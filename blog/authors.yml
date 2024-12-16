@@ -1,0 +1,13 @@
+vader:
+  name: David Vader
+  title: Sr. Engineer
+  url: https://github.com/plyr4
+  image_url: https://avatars.githubusercontent.com/u/48764154
+  page: true
+
+sanders:
+  name: Kell Sanders
+  title: Engineer
+  url: https://github.com/killedgier
+  image_url: https://avatars.githubusercontent.com/u/123609015
+  page: true
