@@ -1,24 +1,48 @@
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Vela External Prototype',
-  tagline: 'Wouldst thou like to Vela deliciously?',
+  title: 'Vela',
+  tagline: 'Vela is a Pipeline Automation (CI/CD) framework built on Linux container technology written in Golang.',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://go-vela.github.io/',
+  url: 'https://pages.git.target.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/docs-v2/',
-  plugins: [require.resolve('docusaurus-lunr-search')],
+  plugins: [
+    require.resolve('docusaurus-lunr-search'),
+    // [
+    //   "docusaurus-plugin-remote-content",
+    //   {
+    //     // options here
+    //     name: "plugin-content-bar", // used by CLI, must be path safe
+    //     sourceBaseUrl: "https://<INSERT GITHUB PAT>@raw.git.target.com/DavidVader/remote-docs-bar/main/", // the base url for the markdown (gets prepended to all of the documents when fetching)
+    //     outDir: "docs/usage/plugins/registry", // the base directory to output to.
+    //     documents: ["DOCS.md"], // the file names to download
+    //     modifyContent: modifyContent,
+    //   },
+    // ],
+    // [
+    //   "docusaurus-plugin-remote-content",
+    //   {
+    //     // options here
+    //     name: "plugin-content-foo", // used by CLI, must be path safe
+    //     sourceBaseUrl: "https://<INSERT GITHUB PAT>@raw.git.target.com/DavidVader/remote-docs-foo/main/", // the base url for the markdown (gets prepended to all of the documents when fetching)
+    //     outDir: "docs/usage/plugins/registry", // the base directory to output to.
+    //     documents: ["DOCS.md"], // the file names to download
+    //     modifyContent: modifyContent,
+    //   },
+    // ],
+  ],
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'actions-playground', 
-  projectName: 'vela-prototype', 
+  organizationName: 'actions-playground',
+  projectName: 'vela-prototype',
   deploymentBranch: 'gh-pages',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
@@ -59,7 +83,6 @@ const config = {
         },
       }),
     ],
-    
   ],
 
   themeConfig:
@@ -67,45 +90,45 @@ const config = {
     ({
       image: 'img/vela.png',
       navbar: {
-        title: 'Vela External Protoype',
+        title: 'Vela',
         logo: {
           alt: 'My Site Logo',
           src: 'img/vela.png',
         },
-        items: 
-        [
-          {
-            type: 'docSidebar',
-            position: 'left',
-            sidebarId: 'installation',
-            label: 'Installation',
-          },
-          {
-            type: 'docSidebar',
-            position: 'left',
-            sidebarId: 'usage',
-            label: 'Usage',
-          },
-          {
-            type: 'docSidebar',
-            position: 'left',
-            sidebarId: 'reference',
-            label: 'Reference',
-          },
-          {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            type: 'docsVersionDropdown',
-            label: 'version',
-            position: 'right',
-            dropdownItemsAfter: [{to: '/versions', label: 'All versions'}],
-            dropdownActiveClassDisabled: true,
-          },
-          {
-            href: 'https://github.com/go-vela',
-            label: 'Vela on GitHub',
-            position: 'right',
-          },
-        ],
+        items:
+          [
+            {
+              type: 'docSidebar',
+              position: 'left',
+              sidebarId: 'installation',
+              label: 'Installation',
+            },
+            {
+              type: 'docSidebar',
+              position: 'left',
+              sidebarId: 'usage',
+              label: 'Usage',
+            },
+            {
+              type: 'docSidebar',
+              position: 'left',
+              sidebarId: 'reference',
+              label: 'Reference',
+            },
+            { to: '/blog', label: 'Blog', position: 'left' },
+            {
+              type: 'docsVersionDropdown',
+              label: 'version',
+              position: 'right',
+              dropdownItemsAfter: [{to: '/versions', label: 'All versions'}],
+              dropdownActiveClassDisabled: true,
+            },
+            {
+              href: 'https://github.com/go-vela',
+              label: 'Vela on GitHub',
+              position: 'right',
+            },
+          ],
       },
       footer: {
         style: 'dark',
@@ -117,5 +140,17 @@ const config = {
       },
     }),
 };
- // hihello
+
+function modifyContent(filename, content) {
+  const titleMatch = content.match(/^#\s*(.+)/);
+  if (titleMatch && titleMatch[1]) {
+      filename = `${titleMatch[1]}.md`;
+  }
+
+  return {
+      filename: filename,
+      content: content,
+  };
+}
+
 export default config;

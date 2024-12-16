@@ -1,11 +1,14 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import * as brandIcons from '@fortawesome/free-brands-svg-icons';
+import * as solidIcons from '@fortawesome/free-solid-svg-icons'
 
 const FeatureList = [
   {
     title: 'Target Engineering Blog',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: <FontAwesomeIcon icon={solidIcons.faBlog} size="4x" />,
     description: (
       <>
         Hear more about other products and Target Engineering on our blog.
@@ -14,7 +17,7 @@ const FeatureList = [
   },
   {
     title: 'Contributors welcome',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Svg: <FontAwesomeIcon icon={brandIcons.faGithub} size="4x" />,
     description: (
       <>
         Learn more about getting started in our community.
@@ -23,7 +26,7 @@ const FeatureList = [
   },
   {
     title: 'Join us on Slack',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: <FontAwesomeIcon icon={brandIcons.faSlack} size="4x" />,
     description: (
       <>
         Come hang out with us in the Gopher Slack workspace.
@@ -32,11 +35,11 @@ const FeatureList = [
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({ Svg, title, description }) {
   return (
     <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+      <div className="text--center padding-vert--md">
+        {Svg}
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
