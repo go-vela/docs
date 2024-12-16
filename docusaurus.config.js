@@ -9,10 +9,10 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://go-vela.github.io/docs-v2/',
+  url: 'https://go-vela.github.io/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/actions-playground/vela-prototype',
+  baseUrl: '/docs-v2/',
   plugins: [require.resolve('docusaurus-lunr-search')],
 
   // GitHub pages deployment config.
