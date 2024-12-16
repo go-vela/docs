@@ -2,18 +2,6 @@ import { themes as prismThemes } from 'prism-react-renderer';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
-function modifyContent(filename, content) {
-  const titleMatch = content.match(/^#\s*(.+)/);
-  if (titleMatch && titleMatch[1]) {
-      filename = `${titleMatch[1]}.md`;
-  }
-
-  return {
-      filename: filename,
-      content: content,
-  };
-}
-
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Vela',
@@ -24,7 +12,7 @@ const config = {
   url: 'https://pages.git.target.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/actions-playground/vela-prototype',
+  baseUrl: '/docs-v2/',
   plugins: [
     require.resolve('docusaurus-lunr-search'),
     // [
@@ -152,5 +140,17 @@ const config = {
       },
     }),
 };
+
+function modifyContent(filename, content) {
+  const titleMatch = content.match(/^#\s*(.+)/);
+  if (titleMatch && titleMatch[1]) {
+      filename = `${titleMatch[1]}.md`;
+  }
+
+  return {
+      filename: filename,
+      content: content,
+  };
+}
 
 export default config;
