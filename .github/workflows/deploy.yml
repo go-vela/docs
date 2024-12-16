@@ -39,7 +39,7 @@ jobs:
 
   publish:
     needs: build
-    runs-on: linux-standard
+    runs-on: ubuntu-latest
     permissions:
       pages: write
       id-token: write
