@@ -1,9 +1,6 @@
 ---
 title: "Authentication"
-linkTitle: "Authentication"
-weight: 5
-description: >
-  Learn how authenticating to the Vela API works.
+sidebar_position: 1
 ---
 
 ## Overview
@@ -18,7 +15,7 @@ The content of this header should be using the `Bearer <token>` scheme.
 Authorization: Bearer <token>
 ```
 
-:::tip
+:::info
 For more information, you can visit the [Swagger authentication documentation](https://swagger.io/docs/specification/authentication/bearer-authentication/).
 :::
 
@@ -40,7 +37,7 @@ header.payload.signature
 xxxxx.yyyyy.zzzzz
 ```
 
-:::tip
+:::info
 For more information, you can visit the [JWT introduction documentation](https://jwt.io/introduction/).
 :::
 

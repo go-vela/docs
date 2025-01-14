@@ -1,6 +1,4 @@
----
-sidebar_position: 4
----
+
 # Managing Deployments
 
 Pipelines can be written with your specific branching methodology in mind but when it comes to deployments you often want to be very intentional with triggering a change. For this reason, Vela has deployments, a unique build event that is triggered directly via Vela on a specific ref (branch, SHA, tag).

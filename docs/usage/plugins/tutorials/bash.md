@@ -1,8 +1,6 @@
 ---
 title: "Bash"
-linkTitle: "Bash"
-description: >
-  Learn how to write a Vela plugin with Bash.
+sidebar_position: 1
 ---
 
 :::warning

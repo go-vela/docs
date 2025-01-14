@@ -11,6 +11,10 @@ description: >
 PUT  /api/v1/admin/build
 ```
 
+## Permissions
+
+COMING SOON!
+
 ## Responses
 
 | Status Code | Description                                         |

@@ -1,11 +1,14 @@
 ---
 title: "YAML"
 linkTitle: "YAML"
+layout: reference
+description: >
+  reference information for creating Vela pipelines
 ---
 
 Steps and Stages Pipeline use "YAML Ain’t Markup Language" (YAML) which is a data serialization language designed to be human friendly. Vela accepts YAML files with either a `.yml` or `.yaml` extension. If you'd like to learn more about the YAML language, we recommend you see, "[Learn YAML in five minutes.](https://www.codeproject.com/Articles/1214409/Learn-YAML-in-five-minutes)".
 
-:::info
+:::tip
 The design goals for YAML are, in decreasing priority:
 
 1. YAML is easily readable by humans.
@@ -23,8 +26,8 @@ See YAML [design goals](https://yaml.org/spec/1.2/spec.html#Introduction) from s
 
 Whether you are a YAML expert or a novice, here is some quick terminology that you should be aware of:
 
-:::info
-You can get feedback directly on your `.vela.yml` or `.vela.yaml` pipelines in your IDE with the available [JSON Schema](/docs/usage/json-schema-support).
+:::tip
+You can get feedback directly on your `.vela.yml` or `.vela.yaml` pipelines in your IDE with the available [JSON Schema](/docs/usage/schema/).
 :::
 
 ### Document
@@ -58,5 +61,4 @@ canonical: "Hello, World"
 # a bool
 canonical: true
 ```
-
 
