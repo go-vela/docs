@@ -130,8 +130,9 @@ const config = {
             },
             {
               href: 'https://github.com/go-vela',
-              label: 'Vela on GitHub',
               position: 'right',
+              className: 'header-github-link',
+              'aria-label': 'GitHub repository',
             },
           ],
       },
