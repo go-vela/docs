@@ -38,7 +38,7 @@ The following parameters are used to configure the command:
 | `image`         | build image(s) that can access the secret         | `VELA_IMAGES`, `SECRET_IMAGES`             |
 | `event`         | build event(s) that can access the secret         | `VELA_EVENTS`, `SECRET_EVENTS`             |
 | `commands`      | allows a step with commands to access the secret  | `VELA_COMMANDS`, `SECRET_COMMANDS`         |
-| `substitution`  | allows substitution of secret using ${KEY} format | `VELA_SUBSTITUTION`, `SECRET_SUBSTITUTION` |
+| `substitution`  | allows substitution of secret using $\{KEY\} format | `VELA_SUBSTITUTION`, `SECRET_SUBSTITUTION` |
 | `file`          | name of file used to add the secret(s)            | `VELA_FILE`, `SECRET_FILE`                 |
 | `output`        | format the output for the secret                  | `VELA_OUTPUT`, `SECRET_OUTPUT`             |
 
