@@ -1,0 +1,23 @@
+@startuml
+
+title Vela Authentication Workflow
+
+skinparam actorStyle awesome
+actor "Developer" as Developer
+
+participant "UI" as UI
+participant "Server" as Server
+participant "GitHub" as Github
+
+Developer -> UI : Connect to vela.example.com
+UI -> Server : Redirect to vela-server.example.com/authenticate
+Server -> Github : GET github.com/login/oauth/authorize for authorization code
+Github -> Server : Return temporary code
+Server -> Github : POST github.com/login/oauth/access_token for OAuth token
+Github -> Server : Return OAuth token
+Server -> Server : Store OAuth token in the database
+Server -> Server : Generate short-lived token for user (automatically refreshes)
+Server -> Developer : Redirect to vela.example.com with short-lived token
+Developer -> UI : Successful completion of authentication workflow
+
+@enduml

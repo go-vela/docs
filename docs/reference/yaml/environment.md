@@ -1,6 +1,9 @@
 ---
 title: "Environment"
 linkTitle: "Environment"
+weight: 1
+description: >
+  YAML keys for environment block
 ---
 
 The environment key is intended to be used to inject a global environment configuration into steps, services and secret containers. Control of which container types get the injected environment settings is available via the metadata block.

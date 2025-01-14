@@ -1,6 +1,5 @@
 ---
 title: "JSON Schema Support"
-sidebar_position: 3
 ---
 
 The schema gets published and updated via https://github.com/go-vela/types where it ends up as a release artifact. The latest schema is available for download from https://github.com/go-vela/types/releases/latest/download/schema.json.

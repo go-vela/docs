@@ -50,7 +50,7 @@ For more information, please review the [CLI config documentation](/docs/referen
 :::info
 This section assumes you have already installed and setup the CLI.
 
-To install the CLI, please review the [installation documentation](/docs/reference/cli/install/).
+To install the CLI, please review the [installation documentation](/docs/reference/cli/install.md).
 
 To setup the CLI, please review the [authentication documentation](/docs/reference/cli/authentication/).
 :::

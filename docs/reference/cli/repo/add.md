@@ -1,6 +1,8 @@
 ---
 title: "Add"
-sidebar_position: 1
+linkTitle: "Add"
+description: >
+  Learn how to create a repo.
 ---
 
 ## Command
@@ -9,7 +11,7 @@ sidebar_position: 1
 $ vela add repo <parameters...> <arguments...>
 ```
 
-:::info
+:::tip
 For more information, you can run `vela add repo --help`.
 :::
 
@@ -35,7 +37,7 @@ The following parameters are used to configure the command:
 | `pipeline-type` | type of base pipeline for the compiler to render   | `VELA_PIPELINE_TYPE`, `PIPELINE_TYPE`  |
 | `output`        | format the output for the repository               | `VELA_OUTPUT`, `REPO_OUTPUT`           |
 
-:::info
+:::tip
 This command also supports setting the following parameters via a configuration file:
 
 - `org`
@@ -45,12 +47,16 @@ This command also supports setting the following parameters via a configuration 
 For more information, please review the [CLI config documentation](/docs/reference/cli/config/).
 :::
 
+## Permissions
+
+COMING SOON!
+
 ## Sample
 
-:::info
+:::warning
 This section assumes you have already installed and setup the CLI.
 
-To install the CLI, please review the [installation documentation](/docs/reference/cli/install/).
+To install the CLI, please review the [installation documentation](/docs/reference/cli/install.md).
 
 To setup the CLI, please review the [authentication documentation](/docs/reference/cli/authentication/).
 :::
