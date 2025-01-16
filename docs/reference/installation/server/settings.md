@@ -26,18 +26,18 @@ The following options are used to configure the component:
 | `settings-refresh-interval` | the interval at which the server syncs with the database | `true`   | `5s`    | `VELA_PLATFORM_SETTINGS_REFRESH_INTERVAL`, `VELA_SETTINGS_REFRESH_INTERVAL` |
 
 :::note
-For more information on how the runtime properties are consumed, please see the [server reference](/docs/installation/server/reference/).
+For more information on how the runtime properties are consumed, please see the [server reference](/docs/reference/installation/server.md).
 :::
 
 ## Permissions
 
-This functionality only exists for [Platform Administrators](/docs/usage/roles/).
+This functionality only exists for [Platform Administrators](/docs/usage/roles.md).
 
 ## Usage
 
 ### Initializing
 
-The server will ensure shared settings are first initialized using the variables provided in the environment. For more information on how the runtime properties are configured, please see the [server reference](/docs/installation/server/reference/). 
+The server will ensure shared settings are first initialized using the variables provided in the environment. For more information on how the runtime properties are configured, please see the [server reference](/docs/reference/installation/server.md). 
 
 On subsequent server startups, the properties controlled by the `settings` component will be retrieved from the database.
 

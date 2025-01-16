@@ -13,7 +13,7 @@ Stages can only be utilized within a template if you use the [`render_inline: tr
 
 ## Reference documentation
 
-Check out the [YAML reference documentation](/docs/reference/yaml/templates/) for templates.
+Check out the [YAML reference documentation](/docs/reference/yaml/templates.md) for templates.
 
 ## Template Engines
 
@@ -415,7 +415,7 @@ Note: when using nested templates with `render_inline: true`, all templates that
 # Working with Templates
 
 :::warning
-It is highly recommended before reviewing the below content to have a solid grasp on Vela's core concepts that are explored while taking the [Vela Tour](/docs/tour/)).
+It is highly recommended before reviewing the below content to have a solid grasp on Vela's core concepts that are explored while taking the [Vela Tour](None)).
 :::
 
 When writing a new template getting feedback can be a very painful process. Vela provides a few core methods to get feedback quickly to ensure the template you're writing expands in the pipeline you expect to run. The main methods for seeing expanded pipelines are:

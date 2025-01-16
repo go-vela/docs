@@ -9,7 +9,7 @@ to the repo.
 
 ### Via the UI
 
-For this example, we'll go over using the UI to add the repo. You can always head over to the [CLI docs](/docs/reference/cli/repo/add/) for docs on how to add a repo via CLI.
+For this example, we'll go over using the UI to add the repo. You can always head over to the [CLI docs](/docs/reference/cli/repo/add.md) for docs on how to add a repo via CLI.
 
 1. Log into your Vela instance.
 1. Click "Add Repositories".
@@ -21,5 +21,5 @@ For this example, we'll go over using the UI to add the repo. You can always hea
 Your repo now has the necessary web hook to Vela.
 
 :::tip
-If you're coming from another CI platform you can set a starting build number by updating the counter field on the repo via the UI, [CLI](/docs/reference/cli/repo/), or [API](/docs/reference/api/repo/).
+If you're coming from another CI platform you can set a starting build number by updating the counter field on the repo via the UI, [CLI](/docs/reference/cli/repo/repo.md), or [API](/docs/reference/api/repo/repo.md).
 :::

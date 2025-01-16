@@ -23,7 +23,7 @@ The following options are used to configure the component:
 | `queue.routes`      | unique channels or topics for pulling workloads   | `true`   | `[ vela ]` | `QUEUE_ROUTES`\`VELA_QUEUE_ROUTES`           |
 
 :::note
-For more information on these configuration options, please see the [worker reference](/docs/installation/worker/reference/).
+For more information on these configuration options, please see the [worker reference](/docs/reference/installation/worker.md).
 :::
 
 ## Drivers

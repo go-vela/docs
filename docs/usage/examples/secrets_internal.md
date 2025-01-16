@@ -13,7 +13,7 @@ Example [Yaml](https://yaml.org/spec/) configuration for a project requiring a s
 User is looking to create a pipeline that can inject configuration that can not be placed into a Yaml file. A simple example would be producing a Docker image with username and password.
 
 :::tip
-It is assumed you have created secrets `docker_username` and `docker_password` in the web interface or [CLI](/docs/reference/cli/).
+It is assumed you have created secrets `docker_username` and `docker_password` in the web interface or [CLI](N/A).
 :::
 
 :::warning
@@ -24,7 +24,7 @@ The examples show a pipeline using repo secrets. Vela contains three secret type
 
 ### Steps
 
-The following [pipeline concepts](/docs/tour/) are being used in the pipeline below:
+The following [pipeline concepts](None) are being used in the pipeline below:
 
 * [Steps](/docs/tour/steps/)
   * [Image](/docs/tour/image/)
@@ -33,9 +33,9 @@ The following [pipeline concepts](/docs/tour/) are being used in the pipeline be
   * [Parameters](/docs/tour/plugins/)
 * [Secrets](/docs/tour/secrets/)
 
-The following [Vela plugins](/docs/tour/) are being used in the pipeline below:
+The following [Vela plugins](None) are being used in the pipeline below:
 
-* [Docker](/docs/plugins/registry/pipeline/docker/)
+* [Docker](None)
 
 :::tip
 Pipeline must be stored in base of repository as `.vela.yml` or `.vela.yaml`
@@ -70,7 +70,7 @@ secrets:
 
 ### Stages
 
-The following [pipeline concepts](/docs/tour/) are being used in the pipeline below:
+The following [pipeline concepts](None) are being used in the pipeline below:
 
 * [Stages](/docs/tour/stages/)
   * [Steps](/docs/tour/steps/)
@@ -80,9 +80,9 @@ The following [pipeline concepts](/docs/tour/) are being used in the pipeline be
   * [Parameters](/docs/tour/plugins/)
 * [Secrets](/docs/tour/secrets/)
 
-The following [Vela plugins](/docs/tour/) are being used in the pipeline below:
+The following [Vela plugins](None) are being used in the pipeline below:
 
-* [Docker](/docs/plugins/registry/pipeline/docker/)
+* [Docker](None)
 
 :::tip
 Pipeline must be stored in base of repository as `.vela.yml` or `.vela.yaml`

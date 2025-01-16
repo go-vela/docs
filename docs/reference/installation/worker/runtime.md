@@ -25,7 +25,7 @@ The following options are used to configure the component:
 | `runtime.volumes`            | path to host volumes to mount into resources for the runtime                                    | `false`  | `N/A`                    | `RUNTIME_VOLUMES`\`VELA_RUNTIME_VOLUMES`                       |
 
 :::note
-For more information on these configuration options, please see the [worker reference](/docs/installation/worker/reference/).
+For more information on these configuration options, please see the [worker reference](/docs/reference/installation/worker.md).
 :::
 
 ## Drivers

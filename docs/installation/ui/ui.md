@@ -23,7 +23,7 @@ From the [Docker official website](https://docker.io/):
 
 > Docker takes away repetitive, mundane configuration tasks and is used throughout the development lifecycle for fast, easy and portable application development - desktop and cloud. Docker’s comprehensive end to end platform includes UIs, CLIs, APIs and security that are engineered to work together across the entire application delivery lifecycle.
 
-Please refer to [our Docker deployment guide](/docs/installation/ui/docker/) to get started.
+Please refer to [our Docker deployment guide](/docs/installation/ui/docker.md) to get started.
 
 ### Kubernetes
 
@@ -31,4 +31,4 @@ From the [Kubernetes official website](https://kubernetes.io/):
 
 > Kubernetes, also known as K8s, is an open-source system for automating deployment, scaling, and management of containerized applications.
 
-Please refer to [our Kubernetes deployment guide](/docs/installation/ui/kubernetes/) to get started.
+Please refer to [our Kubernetes deployment guide](/docs/installation/ui/kubernetes.md) to get started.

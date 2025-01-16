@@ -43,7 +43,7 @@ hitting the sync-all endpoint should re-configure the SCM webhook for all repos 
 :::warning
 This section assumes you already know how to authenticate to the API.
 
-To authenticate to the API, please review the [authentication documentation](/docs/reference/api/authentication/).
+To authenticate to the API, please review the [authentication documentation](/docs/reference/api/authentication.md).
 :::
 
 #### Request

@@ -18,7 +18,7 @@ Work with your server administer to understand what routes are available for you
 
 ### Steps
 
-The following [pipeline concepts](/docs/tour/) are being used in the pipeline below:
+The following [pipeline concepts](None) are being used in the pipeline below:
 
 * *Worker*
   * *Platform*
@@ -49,7 +49,7 @@ steps:
 
 ### Stages
 
-The following [pipeline concepts](/docs/tour/) are being used in the pipeline below:
+The following [pipeline concepts](None) are being used in the pipeline below:
 
 * *Worker*
   * *Platform*

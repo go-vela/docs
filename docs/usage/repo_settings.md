@@ -9,7 +9,7 @@ description: >
 
 Before going through all the Vela repository settings, it's important to cover Vela permissions and how they apply to various parts of the Vela application.
 
-An overview of permissions can be found [here](/docs/usage/roles/).
+An overview of permissions can be found [here](/docs/usage/roles.md).
 
 ## General Repository Settings
 
@@ -89,11 +89,11 @@ Occasionally, due to various compilation errors, this counter can fall behind re
 
 ### Status Badge
 
-Check out the [usage documentation](/docs/usage/badge/) for more details on customizing status badges for Vela repositories.
+Check out the [usage documentation](/docs/usage/badge.md) for more details on customizing status badges for Vela repositories.
 
 ### Repository Actions
 
-**Chown** — every Vela repository requires an owner. This owner is typically the user that first enabled the repository. The owner must have _write_ permissions for the repository at the minimum. The "Chown" button (or [command](/docs/reference/cli/repo/chown/)) will transfer the ownership to the user making the request.
+**Chown** — every Vela repository requires an owner. This owner is typically the user that first enabled the repository. The owner must have _write_ permissions for the repository at the minimum. The "Chown" button (or [command](/docs/reference/cli/repo/chown.md)) will transfer the ownership to the user making the request.
 
 **Repair** — whenever the connection between Vela and the webhook configured with the source control manager has been invalidated, the Vela repository must be repaired. This involves the deletion and re-creation of the webhook with the source repository. The build history will be preserved, but the ability to redeliver old webhooks will not.
 

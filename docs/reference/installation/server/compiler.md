@@ -10,7 +10,7 @@ description: >
 The compiler is embedded directly in the server and can only be accessed through the server.
 :::
 
-This component is responsible for transforming a [pipeline](/docs/tour/) into an executable representation for the [worker](/docs/installation/worker/).
+This component is responsible for transforming a [pipeline](None) into an executable representation for the [worker](/docs/installation/worker/worker.md).
 
 During the transformation, it will retrieve [templates](/docs/tour/templates/) from one or more registries depending on the pipeline configuration.
 
@@ -49,7 +49,7 @@ The following options are used to configure the component:
 _(1) this will be the latest available, tagged release of `target/vela-git` at the time the server component is released_
 
 :::note
-For more information on these configuration options, please see the [server reference](/docs/installation/server/reference/).
+For more information on these configuration options, please see the [server reference](/docs/reference/installation/server.md).
 :::
 
 ## Drivers

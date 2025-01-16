@@ -42,9 +42,9 @@ const config = {
           routeBasePath: "/",
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          versions: {
+            versions: {
             current: {
-              label: `Current 🚧`,
+              label: `0.26 🚧`,
             },
           },
         },

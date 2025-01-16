@@ -14,9 +14,9 @@ The server is made up of several components, responsible for specific tasks, nec
 | Name       | Description                                                                                                       |
 | ---------- | ----------------------------------------------------------------------------------------------------------------- |
 | `settings` | keeps track of updated runtime properties for the [server](/docs/installation/server/)                            |
-| `compiler` | transforms a [pipeline](/docs/tour/) into an executable workload for the [worker](/docs/installation/worker/)     |
+| `compiler` | transforms a [pipeline](None) into an executable workload for the [worker](/docs/installation/worker/worker.md)     |
 | `database` | integrates with a database provider for storing application data at rest                                          |
-| `queue`    | integrates with a queue provider for pushing workloads that will be run by a [worker](/docs/installation/worker/) |
+| `queue`    | integrates with a queue provider for pushing workloads that will be run by a [worker](/docs/installation/worker/worker.md) |
 | `secret`   | integrates with a secret provider for storing sensitive application data at rest                                  |
 | `source`   | integrates with a source control management (SCM) provider for authentication and authorization                   |
 | `tracing`  | implements OpenTelemetry tracing instrumentation for the [server](/docs/installation/server/) |
@@ -35,7 +35,7 @@ The variable should be provided as a `string`.
 
 ### VELA_DATABASE_ENCRYPTION_KEY
 
-This configuration variable is used by the [database component](/docs/installation/server/reference/database/) for the server.
+This configuration variable is used by the [database component](/docs/reference/installation/database.md) for the server.
 
 Examples using this configuration variable are provided in the above reference documentation.
 
@@ -45,17 +45,17 @@ The variable should be provided as an `string`.
 
 ### VELA_QUEUE_ADDR
 
-This configuration variable is used by the [queue component](/docs/installation/server/reference/queue/) for the server.
+This configuration variable is used by the [queue component](/docs/reference/installation/queue.md) for the server.
 
 Examples using this configuration variable are provided in the above reference documentation.
 
-This variable sets a fully qualified URL to the queue instance for pushing workloads that will be run by a [worker](/docs/installation/worker/).
+This variable sets a fully qualified URL to the queue instance for pushing workloads that will be run by a [worker](/docs/installation/worker/worker.md).
 
 The variable should be provided as a `string`.
 
 ### VELA_QUEUE_DRIVER
 
-This configuration variable is used by the [queue component](/docs/installation/server/reference/queue/) for the server.
+This configuration variable is used by the [queue component](/docs/reference/installation/queue.md) for the server.
 
 Examples using this configuration variable are provided in the above reference documentation.
 
@@ -73,7 +73,7 @@ The possible options to provide for this variable are:
 
 ### VELA_SCM_CLIENT
 
-This configuration variable is used by the [SCM component](/docs/installation/server/reference/scm/) for the server.
+This configuration variable is used by the [SCM component](/docs/reference/installation/scm.md) for the server.
 
 This variable sets the client ID from the OAuth application created on the SCM system.
 
@@ -81,7 +81,7 @@ The variable should be provided as a `string`.
 
 ### VELA_SCM_SECRET
 
-This configuration variable is used by the [SCM component](/docs/installation/server/reference/scm/) for the server.
+This configuration variable is used by the [SCM component](/docs/reference/installation/scm.md) for the server.
 
 This variable sets the client secret from the OAuth application created on the SCM system.
 
@@ -113,7 +113,7 @@ This property can be updated while the server is running using the [settings com
 
 ### VELA_COMPILER_GITHUB
 
-This configuration variable is used by the [compiler component](/docs/installation/server/reference/compiler/) for the server.
+This configuration variable is used by the [compiler component](/docs/reference/installation/compiler.md) for the server.
 
 Examples using this configuration variable are provided in the above reference documentation.
 
@@ -131,7 +131,7 @@ This variable has a default value of `false`.
 
 ### VELA_COMPILER_GITHUB_TOKEN
 
-This configuration variable is used by the [compiler component](/docs/installation/server/reference/compiler/) for the server.
+This configuration variable is used by the [compiler component](/docs/reference/installation/compiler.md) for the server.
 
 Examples using this configuration variable are provided in the above reference documentation.
 
@@ -145,7 +145,7 @@ The variable can be provided as a `string`.
 
 ### VELA_COMPILER_GITHUB_URL
 
-This configuration variable is used by the [compiler component](/docs/installation/server/reference/compiler/) for the server.
+This configuration variable is used by the [compiler component](/docs/reference/installation/compiler.md) for the server.
 
 Examples using this configuration variable are provided in the above reference documentation.
 
@@ -159,7 +159,7 @@ The variable can be provided as a `string`.
 
 ### VELA_DATABASE_ADDR
 
-This configuration variable is used by the [database component](/docs/installation/server/reference/database/) for the server.
+This configuration variable is used by the [database component](/docs/reference/installation/database.md) for the server.
 
 Examples using this configuration variable are provided in the above reference documentation.
 
@@ -173,9 +173,9 @@ This variable has a default value of `vela.sqlite`.
 
 ### VELA_DATABASE_COMPRESSION_LEVEL
 
-This configuration variable is used by the [database component](/docs/installation/server/reference/database/) for the server.
+This configuration variable is used by the [database component](/docs/reference/installation/database.md) for the server.
 
-This variable sets the level of compression for workload logs, uploaded by the Vela [worker](/docs/installation/worker/), which are stored in the database.
+This variable sets the level of compression for workload logs, uploaded by the Vela [worker](/docs/installation/worker/worker.md), which are stored in the database.
 
 The variable can be provided as an `integer`.
 
@@ -199,7 +199,7 @@ The possible options to provide for this variable are:
 
 ### VELA_DATABASE_CONNECTION_IDLE
 
-This configuration variable is used by the [database component](/docs/installation/server/reference/database/) for the server.
+This configuration variable is used by the [database component](/docs/reference/installation/database.md) for the server.
 
 This variable sets the maximum number of [idle connections](https://pkg.go.dev/database/sql#DB.SetMaxIdleConns) allowed for the database client.
 
@@ -211,7 +211,7 @@ This variable has a default value of `2`.
 
 ### VELA_DATABASE_CONNECTION_LIFE
 
-This configuration variable is used by the [database component](/docs/installation/server/reference/database/) for the server.
+This configuration variable is used by the [database component](/docs/reference/installation/database.md) for the server.
 
 This variable sets the maximum duration of time [a connection is reusable](https://pkg.go.dev/database/sql#DB.SetConnMaxLifetime) for the database client.
 
@@ -223,7 +223,7 @@ This variable has a default value of `30m`.
 
 ### VELA_DATABASE_CONNECTION_OPEN
 
-This configuration variable is used by the [database component](/docs/installation/server/reference/database/) for the server.
+This configuration variable is used by the [database component](/docs/reference/installation/database.md) for the server.
 
 This variable sets the maximum number of [open connections](https://pkg.go.dev/database/sql#DB.SetMaxOpenConns) allowed for the database client.
 
@@ -235,7 +235,7 @@ This variable has a default value of `0` (meaning no limit is set).
 
 ### VELA_DATABASE_DRIVER
 
-This configuration variable is used by the [database component](/docs/installation/server/reference/database/) for the server.
+This configuration variable is used by the [database component](/docs/reference/installation/database.md) for the server.
 
 Examples using this configuration variable are provided in the above reference documentation.
 
@@ -254,7 +254,7 @@ The possible options to provide for this variable are:
 
 ### VELA_DATABASE_SKIP_CREATION
 
-This configuration variable is used by the [database component](/docs/installation/server/reference/database/) for the server.
+This configuration variable is used by the [database component](/docs/reference/installation/database.md) for the server.
 
 This variable enables skipping the creation of tables and indexes in the database system.
 
@@ -266,7 +266,7 @@ This variable has a default value of `false`.
 
 ### VELA_DATABASE_LOG_LEVEL
 
-This configuration variable is used by the [database component](/docs/installation/server/reference/database/) for the server.
+This configuration variable is used by the [database component](/docs/reference/installation/database.md) for the server.
 
 This variable controls the log level to use in the database system. This can be different than the log level for the rest of the application.
 
@@ -278,7 +278,7 @@ This variable has a default value of `warn`.
 
 ### VELA_DATABASE_LOG_SHOW_SQL
 
-This configuration variable is used by the [database component](/docs/installation/server/reference/database/) for the server.
+This configuration variable is used by the [database component](/docs/reference/installation/database.md) for the server.
 
 This variable controls whether to show the SQL query in the logs for the database system.
 
@@ -290,7 +290,7 @@ This variable has a default value of `false`.
 
 ### VELA_DATABASE_LOG_SKIP_NOTFOUND
 
-This configuration variable is used by the [database component](/docs/installation/server/reference/database/) for the server.
+This configuration variable is used by the [database component](/docs/reference/installation/database.md) for the server.
 
 This variable controls whether to skip showing record not found errors in the logs for the in the database system.
 
@@ -302,7 +302,7 @@ This variable has a default value of `true`.
 
 ### VELA_DATABASE_LOG_SLOW_THRESHOLD
 
-This configuration variable is used by the [database component](/docs/installation/server/reference/database/) for the server.
+This configuration variable is used by the [database component](/docs/reference/installation/database.md) for the server.
 
 This variable controls the threshold that determines which queries are considered slow and logged in the database system.
 
@@ -398,7 +398,7 @@ This variable should match [the `VELA_MAX_BUILD_LIMIT` variable](/docs/installat
 
 ### VELA_MODIFICATION_ADDR
 
-This configuration variable is used by the [compiler component](/docs/installation/server/reference/compiler/) for the server.
+This configuration variable is used by the [compiler component](/docs/reference/installation/compiler.md) for the server.
 
 This variable sets a fully qualified URL to the modification endpoint used for the compiler.
 
@@ -406,7 +406,7 @@ The variable can be provided as a `string`.
 
 ### VELA_MODIFICATION_RETRIES
 
-This configuration variable is used by the [compiler component](/docs/installation/server/reference/compiler/) for the server.
+This configuration variable is used by the [compiler component](/docs/reference/installation/compiler.md) for the server.
 
 This variable sets the maximum number of times to resend failed requests to the modification endpoint for the compiler.
 
@@ -418,7 +418,7 @@ This variable has a default value of `5`.
 
 ### VELA_MODIFICATION_SECRET
 
-This configuration variable is used by the [compiler component](/docs/installation/server/reference/compiler/) for the server.
+This configuration variable is used by the [compiler component](/docs/reference/installation/compiler.md) for the server.
 
 This variable sets a shared secret for authenticating communication between the compiler and the modification endpoint.
 
@@ -426,7 +426,7 @@ The variable can be provided as a `string`.
 
 ### VELA_MODIFICATION_TIMEOUT
 
-This configuration variable is used by the [compiler component](/docs/installation/server/reference/compiler/) for the server.
+This configuration variable is used by the [compiler component](/docs/reference/installation/compiler.md) for the server.
 
 This variable sets the maximum duration of time the compiler will wait before timing out requests sent to the modification endpoint.
 
@@ -476,7 +476,7 @@ This variable has a default value of `8080`.
 
 ### VELA_QUEUE_CLUSTER
 
-This configuration variable is used by the [queue component](/docs/installation/server/reference/queue/) for the server.
+This configuration variable is used by the [queue component](/docs/reference/installation/queue.md) for the server.
 
 This variable enables the server to connect to a queue cluster rather than a standalone instance.
 
@@ -488,7 +488,7 @@ This variable should match [the `VELA_QUEUE_CLUSTER` variable](/docs/installatio
 
 ### VELA_QUEUE_POP_TIMEOUT
 
-This configuration variable is unused by the [queue component](/docs/installation/server/reference/queue/) for the server.
+This configuration variable is unused by the [queue component](/docs/reference/installation/queue.md) for the server.
 
 This variable sets the maximum duration of time the worker will wait before timing out requests sent for pushing workloads.
 
@@ -500,7 +500,7 @@ This variable has a default value of `60s`.
 
 ### VELA_QUEUE_ROUTES
 
-This configuration variable is used by the [queue component](/docs/installation/server/reference/queue/) for the server.
+This configuration variable is used by the [queue component](/docs/reference/installation/queue.md) for the server.
 
 This variable sets the unique channels or topics to push workloads to.
 
@@ -560,7 +560,7 @@ This variable has a default value of `1h`.
 
 ### VELA_SCM_ADDR
 
-This configuration variable is used by the [SCM component](/docs/installation/server/reference/scm/) for the server.
+This configuration variable is used by the [SCM component](/docs/reference/installation/scm.md) for the server.
 
 This variable sets a fully qualified URL to the source control management (SCM) system.
 
@@ -572,7 +572,7 @@ This variable has a default value of `https://github.com`.
 
 ### VELA_SCM_CONTEXT
 
-This configuration variable is used by the [SCM component](/docs/installation/server/reference/scm/) for the server.
+This configuration variable is used by the [SCM component](/docs/reference/installation/scm.md) for the server.
 
 This variable sets the message to set in the commit status on the SCM system.
 
@@ -584,7 +584,7 @@ This variable has a default value of `continuous-integration/vela`.
 
 ### VELA_SCM_DRIVER
 
-This configuration variable is used by the [SCM component](/docs/installation/server/reference/scm/) for the server.
+This configuration variable is used by the [SCM component](/docs/reference/installation/scm.md) for the server.
 
 This variable sets the driver to use for the SCM functionality for the server.
 
@@ -600,7 +600,7 @@ The possible options to provide for this variable are:
 
 ### VELA_SCM_SCOPES
 
-This configuration variable is used by the [SCM component](/docs/installation/server/reference/scm/) for the server.
+This configuration variable is used by the [SCM component](/docs/reference/installation/scm.md) for the server.
 
 This variable sets the permission scopes to apply for OAuth credentials captured from the SCM system.
 
@@ -612,7 +612,7 @@ This variable has a default value of `read:org,read:user,repo,repo:status,user:e
 
 ### VELA_SCM_WEBHOOK_ADDR
 
-This configuration variable is used by the [SCM component](/docs/installation/server/reference/scm/) for the server.
+This configuration variable is used by the [SCM component](/docs/reference/installation/scm.md) for the server.
 
 This variable sets a fully qualified URL on the SCM system to send webhooks to the server.
 
@@ -624,7 +624,7 @@ This variable has a default value of [the `VELA_ADDR` variable](/docs/installati
 
 ### VELA_SECRET
 
-This variable sets a shared secret with the Vela [worker](/docs/installation/worker/) for authenticating communication between workers and the server.
+This variable sets a shared secret with the Vela [worker](/docs/installation/worker/worker.md) for authenticating communication between workers and the server.
 
 Only necessary to provide if utilizing the [server-worker trusted symmetric worker authentication method](/docs/installation/worker/docker/#worker-server-trusted-symmetric-token).
 
@@ -636,7 +636,7 @@ This variable should match [the `VELA_SERVER_SECRET` variable](/docs/installatio
 
 ### VELA_SECRET_VAULT
 
-This configuration variable is used by the [secret component](/docs/installation/server/reference/secret/) for the server.
+This configuration variable is used by the [secret component](/docs/reference/installation/secret.md) for the server.
 
 Examples using this configuration variable are provided in the above reference documentation.
 
@@ -650,7 +650,7 @@ This variable has a default value of `false`.
 
 ### VELA_SECRET_VAULT_ADDR
 
-This configuration variable is used by the [secret component](/docs/installation/server/reference/secret/) for the server.
+This configuration variable is used by the [secret component](/docs/reference/installation/secret.md) for the server.
 
 Examples using this configuration variable are provided in the above reference documentation.
 
@@ -660,7 +660,7 @@ The variable can be provided as a `string`.
 
 ### VELA_SECRET_VAULT_AUTH_METHOD
 
-This configuration variable is used by the [secret component](/docs/installation/server/reference/secret/) for the server.
+This configuration variable is used by the [secret component](/docs/reference/installation/secret.md) for the server.
 
 This variable sets the authentication method to obtain a token from the HashiCorp Vault instance.
 
@@ -668,7 +668,7 @@ The variable can be provided as a `string`.
 
 ### VELA_SECRET_VAULT_AWS_ROLE
 
-This configuration variable is used by the [secret component](/docs/installation/server/reference/secret/) for the server.
+This configuration variable is used by the [secret component](/docs/reference/installation/secret.md) for the server.
 
 This variable sets the HashiCorp Vault role to connect to the `auth/aws/login` endpoint.
 
@@ -676,7 +676,7 @@ The variable can be provided as a `string`.
 
 ### VELA_SECRET_VAULT_PREFIX
 
-This configuration variable is used by the [secret component](/docs/installation/server/reference/secret/) for the server.
+This configuration variable is used by the [secret component](/docs/reference/installation/secret.md) for the server.
 
 This variable sets the prefix for k/v secrets in the HashiCorp Vault instance.
 
@@ -684,7 +684,7 @@ The variable can be provided as a `string`.
 
 ### VELA_SECRET_VAULT_RENEWAL
 
-This configuration variable is used by the [secret component](/docs/installation/server/reference/secret/) for the server.
+This configuration variable is used by the [secret component](/docs/reference/installation/secret.md) for the server.
 
 This variable sets the frequency to renew the token for the HashiCorp Vault instance.
 
@@ -696,7 +696,7 @@ This variable has a default value of `30m`.
 
 ### VELA_SECRET_VAULT_TOKEN
 
-This configuration variable is used by the [secret component](/docs/installation/server/reference/secret/) for the server.
+This configuration variable is used by the [secret component](/docs/reference/installation/secret.md) for the server.
 
 Examples using this configuration variable are provided in the above reference documentation.
 
@@ -706,7 +706,7 @@ The variable can be provided as a `string`.
 
 ### VELA_SECRET_VAULT_VERSION
 
-This configuration variable is used by the [secret component](/docs/installation/server/reference/secret/) for the server.
+This configuration variable is used by the [secret component](/docs/reference/installation/secret.md) for the server.
 
 This variable sets the version for the k/v backend for the HashiCorp Vault instance.
 
@@ -754,13 +754,13 @@ This variable has a default value of `5m`.
 
 ### VELA_WEBUI_ADDR
 
-This variable sets a fully qualified URL to the Vela [UI](/docs/installation/ui/) address.
+This variable sets a fully qualified URL to the Vela [UI](/docs/installation/ui/ui.md) address.
 
 The variable can be provided as a `string`.
 
 ### VELA_WEBUI_OAUTH_CALLBACK_PATH
 
-This variable sets the endpoint to use for the OAuth callback path for the Vela [UI](/docs/installation/ui/).
+This variable sets the endpoint to use for the OAuth callback path for the Vela [UI](/docs/installation/ui/ui.md).
 
 The variable can be provided as a `string`.
 
@@ -805,7 +805,7 @@ The variable can be provided as a `duration` (i.e. `5s`, `10m`).
 :::note
 This variable has a default value of `5m`.\
 \
-The value should coordinate with the [`VELA_CHECK_IN`](/docs/installation/worker/reference/#vela_check_in) setting provided to the [worker](/docs/installation/worker/).
+The value should coordinate with the [`VELA_CHECK_IN`](/docs/installation/worker/reference/#vela_check_in) setting provided to the [worker](/docs/installation/worker/worker.md).
 :::
 
 ### VELA_OTEL_TRACING_ENABLE

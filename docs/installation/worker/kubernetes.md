@@ -81,7 +81,7 @@ $ kubectl apply -f worker-configmap.yaml
 ```
 
 :::info
-For a full list of configuration options, please see the [worker reference](/docs/installation/worker/reference/).
+For a full list of configuration options, please see the [worker reference](/docs/reference/installation/worker.md).
 :::
 
 

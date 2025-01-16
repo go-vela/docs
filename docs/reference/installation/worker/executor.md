@@ -20,7 +20,7 @@ The following options are used to configure the component:
 | `executor.log_streaming_timeout` | maximum time to wait, after build completion, for logs to finish streaming | `false`  | `5m`           | `EXECUTOR_LOG_STREAMING_TIMEOUT`\`VELA_EXECUTOR_LOG_STREAMING_TIMEOUT` |
 
 :::note
-For more information on these configuration options, please see the [worker reference](/docs/installation/worker/reference/).
+For more information on these configuration options, please see the [worker reference](/docs/reference/installation/worker.md).
 :::
 
 ## Drivers
@@ -62,6 +62,6 @@ This Linux configuration is enabled by default and is not necessary to provide i
 
 ### Local
 
-The `local` executor driver is only intended for use with the [Vela CLI](/docs/reference/cli/).
+The `local` executor driver is only intended for use with the [Vela CLI](N/A).
 
 It's not recommended to run any workloads on a worker configured with this driver.

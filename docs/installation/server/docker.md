@@ -16,7 +16,7 @@ You can refer to [Docker's official documentation](https://docs.docker.com/get-d
 
 ### Dependency 2: Redis
 
-[Redis](https://redis.io/) will be used for storing workloads, created by the server, that will run on a [worker](/docs/installation/worker/).
+[Redis](https://redis.io/) will be used for storing workloads, created by the server, that will run on a [worker](/docs/installation/worker/worker.md).
 
 You can refer to [Redis's official documentation](https://redis.io/topics/quickstart/) on installing and configuring the service.
 
@@ -104,7 +104,7 @@ These credentials are used to authenticate and authorize actions preformed withi
 
 Vela has support for many Source Control Management (SCM) providers to enable the preferences of you and your team.
 
-You can follow the [SCM reference](/docs/installation/server/reference/scm/) for instructions on creating the OAuth application.
+You can follow the [SCM reference](/docs/reference/installation/scm.md) for instructions on creating the OAuth application.
 
 ### Step 7: Start the Server
 
@@ -137,7 +137,7 @@ If using the [server-worker trusted symmetric auth method](/docs/installation/wo
 ```shell
   --env=VELA_SECRET=<shared_secret>
 ```
-For a full list of configuration options, please see the [server reference](/docs/installation/server/reference/).
+For a full list of configuration options, please see the [server reference](/docs/reference/installation/server.md).
 :::
 
 ### Step 8: Verify the Server Logs
@@ -154,4 +154,4 @@ $ docker logs server
 
 After the server is up and running, you need to install workers to run workloads.
 
-Please refer to [the worker installation docs](/docs/installation/worker/) for more information.
+Please refer to [the worker installation docs](/docs/installation/worker/worker.md) for more information.

@@ -10,5 +10,5 @@ The below endpoints are available to operate on for the current user.
 :::warning
 This section assumes you already know how to authenticate to the API.
 
-To authenticate to the API, please review the [authentication documentation](/docs/reference/api/authentication/).
+To authenticate to the API, please review the [authentication documentation](/docs/reference/api/authentication.md).
 :::

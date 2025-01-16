@@ -39,7 +39,7 @@ COMING SOON!
 :::warning
 This section assumes you already know how to authenticate to the API.
 
-To authenticate to the API, please review the [authentication documentation](/docs/reference/api/authentication/).
+To authenticate to the API, please review the [authentication documentation](/docs/reference/api/authentication.md).
 :::
 
 #### Request
