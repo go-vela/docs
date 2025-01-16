@@ -1,4 +1,5 @@
 import { themes as prismThemes } from 'prism-react-renderer';
+import remoteContentVelaPlugins from './remote-vela-plugins/index.js';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -15,28 +16,7 @@ const config = {
   baseUrl: '/docs-v2/',
   plugins: [
     require.resolve('docusaurus-lunr-search'),
-    // [
-    //   "docusaurus-plugin-remote-content",
-    //   {
-    //     // options here
-    //     name: "plugin-content-bar", // used by CLI, must be path safe
-    //     sourceBaseUrl: "https://<INSERT GITHUB PAT>@raw.git.target.com/DavidVader/remote-docs-bar/main/", // the base url for the markdown (gets prepended to all of the documents when fetching)
-    //     outDir: "docs/usage/plugins/registry", // the base directory to output to.
-    //     documents: ["DOCS.md"], // the file names to download
-    //     modifyContent: modifyContent,
-    //   },
-    // ],
-    // [
-    //   "docusaurus-plugin-remote-content",
-    //   {
-    //     // options here
-    //     name: "plugin-content-foo", // used by CLI, must be path safe
-    //     sourceBaseUrl: "https://<INSERT GITHUB PAT>@raw.git.target.com/DavidVader/remote-docs-foo/main/", // the base url for the markdown (gets prepended to all of the documents when fetching)
-    //     outDir: "docs/usage/plugins/registry", // the base directory to output to.
-    //     documents: ["DOCS.md"], // the file names to download
-    //     modifyContent: modifyContent,
-    //   },
-    // ],
+    ...remoteContentVelaPlugins,
   ],
 
   // GitHub pages deployment config.
