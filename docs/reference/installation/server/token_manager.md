@@ -29,5 +29,5 @@ The following options are used to configure the component:
 :::note
 \* `worker-auth-token-duration` and `worker-register-token-duration` are required if you intend to register workers.
 
-For more information on these configuration options, please see the [server reference](/docs/installation/server/reference/).
+For more information on these configuration options, please see the [server reference](/docs/reference/installation/server/server.md).
 :::

@@ -27,7 +27,7 @@ The following options are used to configure the component:
 | `tracing.tracestate.attributes` | This variable sets OTel tracestate [(span) attributes](https://www.w3.org/TR/trace-context) as a list of `key=value` pairs. Each pair will be inserted into the tracestate for each sampled span. | `false` | `N/A` | `VELA_OTEL_TRACING_TRACESTATE_ATTRIBUTES` |
 
 :::note
-For more information on how the runtime properties are consumed, please see the [server reference](/docs/installation/server/reference/).
+For more information on how the runtime properties are consumed, please see the [server reference](/docs/reference/installation/server/server.md).
 :::
 
 ## Exporter

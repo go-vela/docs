@@ -32,7 +32,7 @@ The following options are used to configure the component:
 | `secret.vault.version`     | version for the k/v backend for the HashiCorp Vault instance                 | `true`   | `2`     | `SECRET_VAULT_VERSION`\`VELA_SECRET_VAULT_VERSION`         |
 
 :::note
-For more information on these configuration options, please see the [server reference](/docs/installation/server/reference/).
+For more information on these configuration options, please see the [server reference](/docs/reference/installation/server/server.md).
 :::
 
 ## Drivers

@@ -27,7 +27,7 @@ See YAML [design goals](https://yaml.org/spec/1.2/spec.html#Introduction) from s
 Whether you are a YAML expert or a novice, here is some quick terminology that you should be aware of:
 
 :::tip
-You can get feedback directly on your `.vela.yml` or `.vela.yaml` pipelines in your IDE with the available [JSON Schema](/docs/usage/schema/).
+You can get feedback directly on your `.vela.yml` or `.vela.yaml` pipelines in your IDE with the available [JSON Schema](/docs/usage/json-schema-support.md).
 :::
 
 ### Document

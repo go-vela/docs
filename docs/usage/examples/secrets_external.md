@@ -13,14 +13,14 @@ Example [Yaml](https://yaml.org/spec/) configuration for a project requiring a s
 User is looking to create a pipeline that can integrate with a private Vault to inject secrets that can not be used with pushing a Docker image to a registry.
 
 :::tip
-It is assumed you have created secret `vault_token` in the web interface or [CLI](/docs/reference/cli/).
+It is assumed you have created secret `vault_token` in the web interface or [CLI](None).
 :::
 
 The examples show a pipeline using repository secrets. Vela contains three secret types: repository, organization, and shared. For examples on organization and shared, please see the [secret concepts](/docs/tour/secrets/) documentation.
 
 ### Steps
 
-The following [pipeline concepts](/docs/tour/) are being used in the pipeline below:
+The following [pipeline concepts](None) are being used in the pipeline below:
 
 * [Steps](/docs/tour/steps/)
   * [Image](/docs/tour/image/)
@@ -29,9 +29,9 @@ The following [pipeline concepts](/docs/tour/) are being used in the pipeline be
   * [Parameters](/docs/tour/plugins/)
 * [Secrets](/docs/tour/secrets/)
 
-The following [Vela plugins](/docs/tour/) are being used in the pipeline below:
+The following [Vela plugins](None) are being used in the pipeline below:
 
-* [Docker](/docs/plugins/registry/pipeline/docker/)
+* [Docker](None)
 
 :::tip
 Pipeline must be stored in base of repository as `.vela.yml` or `.vela.yaml`
@@ -86,9 +86,9 @@ The following [pipeline concepts](/docs/tour) are being used in the pipeline bel
   * [Parameters](/docs/tour/plugins/)
 * [Secrets](/docs/tour/secrets/)
 
-The following [Vela plugins](/docs/tour/) are being used in the pipeline below:
+The following [Vela plugins](None) are being used in the pipeline below:
 
-* [Docker](/docs/plugins/registry/pipeline/docker/)
+* [Docker](None)
 
 :::tip
 Pipeline must be stored in base of repository as `.vela.yml` or `.vela.yaml`

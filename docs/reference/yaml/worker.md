@@ -31,7 +31,7 @@ Routes are defined by the Vela system administrators during installation. To kno
 ### Usage
 
 :::tip
-See an [example](/docs/usage/examples/route/) on how to route a build.
+See an [example](/docs/usage/examples/route.md) on how to route a build.
 :::
 
 #### The `flavor:` key

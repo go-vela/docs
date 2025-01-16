@@ -23,7 +23,7 @@ For this example, we'll go over using the UI to add the repo. You can always hea
 Your repo now has the necessary web hook to Vela.
 
 :::info
-If you're coming from another CI platform you can set a starting build number by updating the counter field on the repo via the UI, [CLI](/docs/reference/cli/repo/), or [API](/docs/reference/api/repo/).
+If you're coming from another CI platform you can set a starting build number by updating the counter field on the repo via the UI, [CLI](/docs/reference/cli/repo/repo.md), or [API](/docs/reference/api/repo/repo.md).
 :::
 
 ## Step 2 - Build a Pipeline
@@ -51,11 +51,11 @@ steps:
 ```
 **See it in action with examples!**
 
-* [Go](/docs/usage/examples/go_modules/)
-* [Rust](/docs/usage/examples/rust_cargo/)
-* [Gradle](/docs/usage/examples/java_gradle/)
-* [Maven](/docs/usage/examples/java_maven/)
-* [Node](/docs/usage/examples/node/)
+* [Go](/docs/usage/examples/go_modules.md)
+* [Rust](/docs/usage/examples/rust_cargo.md)
+* [Gradle](/docs/usage/examples/java_gradle.md)
+* [Maven](/docs/usage/examples/java_maven.md)
+* [Node](/docs/usage/examples/node.md)
 
 ## Step 3 - Customize the Pipeline with Rulesets
 
@@ -99,13 +99,13 @@ These actions can be for any number of general tasks, deploying code, publishing
 
 Anyone can create a plugin and use it in their pipeline.
 
-The registry of existing plugins can be found on this site in the [plugins](/docs/plugins/registry/) tab.
+The registry of existing plugins can be found on this site in the [plugins](docs/usage/plugins/index.md) tab.
 
 Within the parameters block, keys are injected as upper case environment variables with the pattern of `PARAMETER_<YAML_KEY>`.
 
 **Expand your knowledge with an example!**
 
-* [Working with Plugins](/docs/usage/plugin/)
+* [Working with Plugins](/docs/usage/plugin.md)
 
 <!-- section break -->
 
@@ -131,7 +131,7 @@ steps:
 ```
 ## Step 5 - Trigger the Pipeline
 
-If you've followed the documentation for [enabling a repo](/docs/usage/enable_repo/) and wrote a pipeline ([here are some example pipelines](/docs/usage/examples/)), all that should be left is to push your pipeline to your repo.
+If you've followed the documentation for [enabling a repo](/docs/usage/enable_repo.md) and wrote a pipeline ([here are some example pipelines](None)), all that should be left is to push your pipeline to your repo.
 
 If a build does not trigger when your push a change to your repo, check the webhook response to see if there is an error.
 

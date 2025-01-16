@@ -37,7 +37,7 @@ This command also supports setting the following parameters via a configuration 
 - `repo`
 - `output`
 
-For more information, please review the [CLI config documentation](/docs/reference/cli/config/).
+For more information, please review the [CLI config documentation](/docs/reference/cli/config/config.md).
 :::
 
 ## Sample
@@ -47,7 +47,7 @@ This section assumes you have already installed and setup the CLI.
 
 To install the CLI, please review the [installation documentation](/docs/reference/cli/install.md).
 
-To setup the CLI, please review the [authentication documentation](/docs/reference/cli/authentication/).
+To setup the CLI, please review the [authentication documentation](/docs/reference/cli/authentication.md).
 :::
 
 #### Request

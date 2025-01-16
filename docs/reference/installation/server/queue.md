@@ -8,7 +8,7 @@ description: >
 
 This component is responsible for integrating with a queue system based off the configuration provided.
 
-The queue system is used by the Vela server for pushing workloads that will be run by a [worker](/docs/installation/worker/).
+The queue system is used by the Vela server for pushing workloads that will be run by a [worker](/docs/installation/worker/worker.md).
 
 Workloads published to the queue are managed with a [first in, first out (FIFO)](https://en.wikipedia.org/wiki/FIFO_(computing_and_electronics)) strategy.
 
@@ -27,7 +27,7 @@ The following options are used to configure the component:
 | `queue.public-key`  | public key for opening items after popping them off the queue | `false`  | `N/A`      | `QUEUE_PUBLIC_KEY`\`VELA_QUEUE_PUBLIC_KEY`   |
 
 :::note
-For more information on these configuration options, please see the [server reference](/docs/installation/server/reference/).
+For more information on these configuration options, please see the [server reference](/docs/reference/installation/server/server.md).
 :::
 
 ## Drivers

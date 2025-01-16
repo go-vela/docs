@@ -14,7 +14,7 @@ User is looking to create a pipeline that builds an artifact on any event or bra
 
 ### Steps
 
-The following [pipeline concepts](/docs/tour/) are being used in the pipeline below:
+The following [pipeline concepts](None) are being used in the pipeline below:
 
 * [Steps](/docs/tour/steps/)
   * [image](/docs/tour/image/)
@@ -58,7 +58,7 @@ steps:
 
 ### Stages
 
-The following [pipeline concepts](/docs/tour/) are being used in the pipeline below:
+The following [pipeline concepts](None) are being used in the pipeline below:
 
 * [Stages](/docs/tour/stages/)
   * [Needs](/docs/tour/stages/)

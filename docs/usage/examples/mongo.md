@@ -16,7 +16,7 @@ User is looking to create a pipeline that can integrate with an ephemeral Mongo 
 
 Services Yaml block can be used with stages and steps pipelines. This example uses a basic steps configuration.
 
-The following [pipeline concepts](/docs/tour/) are being used in the pipeline below:
+The following [pipeline concepts](None) are being used in the pipeline below:
 
 * [Services](/docs/tour/services/)
   * [Image](/docs/tour/image/)
@@ -52,7 +52,7 @@ steps:
 
 If you're looking for more granular start time for the container you can add a detach flag within stages and steps pipelines.
 
-The following [pipeline concepts](/docs/tour/) are being used in the pipeline below:
+The following [pipeline concepts](None) are being used in the pipeline below:
 
 * [Steps](/docs/tour/steps/)
   * [Image](/docs/tour/image/)

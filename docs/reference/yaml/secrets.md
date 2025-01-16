@@ -131,7 +131,7 @@ secrets:
 ```
 
 :::warning `step_start` or lazy loading secrets
-is not currently available for the [Kubernetes-based workers](/docs/installation/worker/kubernetes/) and does not work with secrets
+is not currently available for the [Kubernetes-based workers](/docs/installation/worker/kubernetes.md) and does not work with secrets
 originating from plugins loaded via [`origin:`](/docs/reference/yaml/secrets/#the-pull-key) (see below).
 :::
 
