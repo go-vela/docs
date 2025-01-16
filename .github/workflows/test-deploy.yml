@@ -30,4 +30,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Test build website
+        env:
+          GITHUB_PAT: ${{ secrets.DOCUSAURUS_GITHUB_PAT }}
+          GHE_PAT: ${{ secrets.DOCUSAURUS_GHE_PAT }}
+          GHE_API_URL: ${{ secrets.DOCUSAURUS_GHE_API_URL }}  
         run: pnpm build
