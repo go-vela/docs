@@ -27,7 +27,7 @@ The following options are used to configure the component:
 | `scm.webhook.addr` | url for webhooks on the SCM to send requests to                 | `false`  | the address of the Vela server (`$VELA_ADDR`)            | `SCM_WEBHOOK_ADDR`\`VELA_SCM_WEBHOOK_ADDR` |
 
 :::note
-For more information on these configuration options, please see the [server reference](/docs/installation/server/reference/).
+For more information on these configuration options, please see the [server reference](/docs/reference/installation/server/server.md).
 :::
 
 ## Drivers

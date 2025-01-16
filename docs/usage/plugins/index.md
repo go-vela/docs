@@ -1,6 +1,6 @@
 ---
 title: "Plugins"
-sidebar_position: 2
+sidebar_position: 4
 ---
 
 Vela contains two plugin types:

@@ -93,5 +93,5 @@ steps:
 
 #### vela
 
-The `vela` function provides the convenience of accessing [Vela environment variables](/docs/reference/environment/variables/) within your Vela templates. See its dedicated [platform vars page](/docs/templates/tutorials/go/vars_platform/) for more info.
+The `vela` function provides the convenience of accessing [Vela environment variables](/docs/reference/environment/variables.md) within your Vela templates. See its dedicated [platform vars page](/docs/templates/tutorials/go/vars_platform/) for more info.
 

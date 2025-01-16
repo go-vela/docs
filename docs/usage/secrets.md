@@ -5,16 +5,16 @@ description: >
   Learn about internal Vela secrets.
 ---
 
-This page will primarily focus on `internal secrets`. If you would like to learn more about `external secrets`, check out the [external secrets examples page](/docs/usage/examples/secrets_external/). For a broader view of secrets and how to use `internal` or `external` secrets in your pipeline, check out the [secrets tour page](/docs/tour/secrets/).
+This page will primarily focus on `internal secrets`. If you would like to learn more about `external secrets`, check out the [external secrets examples page](/docs/usage/examples/secrets_external.md). For a broader view of secrets and how to use `internal` or `external` secrets in your pipeline, check out the [secrets tour page](/docs/tour/secrets/).
 
 :::warning
 Internal secrets do NOT have the `pull_request` event enabled by default. This is intentional to help mitigate exposure via a pull request against the repo. You can override this behavior, at your own risk, for each secret.
 :::
 
 ## Internal Secrets
-Internal secrets are generally managed via the UI or the [CLI](/docs/reference/cli/secret/). They can also be managed via the [API](/docs/reference/api/secret/).
+Internal secrets are generally managed via the UI or the [CLI](/docs/reference/cli/secret/secret.md). They can also be managed via the [API](/docs/reference/api/secret/secret.md).
 
-A full pipeline example is available [here](/docs/usage/examples/secrets_internal/)
+A full pipeline example is available [here](/docs/usage/examples/secrets_internal.md)
 
 _Example pipeline yaml block for internal secrets_
 

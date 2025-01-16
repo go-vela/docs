@@ -11,7 +11,7 @@ The first step to troubleshooting this issue requires viewing the webhook delive
 This can be accomplished by using one of the following methods:
 
 * **UI** - Navigate to the `https://vela.example.com/<org>/<repo>/hooks` page for the repository
-* **CLI** - Run [the `vela get hooks --org <org> --repo <repo>` command for the repository](/docs/reference/cli/hook/get/)
+* **CLI** - Run [the `vela get hooks --org <org> --repo <repo>` command for the repository](/docs/reference/cli/hook/get.md)
 
 After finding the information for the webhook, please use the list below which includes details on how to resolve the issue.
 
@@ -26,7 +26,7 @@ To resolve the issue, the repository will need to be repaired which will recreat
 This can be accomplished by using one of the following methods:
 
 * **UI** - Click the `Repair` button on the `https://vela.example.com/<org>/<repo>/settings` page for the repository
-* **CLI** - Run [the `vela repair repo --org <org> --repo <repo>` command for the repository](/docs/reference/cli/repo/repair/)
+* **CLI** - Run [the `vela repair repo --org <org> --repo <repo>` command for the repository](/docs/reference/cli/repo/repair.md)
 
 :::tip
 An access level of `admin` is required in order to repair a repository.
@@ -43,7 +43,7 @@ To resolve the issue, the repository will need to be repaired which will recreat
 This can be accomplished by using one of the following methods:
 
 * **UI** - Click the `Repair` button on the `https://vela.example.com/<org>/<repo>/settings` page for the repository
-* **CLI** - Run [the `vela repair repo --org <org> --repo <repo>` command for the repository](/docs/reference/cli/repo/repair/)
+* **CLI** - Run [the `vela repair repo --org <org> --repo <repo>` command for the repository](/docs/reference/cli/repo/repair.md)
 
 :::tip
 An access level of `admin` is required in order to repair a repository.
@@ -60,7 +60,7 @@ To resolve the issue, find a build with a `pending` or `running` status and canc
 This can be accomplished by using one of the following methods:
 
 * **UI** - Click the `Cancel Build` button on the `https://vela.example.com/<org>/<repo>/<build>` page for the repository
-* **CLI** - Run [the `vela cancel build --org <org> --repo <repo> --build <build>` command for the repository](/docs/reference/cli/build/cancel/)
+* **CLI** - Run [the `vela cancel build --org <org> --repo <repo> --build <build>` command for the repository](/docs/reference/cli/build/cancel.md)
 
 :::tip
 An alternative solution is to increase the build limit for the repository.
@@ -68,7 +68,7 @@ An alternative solution is to increase the build limit for the repository.
 This can be accomplished by using one of the following methods:
 
 * **UI** - Update the `Build Limit` field on the `https://vela.example.com/<org>/<repo>/settings` page for the repository
-* **CLI** - Run [the `vela update repo --org <org> --repo <repo> --build.limit <limit>` command for the repository](/docs/reference/cli/repo/update/)
+* **CLI** - Run [the `vela update repo --org <org> --repo <repo> --build.limit <limit>` command for the repository](/docs/reference/cli/repo/update.md)
 :::
 
 ### Unable To Unmarshal YAML
@@ -79,7 +79,7 @@ This behavior indicates the pipeline can't be compiled because it includes inval
 
 To resolve the issue, identify the incorrect syntax in the pipeline and update it with proper value(s).
 
-This can be accomplished by using the [`vela validate pipeline` CLI command](/docs/reference/cli/pipeline/validate/) in the directory where the pipeline is located.
+This can be accomplished by using the [`vela validate pipeline` CLI command](/docs/reference/cli/pipeline/validate.md) in the directory where the pipeline is located.
 
 ### Your Account Was Suspended
 
@@ -92,7 +92,7 @@ To resolve the issue, the repository owner will need to be changed to an unsuspe
 This can be accomplished by using one of the following methods:
 
 * **UI** - Click the `Chown` button on the `https://vela.example.com/<org>/<repo>/settings` page for the repository
-* **CLI** - Run [the `vela chown repo --org <org> --repo <repo>` command for the repository](/docs/reference/cli/repo/chown/)
+* **CLI** - Run [the `vela chown repo --org <org> --repo <repo>` command for the repository](/docs/reference/cli/repo/chown.md)
 
 :::tip
 An access level of `admin` is required in order to change ownership of a repository.
@@ -107,7 +107,7 @@ The first step to troubleshooting this issue requires viewing the build object f
 This can be accomplished by using one of the following methods:
 
 * **UI** - Navigate to the `https://vela.example.com/<org>/<repo>` page for the repository
-* **CLI** - Run [the `vela get builds --org <org> --repo <repo>` command for the repository](/docs/reference/cli/build/get/)
+* **CLI** - Run [the `vela get builds --org <org> --repo <repo>` command for the repository](/docs/reference/cli/build/get.md)
 
 After finding the information for the build, please use the list below which includes details on how to resolve the issue.
 
@@ -115,7 +115,7 @@ After finding the information for the build, please use the list below which inc
 
 ![Build Is Pending](/img/troubleshooting/build_is_pending.png)
 
-This behavior indicates the number of `running` builds for the system is greater than the number of [workers](/docs/installation/worker/) available.
+This behavior indicates the number of `running` builds for the system is greater than the number of [workers](/docs/installation/worker/worker.md) available.
 
 Unfortunately, the only way to resolve the issue is to wait until a worker becomes available to run your build.
 
@@ -138,7 +138,7 @@ An alternative solution is to increase the build timeout for the repository.
 This can be accomplished by using one of the following methods:
 
 * **UI** - Update the `Build Timeout` field on the `https://vela.example.com/<org>/<repo>/settings` page for the repository
-* **CLI** - Run [the `vela update repo --org <org> --repo <repo> --timeout <timeout>` command for the repository](/docs/reference/cli/repo/update/)
+* **CLI** - Run [the `vela update repo --org <org> --repo <repo> --timeout <timeout>` command for the repository](/docs/reference/cli/repo/update.md)
 :::
 
 ### Invalid Reference Format
@@ -157,7 +157,7 @@ This can be accomplished by using the [`docker pull` CLI command](https://docs.d
 
 This behavior indicates [the `key` property](/docs/reference/yaml/secrets/#the-key-key) provided for a secret in the pipeline is invalid.
 
-To resolve the issue, explicitly define the secret depending on the type as outlined in the [secret usage docs](/docs/usage/secrets/) with all of the expected fields.
+To resolve the issue, explicitly define the secret depending on the type as outlined in the [secret usage docs](/docs/usage/secrets.md) with all of the expected fields.
 
 If you are using a secret that only defines `name` as the property and are receiving this error, you will need add the missing properties as this way of referencing a secret was deprecated in an older version of Vela.
 

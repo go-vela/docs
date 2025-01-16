@@ -46,7 +46,7 @@ Authentication complete. Continue to save configuration (existing config will be
 ```
 
 :::tip
-For more information, you can visit the [CLI config documentation](/docs/reference/cli/config/).
+For more information, you can visit the [CLI config documentation](/docs/reference/cli/config/config.md).
 :::
 
 ### Environment Variables
