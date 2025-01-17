@@ -17,7 +17,7 @@ That's when you can use the `pull:` key to set the policy for how/when the image
 
 **Expand your knowledge with an example!**
 
-* [Pull policy](/docs/usage/pull_policies/)
+* [Pull policy](/docs/usage/pull_policies.md)
 
 <!-- section break -->
 
@@ -51,5 +51,5 @@ image: index.docker.io/library/alpine:3
 
 **Key references:**
 
-[`name:`](/docs/reference/yaml/steps/#the-name-key), [`image:`](/docs/reference/yaml/steps/#the-image-key), [`pull:`](/docs/reference/yaml/steps/#the-commands-key),  [`commands:`](/docs/reference/yaml/steps/#the-commands-key),
+[`name:`](/reference/yaml/steps/#the-name-key), [`image:`](/reference/yaml/steps/#the-image-key), [`pull:`](/reference/yaml/steps/#the-commands-key),  [`commands:`](/reference/yaml/steps/#the-commands-key),
 

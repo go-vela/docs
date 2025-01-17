@@ -18,9 +18,9 @@ Both options have disadvantages and advantages, so we encourage all Vela adminis
 
 Building an image without elevated access gives administrators the most secure pattern for not allowing any elevated access to the workers within the cluster. There are two plugin options for building those images:
 
-* [vela-kaniko](None)
+* [vela-kaniko](/docs/usage/plugins/registry/Kaniko.md)
 
-We recommend customers read the [tool comparisons](/docs/usage/docker/#additional-resources) before picking a technology for building their images. In-depth examples for building with either utility are available within their respective plugin documentation pages. A simple example is provided below:
+We recommend customers read the [tool comparisons](/usage/docker/#additional-resources) before picking a technology for building their images. In-depth examples for building with either utility are available within their respective plugin documentation pages. A simple example is provided below:
 
 ```yaml
 version: "1"
@@ -37,7 +37,7 @@ steps:
 
 Building an image with elevated access is a allowed pattern as long as the administrators have set the required allow list of images on the worker. It's *important to work with your administrator* to understand stand which pattern you instances was deployed to support. The supported plugin for building those images:
 
-* [vela-docker](None)
+* [vela-docker](/docs/usage/tour/)
 
 ```yaml
 version: "1"

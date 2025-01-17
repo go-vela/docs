@@ -12,7 +12,7 @@ For this, we introduce pipeline secrets as a pattern to keep sensitive data safe
 
 They are the answer when you don’t want to provide that sensitive information in plain text.
 
-Let's go back to our Docker image used within the plugin tutorial and focus only on the repo secrets type. You can learn about all secret types in the [secrets usage section](/docs/usage/secrets/).
+Let's go back to our Docker image used within the plugin tutorial and focus only on the repo secrets type. You can learn about all secret types in the [secrets usage section](/docs/usage/secrets.md).
 
 The pipeline we are looking at shows a few different patterns on how you can leverage adding and aliasing secrets in your pipeline.
 
@@ -20,8 +20,8 @@ However, this time we are going to remove the `username:` and `password:` YAML k
 
 **See it in action with examples!**
 
-* [internal secrets](/docs/usage/examples/secrets_internal/)
-* [external secrets](/docs/usage/examples/secrets_external/)
+* [internal secrets](/docs/usage/examples/secrets_internal.md)
+* [external secrets](/docs/usage/examples/secrets_external.md)
 
 <!-- section break -->
 
@@ -73,4 +73,4 @@ secrets:
 
 **Key references:**
 
-[(step) `secrets:`](/docs/reference/yaml/steps/#the-secrets-key), [(parent)  `secrets:`](/docs/reference/yaml/secrets),
+[(step) `secrets:`](/reference/yaml/steps/#the-secrets-key), [(parent)  `secrets:`](/docs/reference/yaml/secrets.md),

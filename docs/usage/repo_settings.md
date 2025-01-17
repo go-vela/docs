@@ -35,7 +35,7 @@ Vela can subscribe to any of the following webhook events:
 | `delete:branch`               |  a repository branch has been deleted                                      |
 | `delete:tag`                  |  a repository tag has been deleted                                         |
 
-Pipelines can be written to behave differently based on which event triggered the build (see [rulesets](/docs/tour/rulesets)).
+Pipelines can be written to behave differently based on which event triggered the build (see [rulesets](/docs/usage/tour/rulesets.md).
 
 :::note
 Event scoping (`event:action`) was included in Vela release `v0.23.0`. As such, general `event` rulesets in pipelines are mapped as following:
@@ -46,7 +46,7 @@ Event scoping (`event:action`) was included in Vela release `v0.23.0`. As such, 
 
 :::
 
-Updating webhook events for a Vela repository _must_ be done through Vela (API/CLI/UI) in order to preserve the signature integrity of the webhook. Otherwise, users will experience a [webhook signature error](/docs/faq/usage/#payload-signature-check-failed).
+Updating webhook events for a Vela repository _must_ be done through Vela (API/CLI/UI) in order to preserve the signature integrity of the webhook. Otherwise, users will experience a [webhook signature error](/usage/troubleshooting/#payload-signature-check-failed).
 
 ### Access
 
@@ -67,7 +67,7 @@ The four settings are:
 
 When a build is awaiting approval, the SCM will be updated with the status `pending` with the description `build needs approval from repo admin to run`.
 
-Repository admins can approve a build in the UI or by using the [CLI](/docs/reference/cli/build/approve).
+Repository admins can approve a build in the UI or by using the [CLI](/docs/reference/cli/build/approve.md).
 
 PR builds that are marked as `pending approval` will auto cancel any previous PR build from the same source (if one exists). This is to prevent a build up of builds pending approval from the same source.
 
@@ -79,7 +79,7 @@ Builds that are triggered from a webhook event that result in exceeding the buil
 
 ### Build Timeout
 
-The Build Timeout setting determines the time limit for any given build for a repository. If a build lasts longer than the set timeout, the build will [error out](/docs/faq/usage/#context-deadline-exceeded).
+The Build Timeout setting determines the time limit for any given build for a repository. If a build lasts longer than the set timeout, the build will [error out](/usage/troubleshooting/#context-deadline-exceeded).
 
 ### Build Counter
 
@@ -93,7 +93,7 @@ Check out the [usage documentation](/docs/usage/badge.md) for more details on cu
 
 ### Repository Actions
 
-**Chown** — every Vela repository requires an owner. This owner is typically the user that first enabled the repository. The owner must have _write_ permissions for the repository at the minimum. The "Chown" button (or [command](/docs/reference/cli/repo/chown.md)) will transfer the ownership to the user making the request.
+**Chown** — every Vela repository requires an owner. This owner is typically the user that first enabled the repository. The owner must have _write_ permissions for the repository at the minimum. The "Chown" button (or [command](/docs/reference/cli/repo/chown.md) will transfer the ownership to the user making the request.
 
 **Repair** — whenever the connection between Vela and the webhook configured with the source control manager has been invalidated, the Vela repository must be repaired. This involves the deletion and re-creation of the webhook with the source repository. The build history will be preserved, but the ability to redeliver old webhooks will not.
 
@@ -103,9 +103,9 @@ The following are the options for the formatting of the base pipeline:
 
 | Type        | Description                                                                                             |
 |-------------|---------------------------------------------------------------------------------------------------------|
-| `YAML`      |  Default pipeline syntax ([Reference Documentation](/docs/reference/yaml/yaml.md))                             |
-| `Go`        |  Standard YAML with Go inline functionality ([Reference Documentation](/docs/templates/tutorials/go/))  |
-| `Starlark`  |  YAML generation using Starlark ([Reference Documentation](None))        |
+| `YAML`      |  Default pipeline syntax ([Reference Documentation](/docs/reference/yaml/yaml.md)                             |
+| `Go`        |  Standard YAML with Go inline functionality ([Reference Documentation](/docs/usage/templates/go/)  |
+| `Starlark`  |  YAML generation using Starlark ([Reference Documentation](/docs/usage/tour/)        |
 
 Note: by default, templates are treated with `Go` syntax. In order to match that behavior for the base pipeline, this setting must be changed to `Go`.
 
@@ -122,7 +122,7 @@ metadata:
         default_branch: true
 ```
 
-Auto canceling builds is a build strategy that will prioritize the most recent status of the source code by canceling obsolete running/pending builds. More information can be found [here](/docs/reference/yaml/metadata/#the-auto_cancel-key).
+Auto canceling builds is a build strategy that will prioritize the most recent status of the source code by canceling obsolete running/pending builds. More information can be found [here](/reference/yaml/metadata/#the-auto_cancel-key).
 
 ### Render Inline
 
@@ -136,7 +136,7 @@ templates:
       type: github
 ```
 
-Render Inline is a template compilation strategy that appends templates to the end of the base pipeline in the order in which they are declared. This is the only viable method of calling templates with `stages` at the top level. More information can be found [here](/docs/templates/#rendering-inline-directly-in-velayml).
+Render Inline is a template compilation strategy that appends templates to the end of the base pipeline in the order in which they are declared. This is the only viable method of calling templates with `stages` at the top level. More information can be found [here](/usage/templates/#rendering-inline-directly-in-velayml).
 
 ### Clone
 
@@ -145,4 +145,4 @@ metadata:
     clone: false
 ```
 
-Setting the `clone` key to `false` will override Vela's default behavior of cloning the repository at the start of the build. More information can be found [here](/docs/tour/cloning/).
+Setting the `clone` key to `false` will override Vela's default behavior of cloning the repository at the start of the build. More information can be found [here](/docs/usage/tour/cloning.md).

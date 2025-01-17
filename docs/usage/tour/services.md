@@ -18,9 +18,9 @@ However, there are times when you need more control over when a service is creat
 
 **See it in action with examples!**
 
-* [Mongo](/docs/usage/examples/mongo/)
-* [Postgres](/docs/usage/examples/postgres/)
-* [Redis](/docs/usage/examples/redis/)
+* [Mongo](/docs/usage/examples/mongo.md)
+* [Postgres](/docs/usage/examples/postgres.md)
+* [Redis](/docs/usage/examples/redis.md)
 
 <!-- section break -->
 
@@ -73,4 +73,4 @@ $ vela exec pipeline
 
 **Key references:**
 
-[`name:`](/docs/reference/yaml/services/#the-name-key), [`image:`](/docs/reference/yaml/services/#the-image-key), [`detach:`](/docs/reference/yaml/steps/#the-detach-key),
+[`name:`](/reference/yaml/services/#the-name-key), [`image:`](/reference/yaml/services/#the-image-key), [`detach:`](/reference/yaml/steps/#the-detach-key),

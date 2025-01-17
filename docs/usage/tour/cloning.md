@@ -14,7 +14,7 @@ However, sometimes you may need to customize, override or disable the default cl
 
 **Expand your knowledge with an example!**
 
-* [Understanding the workspace](/docs/usage/workspace/)
+* [Understanding the workspace](/docs/usage/workspace.md)
 
 <!-- section break -->
 
@@ -55,5 +55,5 @@ steps:
 
 **Key references:**
 
-[`clone:`](/docs/reference/yaml/metadata/#the-clone-key), [`name:`](/docs/reference/yaml/steps/#the-name-key), [`image:`](/docs/reference/yaml/steps/#the-image-key), [`parameters:`](/docs/reference/yaml/steps/#the-parameters-key),
+[`clone:`](/reference/yaml/metadata/#the-clone-key), [`name:`](/reference/yaml/steps/#the-name-key), [`image:`](/reference/yaml/steps/#the-image-key), [`parameters:`](/reference/yaml/steps/#the-parameters-key),
 

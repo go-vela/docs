@@ -9,12 +9,12 @@ This section contains a list of all variables that must be provided to the UI.
 
 ### VELA_API
 
-This variable sets a fully qualified URL to the Vela [server](/docs/installation/server/) address.
+This variable sets a fully qualified URL to the Vela [server](/docs/installation/server/server.md) address.
 
 The variable should be provided as a `string`.
 
 :::note
-This variable should match [the `VELA_ADDR` variable](/docs/installation/server/reference/#vela_addr) provided to the server.
+This variable should match [the `VELA_ADDR` variable](/reference/installation/server#vela_addr) provided to the server.
 :::
 
 ## Optional
@@ -78,5 +78,5 @@ The variable can be provided as an `integer`.
 :::note
 This variable has a default value of `30`.
 
-This variable should match [the `VELA_MAX_BUILD_LIMIT` variable](/docs/installation/server/reference/#vela_max_build_limit) provided to the server.
+This variable should match [the `VELA_MAX_BUILD_LIMIT` variable](/reference/installation/server#vela_max_build_limit) provided to the server.
 :::

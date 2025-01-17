@@ -63,7 +63,7 @@ The specific value we need from the output is the line with `key` in it (i.e. `k
 ### Step 3: Create a Shared Secret
 
 :::info
-Skip this step if you are utilizing the [worker registration auth flow](/docs/installation/worker/docker/#worker-registration-and-auth-refresh)
+Skip this step if you are utilizing the [worker registration auth flow](/installation/worker/docker/#worker-registration-and-auth-refresh)
 :::
 
 Create a shared secret used for authenticating communication between workers and the server.
@@ -133,7 +133,7 @@ $ docker run \
 ```
 
 :::info
-If using the [server-worker trusted symmetric auth method](/docs/installation/worker/docker/#worker-server-trusted-symmetric-token), be sure to add the `VELA_SECRET` env variable:
+If using the [server-worker trusted symmetric auth method](/installation/worker/docker/#worker-server-trusted-symmetric-token), be sure to add the `VELA_SECRET` env variable:
 ```shell
   --env=VELA_SECRET=<shared_secret>
 ```

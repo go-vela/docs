@@ -37,5 +37,5 @@ Vela also supports up to 10 step-level statuses. These statuses will reflect the
 
 **Key references:**
 
-[`name:`](/docs/reference/yaml/steps/#the-name-key), [`image:`](/docs/reference/yaml/steps/#the-image-key), [`commands:`](/docs/reference/yaml/steps/#the-commands-key), [`report_as:`](/docs/reference/yaml/steps/#the-report_as-key)
+[`name:`](/reference/yaml/steps/#the-name-key), [`image:`](/reference/yaml/steps/#the-image-key), [`commands:`](/reference/yaml/steps/#the-commands-key), [`report_as:`](/reference/yaml/steps/#the-report_as-key)
 

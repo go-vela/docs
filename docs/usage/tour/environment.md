@@ -19,7 +19,7 @@ With this substitution you should be aware `${variable}` expressions are subject
 
 **Expand your knowledge with an example!**
 
-* [Using the environment](/docs/usage/environment/)
+* [Using the environment](/docs/usage/environment.md)
 
 <!-- section break -->
 
@@ -59,4 +59,4 @@ stages:
 
 **Key references:**
 
-[`name:`](/docs/reference/yaml/steps/#the-name-key), [`image:`](/docs/reference/yaml/steps/#the-image-key), [`environment:`](/docs/reference/yaml/steps/#the-environment-key), [`commands:`](/docs/reference/yaml/steps/#the-commands-key),
+[`name:`](/reference/yaml/steps/#the-name-key), [`image:`](/reference/yaml/steps/#the-image-key), [`environment:`](/reference/yaml/steps/#the-environment-key), [`commands:`](/reference/yaml/steps/#the-commands-key),
