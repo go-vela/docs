@@ -116,6 +116,12 @@ const config = {
             },
           ],
       },
+      docs: {
+        sidebar: {
+          hideable: true,
+          autoCollapseCategories: true,
+        },
+      },
       footer: {
         style: 'dark',
         copyright: `Copyright © ${new Date().getFullYear()} Target Brands All Rights Reserved.`,

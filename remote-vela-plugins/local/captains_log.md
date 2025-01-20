@@ -76,7 +76,7 @@ The plugin accepts the following `parameters` for authentication:
 | `slack_token`  | `SLACK_URL`                        |
 | `slack_url`    | `SLACK_TOKEN`                      |
 
-Users can use [Vela secrets](/docs/usage/tour/secrets/) to substitute these sensitive values at runtime:
+Users can use [Vela secrets](/docs/usage/tour/secrets.md) to substitute these sensitive values at runtime:
 
 ```diff
 steps:
@@ -101,8 +101,4 @@ This example will add the `secrets` to the `captains-log` step as environment va
 - `SLACK_URL`=`<value>`
 :::
 
-## Parameters
 
-For more on configuration options, visit the Captain's Log documentation.
-
-https://target.github.io/captains-log/#/configuration/

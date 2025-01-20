@@ -131,7 +131,7 @@ steps:
 ```
 ## Step 5 - Trigger the Pipeline
 
-If you've followed the documentation for [enabling a repo](/docs/usage/enable_repo.md) and wrote a pipeline ([here are some example pipelines](/docs/usage/tour/)), all that should be left is to push your pipeline to your repo.
+If you've followed the documentation for [enabling a repo](/docs/usage/enable_repo.md) and wrote a pipeline ([here are some example pipelines](/docs/usage/tour/tour.md)), all that should be left is to push your pipeline to your repo.
 
 If a build does not trigger when your push a change to your repo, check the webhook response to see if there is an error.
 
