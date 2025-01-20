@@ -16,11 +16,11 @@ Both steps are pulling a [Alpine Linux](https://alpinelinux.org/) image from [Do
 
 **See it in action with examples!**
 
-* [Go](/docs/usage/examples/go_modules/)
-* [Rust](/docs/usage/examples/rust_cargo/)
-* [Gradle](/docs/usage/examples/java_gradle/)
-* [Maven](/docs/usage/examples/java_maven/)
-* [Node](/docs/usage/examples/node/)
+* [Go](/docs/usage/examples/go_modules.md)
+* [Rust](/docs/usage/examples/rust_cargo.md)
+* [Gradle](/docs/usage/examples/java_gradle.md)
+* [Maven](/docs/usage/examples/java_maven.md)
+* [Node](/docs/usage/examples/node.md)
 
 <!-- section break -->
 
@@ -54,4 +54,4 @@ $ vela exec pipeline
 
 **Key references:**
 
-[`name:`](/docs/reference/yaml/steps/#the-name-key), [`image:`](/docs/reference/yaml/steps/#the-image-key), [`commands:`](/docs/reference/yaml/steps/#the-commands-key),
+[`name:`](/reference/yaml/steps/#the-name-key), [`image:`](/reference/yaml/steps/#the-image-key), [`commands:`](/reference/yaml/steps/#the-commands-key),

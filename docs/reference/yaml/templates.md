@@ -30,7 +30,7 @@ templates:
 ### Usage
 
 :::tip
-To learn how to write templates, see the [template documentation](/docs/templates)
+To learn how to write templates, see the [template documentation](/docs/usage/templates/templates.md)
 :::
 
 #### The `name:` key

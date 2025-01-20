@@ -30,7 +30,7 @@ This example only shows a subset of all possible configuration options.
 You will need to store some env vars in a `Secret`, and the rest can go in a `ConfigMap`.
 
 :::info
-Determine which worker auth method to use for worker-server communication before writing the `ConfigMap`. Details of the two offerings can be found [here](/docs/installation/worker/docker/#step-2-determine-worker-authentication-and-start-worker).
+Determine which worker auth method to use for worker-server communication before writing the `ConfigMap`. Details of the two offerings can be found [here](/installation/worker/docker/#step-2-determine-worker-authentication-and-start-worker).
 :::
 
 ```yaml

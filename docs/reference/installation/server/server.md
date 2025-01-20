@@ -14,7 +14,7 @@ The server is made up of several components, responsible for specific tasks, nec
 | Name       | Description                                                                                                       |
 | ---------- | ----------------------------------------------------------------------------------------------------------------- |
 | `settings` | keeps track of updated runtime properties for the [server](/docs/installation/server/server.md)                            |
-| `compiler` | transforms a [pipeline](None) into an executable workload for the [worker](/docs/installation/worker/worker.md)     |
+| `compiler` | transforms a [pipeline](/docs/usage/tour/tour.md) into an executable workload for the [worker](/docs/installation/worker/worker.md)     |
 | `database` | integrates with a database provider for storing application data at rest                                          |
 | `queue`    | integrates with a queue provider for pushing workloads that will be run by a [worker](/docs/installation/worker/worker.md) |
 | `secret`   | integrates with a secret provider for storing sensitive application data at rest                                  |
@@ -25,7 +25,7 @@ The server is made up of several components, responsible for specific tasks, nec
 
 This section contains a list of all variables that must be provided to the server.
 
-Some properties can be updated while the server is running using the [settings component](/docs/installation/server/reference/settings).
+Some properties can be updated while the server is running using the [settings component](/docs/reference/installation/server/settings.md).
 
 ### VELA_ADDR
 
@@ -64,7 +64,7 @@ This variable sets the driver to use for the queue functionality for the server.
 The variable should be provided as a `string`.
 
 :::note
-This variable should match [the `VELA_QUEUE_DRIVER` variable](/docs/installation/worker/reference/#vela_queue_driver) provided to the worker.
+This variable should match [the `VELA_QUEUE_DRIVER` variable](/reference/installation/worker/#vela_queue_driver) provided to the worker.
 
 The possible options to provide for this variable are:
 
@@ -97,11 +97,11 @@ The variable should be provided as a `string`.
 
 This section contains a list of all variables that can be provided to the server.
 
-Some properties can be updated while the server is running using the [settings component](/docs/installation/server/reference/settings).
+Some properties can be updated while the server is running using the [settings component](/docs/reference/installation/server/settings.md).
 
 ### VELA_CLONE_IMAGE
 
-This configuration variable is used by the [compiler component](/docs/installation/server/reference/compiler) for the server.
+This configuration variable is used by the [compiler component](/docs/reference/installation/server/compiler.md) for the server.
 
 The clone image sets the clone image to use for the Vela injected clone step in a pipeline.
 
@@ -109,7 +109,7 @@ By default, Vela will use the latest available release of the clone image at the
 
 This variable should be provided as a `string`.
 
-This property can be updated while the server is running using the [settings component](/docs/installation/server/reference/settings).
+This property can be updated while the server is running using the [settings component](/docs/reference/installation/server/settings.md).
 
 ### VELA_COMPILER_GITHUB
 
@@ -117,7 +117,7 @@ This configuration variable is used by the [compiler component](/docs/reference/
 
 Examples using this configuration variable are provided in the above reference documentation.
 
-This variable enables using GitHub or GitHub Enterprise Server as a registry for fetching pipeline [templates](/docs/tour/templates/) from.
+This variable enables using GitHub or GitHub Enterprise Server as a registry for fetching pipeline [templates](docs/usage/tour/templates.md) from.
 
 By default, Vela will use [GitHub](https://github.com/) as a registry for fetching templates.
 
@@ -135,7 +135,7 @@ This configuration variable is used by the [compiler component](/docs/reference/
 
 Examples using this configuration variable are provided in the above reference documentation.
 
-This variable sets a [Personal Access Token (PAT)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) for fetching pipeline [templates](/docs/tour/templates/) from GitHub or GitHub Enterprise Server.
+This variable sets a [Personal Access Token (PAT)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) for fetching pipeline [templates](docs/usage/tour/templates.md) from GitHub or GitHub Enterprise Server.
 
 By default, Vela will use [GitHub](https://github.com/) as a registry for fetching templates.
 
@@ -149,7 +149,7 @@ This configuration variable is used by the [compiler component](/docs/reference/
 
 Examples using this configuration variable are provided in the above reference documentation.
 
-This variable sets a fully qualified URL to GitHub or GitHub Enterprise Server used for fetching pipeline [templates](/docs/tour/templates/) from.
+This variable sets a fully qualified URL to GitHub or GitHub Enterprise Server used for fetching pipeline [templates](docs/usage/tour/templates.md) from.
 
 By default, Vela will use [GitHub](https://github.com/) as a registry for fetching templates.
 
@@ -393,7 +393,7 @@ The variable can be provided as an `integer`.
 :::note
 This variable has a default value of `30`.
 
-This variable should match [the `VELA_MAX_BUILD_LIMIT` variable](/docs/installation/ui/reference/#vela_max_build_limit) provided to the UI.
+This variable should match [the `VELA_MAX_BUILD_LIMIT` variable](/reference/installation/ui/#vela_max_build_limit) provided to the UI.
 :::
 
 ### VELA_MODIFICATION_ADDR
@@ -438,7 +438,7 @@ This variable has a default value of `8s`.
 
 ### VELA_MAX_TEMPLATE_DEPTH
 
-This configuration variable is used by the [compiler component](/docs/installation/server/reference/compiler) for the server.
+This configuration variable is used by the [compiler component](/docs/reference/installation/server/compiler.md) for the server.
 
 This variable sets the maximum depth of nested templates that can be called during compilation.
 
@@ -448,11 +448,11 @@ The variable can be provided as an `integer`.
 This variable has a default value of `3`.
 :::
 
-This property can be updated while the server is running using the [settings component](/docs/installation/server/reference/settings).
+This property can be updated while the server is running using the [settings component](/docs/reference/installation/server/settings.md).
 
 ### VELA_COMPILER_STARLARK_EXEC_LIMIT
 
-This configuration variable is used by the [compiler component](/docs/installation/server/reference/compiler) for the server.
+This configuration variable is used by the [compiler component](/docs/reference/installation/server/compiler.md) for the server.
 
 This variable sets the starlark execution step limit for compiling starlark pipelines.
 
@@ -462,7 +462,7 @@ The variable can be provided as an `integer`.
 This variable has a default value of `7500`.
 :::
 
-This property can be updated while the server is running using the [settings component](/docs/installation/server/reference/settings).
+This property can be updated while the server is running using the [settings component](/docs/reference/installation/server/settings.md).
 
 ### VELA_PORT
 
@@ -483,7 +483,7 @@ This variable enables the server to connect to a queue cluster rather than a sta
 The variable can be provided as a `boolean`.
 
 :::note
-This variable should match [the `VELA_QUEUE_CLUSTER` variable](/docs/installation/worker/reference/#vela_queue_cluster) provided to the worker.
+This variable should match [the `VELA_QUEUE_CLUSTER` variable](/reference/installation/worker/#vela_queue_cluster) provided to the worker.
 :::
 
 ### VELA_QUEUE_POP_TIMEOUT
@@ -510,7 +510,7 @@ The variable can be provided as a comma-separated `list` (i.e. `myRoute1,myRoute
 This variable has a default value of `vela`.
 :::
 
-This property can be updated while the server is running using the [settings component](/docs/installation/server/reference/settings).
+This property can be updated while the server is running using the [settings component](/docs/reference/installation/server/settings.md).
 
 ### VELA_QUEUE_PRIVATE_KEY
 
@@ -534,7 +534,7 @@ The variable can be provided as a comma-separated `list` (i.e. `myOrg1/myRepo1,m
 By default, no repositories are allowed to be enabled. To allow any repository to be enabled, provide a single value of `*`.
 :::
 
-This property can be updated while the server is running using the [settings component](/docs/installation/server/reference/settings).
+This property can be updated while the server is running using the [settings component](/docs/reference/installation/server/settings.md).
 
 ### VELA_SCHEDULE_ALLOWLIST
 
@@ -546,7 +546,7 @@ The variable can be provided as a comma-separated `list` (i.e. `myOrg1/myRepo1,m
 By default, no repositories are allowed to create a schedule. To allow any repository to create a schedule, provide a single value of `*`.
 :::
 
-This property can be updated while the server is running using the [settings component](/docs/installation/server/reference/settings).
+This property can be updated while the server is running using the [settings component](/docs/reference/installation/server/settings.md).
 
 ### VELA_SCHEDULE_MINIMUM_FREQUENCY
 
@@ -619,19 +619,19 @@ This variable sets a fully qualified URL on the SCM system to send webhooks to t
 The variable can be provided as a `string`.
 
 :::note
-This variable has a default value of [the `VELA_ADDR` variable](/docs/installation/server/reference/#vela_addr) provided to the server.
+This variable has a default value of [the `VELA_ADDR` variable](/reference/installation/server#vela_addr) provided to the server.
 :::
 
 ### VELA_SECRET
 
 This variable sets a shared secret with the Vela [worker](/docs/installation/worker/worker.md) for authenticating communication between workers and the server.
 
-Only necessary to provide if utilizing the [server-worker trusted symmetric worker authentication method](/docs/installation/worker/docker/#worker-server-trusted-symmetric-token).
+Only necessary to provide if utilizing the [server-worker trusted symmetric worker authentication method](/installation/worker/docker/#worker-server-trusted-symmetric-token).
 
 The variable should be provided as a `string`.
 
 :::note
-This variable should match [the `VELA_SERVER_SECRET` variable](/docs/installation/worker/reference/#vela_server_secret) provided to the worker.
+This variable should match [the `VELA_SERVER_SECRET` variable](/reference/installation/worker/#vela_server_secret) provided to the worker.
 :::
 
 ### VELA_SECRET_VAULT
@@ -777,7 +777,7 @@ The worker auth token is used for authenticating a worker's access to the server
 The variable can be provided as a `duration` (i.e. `5s`, `10m`).
 
 :::note
-This variable should be _longer_ than the [VELA_CHECK_IN](/docs/installation/worker/reference/#vela_check_in) in order to be able to refresh the auth token.
+This variable should be _longer_ than the [VELA_CHECK_IN](/reference/installation/worker/#vela_check_in) in order to be able to refresh the auth token.
 
 This variable has a default value of `20m`.
 :::
@@ -791,7 +791,7 @@ The worker register token is used for onboarding a worker onto the server and be
 The variable can be provided as a `duration` (i.e. `5s`, `10m`).
 
 :::note
-This variable should be relatively short-lived. There is a [CLI Command](/docs/reference/cli/worker/add) to quicken the registration process for admins.
+This variable should be relatively short-lived. There is a [CLI Command](/docs/reference/cli/worker/add.md) to quicken the registration process for admins.
 
 This variable has a default value of `1m`.
 :::
@@ -805,7 +805,7 @@ The variable can be provided as a `duration` (i.e. `5s`, `10m`).
 :::note
 This variable has a default value of `5m`.\
 \
-The value should coordinate with the [`VELA_CHECK_IN`](/docs/installation/worker/reference/#vela_check_in) setting provided to the [worker](/docs/installation/worker/worker.md).
+The value should coordinate with the [`VELA_CHECK_IN`](/reference/installation/worker/#vela_check_in) setting provided to the [worker](/docs/installation/worker/worker.md).
 :::
 
 ### VELA_OTEL_TRACING_ENABLE

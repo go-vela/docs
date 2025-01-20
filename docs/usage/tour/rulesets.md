@@ -45,4 +45,4 @@ The ruleset key gives you the ability to add conditions on the step to tell Vela
 
 **Key references:**
 
-[`name:`](/docs/reference/yaml/steps/#the-name-key), [`ruleset:`](/docs/reference/yaml/steps/#the-ruleset-key),[`image:`](/docs/reference/yaml/steps/#the-image-key), [`commands:`](/docs/reference/yaml/steps/#the-commands-key),
+[`name:`](/reference/yaml/steps/#the-name-key), [`ruleset:`](/reference/yaml/steps/#the-ruleset-key),[`image:`](/reference/yaml/steps/#the-image-key), [`commands:`](/reference/yaml/steps/#the-commands-key),

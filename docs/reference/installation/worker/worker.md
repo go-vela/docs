@@ -29,7 +29,7 @@ This variable sets the driver to use for the queue functionality for the worker.
 The variable should be provided as a `string`.
 
 :::note
-This variable should match [the `VELA_QUEUE_DRIVER` variable](/docs/installation/server/reference/#vela_queue_driver) provided to the server.
+This variable should match [the `VELA_QUEUE_DRIVER` variable](/reference/installation/server#vela_queue_driver) provided to the server.
 
 The possible options to provide for this variable are:
 
@@ -43,7 +43,7 @@ This variable sets a fully qualified URL to the Vela [server](/docs/installation
 The variable should be provided as a `string`.
 
 :::note
-This variable should match [the `VELA_ADDR` variable](/docs/installation/server/reference/#vela_addr) provided to the server.
+This variable should match [the `VELA_ADDR` variable](/reference/installation/server#vela_addr) provided to the server.
 :::
 
 ### VELA_WORKER_ADDR
@@ -60,12 +60,12 @@ This section contains a list of all variables that can be provided to the worker
 
 This variable sets a shared secret for authenticating communication between workers and the server.
 
-Only necessary to provide if utilizing the [server-worker trusted symmetric worker authentication method](/docs/installation/worker/docker/#worker-server-trusted-symmetric-token).
+Only necessary to provide if utilizing the [server-worker trusted symmetric worker authentication method](/installation/worker/docker/#worker-server-trusted-symmetric-token).
 
 The variable should be provided as a `string`.
 
 :::note
-This variable should match [the `VELA_SECRET` variable](/docs/installation/server/reference/#vela_secret) provided to the server.
+This variable should match [the `VELA_SECRET` variable](/reference/installation/server#vela_secret) provided to the server.
 :::
 
 ### VELA_BUILD_LIMIT
@@ -97,7 +97,7 @@ The variable can be provided as a `duration` (i.e. `5s`, `10m`).
 :::note
 This variable has a default value of `15m`.\
 \
-The value should coordinate with the [`VELA_WORKER_ACTIVE_INTERVAL`](/docs/installation/server/reference/#vela_worker_active_interval) setting provided to the [server](/docs/installation/server/server.md).
+The value should coordinate with the [`VELA_WORKER_ACTIVE_INTERVAL`](/reference/installation/server/#vela_worker_active_interval) setting provided to the [server](/docs/installation/server/server.md).
 :::
 
 ### VELA_EXECUTOR_DRIVER
@@ -135,7 +135,7 @@ This variable has a default value of `0`. No limit.
 
 This configuration variable is used by the [executor component](/docs/reference/installation/worker/executor.md) for the worker.
 
-This variable sets whether or not the executor will verify a repository is `trusted` before executing a build that contains privileged images (see [runtime privileged images](/docs/installation/worker/reference/#vela_runtime_privileged_images)). 
+This variable sets whether or not the executor will verify a repository is `trusted` before executing a build that contains privileged images (see [runtime privileged images](/reference/installation/worker/#vela_runtime_privileged_images)). 
 
 The variable can be provided as a `boolean`.
 
@@ -152,7 +152,7 @@ This variable enables the worker to connect to a queue cluster rather than a sta
 The variable can be provided as a `boolean`.
 
 :::note
-This variable should match [the `VELA_QUEUE_CLUSTER` variable](/docs/installation/server/reference/#vela_queue_cluster) provided to the server.
+This variable should match [the `VELA_QUEUE_CLUSTER` variable](/reference/installation/server#vela_queue_cluster) provided to the server.
 :::
 
 ### VELA_QUEUE_POP_TIMEOUT
@@ -175,7 +175,7 @@ This variable sets the unique channels or topics to pull workloads from.
 
 The variable can be provided as a comma-separated `list` (i.e. `myRoute1,myRoute2`).
 
-The worker will update its own database record using the provided queue routes. If you wish to control worker routes solely using API / Database, supply `""` or `"NONE"`.
+The worker will update its own database record using the provided queue routes. If you wish to control worker routes solely using API / Database, supply `""` or `"/docs/usage/tour/"`.
 
 :::note
 This variable has a default value of `vela`.

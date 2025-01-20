@@ -11,7 +11,7 @@ We recommend reviewing [Starlark Spec](https://github.com/bazelbuild/starlark/bl
 
 ## Overview
 
-From [Starlark for loops](https://github.com/google/starlark-go/blob/master/doc/spec.md#for-loops):
+From [Starlark for loops](https://github.com/google/starlark-go/blob/master/doc/spec#for-loops):
 
 ```python
 for i in [1, 2, 3]:
