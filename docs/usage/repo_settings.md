@@ -104,8 +104,8 @@ The following are the options for the formatting of the base pipeline:
 | Type        | Description                                                                                             |
 |-------------|---------------------------------------------------------------------------------------------------------|
 | `YAML`      |  Default pipeline syntax ([Reference Documentation](/docs/reference/yaml/yaml.md)                             |
-| `Go`        |  Standard YAML with Go inline functionality ([Reference Documentation](/docs/usage/templates/go/)  |
-| `Starlark`  |  YAML generation using Starlark ([Reference Documentation](/docs/usage/tour/)        |
+| `Go`        |  Standard YAML with Go inline functionality ([Reference Documentation](/docs/usage/templates/go/conditional.md)  |
+| `Starlark`  |  YAML generation using Starlark ([Reference Documentation](/docs/usage/templates/starlark/anatomy.md)        |
 
 Note: by default, templates are treated with `Go` syntax. In order to match that behavior for the base pipeline, this setting must be changed to `Go`.
 
