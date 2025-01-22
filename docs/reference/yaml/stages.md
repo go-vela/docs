@@ -60,7 +60,7 @@ stages:
 ```
 
 :::tip
-For more details on steps keys, see the [step keys documentation](/docs/reference/yaml/steps/#keys)
+For more details on steps keys, see the [step keys documentation](/reference/yaml/steps/#keys)
 :::
 
 #### The `needs:` key

@@ -67,14 +67,14 @@ This pipeline will:
 
 ## References
 
-The following [pipeline concepts](/docs/tour) are being used in the pipeline below:
+The following [pipeline concepts](/docs/usage/tour/tour.md) are being used in the pipeline below:
 
-* [Services](/docs/tour/services/)
-  * [Pull](/docs/tour/image/)
-* [Steps](/docs/tour/steps/)
-  * [Pull](/docs/tour/image/)
-* [Secrets](/docs/tour/secrets/)
-  * [Origin](/docs/tour/secrets/)
+* [Services](docs/usage/tour/services.md)
+  * [Pull](docs/usage/tour/image.md)
+* [Steps](docs/usage/tour/steps.md)
+  * [Pull](docs/usage/tour/image.md)
+* [Secrets](docs/usage/tour/secrets.md)
+  * [Origin](docs/usage/tour/secrets.md)
 
-* [`Pull` YAML Key](/docs/reference/yaml/steps/#the-pull-key)
+* [`Pull` YAML Key](/reference/yaml/steps/#the-pull-key)
 

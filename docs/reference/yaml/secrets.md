@@ -131,8 +131,8 @@ secrets:
 ```
 
 :::warning `step_start` or lazy loading secrets
-is not currently available for the [Kubernetes-based workers](/docs/installation/worker/kubernetes/) and does not work with secrets
-originating from plugins loaded via [`origin:`](/docs/reference/yaml/secrets/#the-pull-key) (see below).
+is not currently available for the [Kubernetes-based workers](/docs/installation/worker/kubernetes.md) and does not work with secrets
+originating from plugins loaded via [`origin:`](/reference/yaml/secrets/#the-pull-key) (see below).
 :::
 
 #### The `origin:` key
@@ -149,11 +149,11 @@ originating from plugins loaded via [`origin:`](/docs/reference/yaml/secrets/#th
 
 :::tip The `pull:` option under `origin:`
 allows for different values than the
-[Secrets `pull:` key](/docs/reference/yaml/secrets/#the-pull-key). It mimics the
-[Steps version of the `pull:` key](/docs/reference/yaml/steps/#the-pull-key).
+[Secrets `pull:` key](/reference/yaml/secrets/#the-pull-key). It mimics the
+[Steps version of the `pull:` key](/reference/yaml/steps/#the-pull-key).
 :::
 
 :::tip In an effort to reduce duplicate
 documentation, see the comparable
-[step keys documentation](/docs/reference/yaml/steps/#keys) to learn how keys
+[step keys documentation](/reference/yaml/steps/#keys) to learn how keys
 can be set and details on behavior. :::

@@ -41,6 +41,12 @@ const remoteVelaPlugins = [
         sourceFileName: "DOCS.md",
     },
     {
+        name: "docker",
+        sourceRepo: "go-vela/vela-docker",
+        sourceRef: "refs/heads/main",
+        sourceFileName: "DOCS.md",
+    },
+    {
         name: "downstream",
         sourceRepo: "go-vela/vela-downstream",
         sourceRef: "refs/heads/main",

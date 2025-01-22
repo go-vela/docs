@@ -99,7 +99,7 @@ These actions can be for any number of general tasks, deploying code, publishing
 
 Anyone can create a plugin and use it in their pipeline.
 
-The registry of existing plugins can be found on this site in the [plugins](/docs/plugins/registry/) tab.
+The registry of existing plugins can be found on this site in the [plugins](docs/usage/plugins/index.md) tab.
 
 Within the parameters block, keys are injected as upper case environment variables with the pattern of `PARAMETER_<YAML_KEY>`.
 
@@ -131,7 +131,7 @@ steps:
 ```
 ## Step 5 - Trigger the Pipeline
 
-If you've followed the documentation for [enabling a repo](/docs/usage/enable_repo.md) and wrote a pipeline ([here are some example pipelines](/docs/usage/examples/)), all that should be left is to push your pipeline to your repo.
+If you've followed the documentation for [enabling a repo](/docs/usage/enable_repo.md) and wrote a pipeline ([here are some example pipelines](/docs/usage/tour/tour.md)), all that should be left is to push your pipeline to your repo.
 
 If a build does not trigger when your push a change to your repo, check the webhook response to see if there is an error.
 

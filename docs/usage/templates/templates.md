@@ -118,7 +118,7 @@ steps:
 
 ### Rulesets for Templates
 
-As of `v0.19.0`, users can leverage step [`rulesets`](/docs/tour/rulesets) for steps that call a template:
+As of `v0.19.0`, users can leverage step [`rulesets`](/docs/usage/tour/rulesets.md) for steps that call a template:
 
 ```yaml
 version: "1"
@@ -415,7 +415,7 @@ Note: when using nested templates with `render_inline: true`, all templates that
 # Working with Templates
 
 :::warning
-It is highly recommended before reviewing the below content to have a solid grasp on Vela's core concepts that are explored while taking the [Vela Tour](None)).
+It is highly recommended before reviewing the below content to have a solid grasp on Vela's core concepts that are explored while taking the [Vela Tour](/docs/usage/tour/tour.md).
 :::
 
 When writing a new template getting feedback can be a very painful process. Vela provides a few core methods to get feedback quickly to ensure the template you're writing expands in the pipeline you expect to run. The main methods for seeing expanded pipelines are:
@@ -430,7 +430,7 @@ This method allows you to evaluate your pipeline that exists within a VCS system
 
 Additionally, you can also interact with it the Vela CLI or API if you're trying to create more elaborate workflows.
 
-* [API Docs](/docs/reference/api/pipeline/)
+* [API Docs](/docs/reference/api/pipeline/pipeline.md)
 
 ## CLI Pipeline Validation
 

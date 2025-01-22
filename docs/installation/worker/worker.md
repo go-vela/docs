@@ -6,7 +6,7 @@ sidebar_position: 1
 
 Known as the brawn of the Vela application, this service is responsible for managing the state of build resources.
 
-This includes pulling the build, provided by the [server](/docs/installation/server/overview.md), from the queue to be run.
+This includes pulling the build, provided by the [server](/docs/installation/server/server.md), from the queue to be run.
 
 When a build is fetched from the queue, the worker will create and delete resources through the lifecycle of the build.
 

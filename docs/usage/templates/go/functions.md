@@ -43,7 +43,7 @@ To note, the `env` and `expandenv` functions are not available in Vela.
 
 The `toYaml` function is intended to ease working with passing and rendering YAML content in Vela templates.
 
-##### Example
+### Example
 
 `.vela.yml`
 ```yaml
@@ -93,5 +93,5 @@ steps:
 
 #### vela
 
-The `vela` function provides the convenience of accessing [Vela environment variables](/docs/reference/environment/variables.md) within your Vela templates. See its dedicated [platform vars page](/docs/templates/tutorials/go/vars_platform/) for more info.
+The `vela` function provides the convenience of accessing [Vela environment variables](/docs/reference/environment/variables.md) within your Vela templates. See its dedicated [platform vars page](/docs/usage/templates/go/vars_platform.md) for more info.
 
