@@ -88,7 +88,7 @@ vela update settings --file @/path/to/file
 vela update settings --file @$HOME/tmp/settings.yml
 ```
 
-##### Single YAML document
+### Single YAML document
 
 ```yaml
 ---

@@ -13,25 +13,25 @@ Example [Yaml](https://yaml.org/spec/) configuration for a project requiring a s
 User is looking to create a pipeline that can integrate with a private Vault to inject secrets that can not be used with pushing a Docker image to a registry.
 
 :::tip
-It is assumed you have created secret `vault_token` in the web interface or [CLI](N/A).
+It is assumed you have created secret `vault_token` in the web interface or [CLI](/docs/usage/tour/tour.md).
 :::
 
-The examples show a pipeline using repository secrets. Vela contains three secret types: repository, organization, and shared. For examples on organization and shared, please see the [secret concepts](/docs/tour/secrets/) documentation.
+The examples show a pipeline using repository secrets. Vela contains three secret types: repository, organization, and shared. For examples on organization and shared, please see the [secret concepts](docs/usage/tour/secrets.md) documentation.
 
 ### Steps
 
-The following [pipeline concepts](None) are being used in the pipeline below:
+The following [pipeline concepts](/docs/usage/tour/tour.md) are being used in the pipeline below:
 
-* [Steps](/docs/tour/steps/)
-  * [Image](/docs/tour/image/)
-  * [Pull](/docs/tour/image/)
-  * [Secrets](/docs/tour/secrets/)
-  * [Parameters](/docs/tour/plugins/)
-* [Secrets](/docs/tour/secrets/)
+* [Steps](docs/usage/tour/steps.md)
+  * [Image](docs/usage/tour/image.md)
+  * [Pull](docs/usage/tour/image.md)
+  * [Secrets](docs/usage/tour/secrets.md)
+  * [Parameters](docs/usage/tour/plugins.md)
+* [Secrets](docs/usage/tour/secrets.md)
 
-The following [Vela plugins](None) are being used in the pipeline below:
+The following [Vela plugins](/docs/usage/tour/tour.md) are being used in the pipeline below:
 
-* [Docker](None)
+* [Docker](/docs/usage/plugins/registry/docker.md)
 
 :::tip
 Pipeline must be stored in base of repository as `.vela.yml` or `.vela.yaml`
@@ -76,19 +76,19 @@ secrets:
 
 ### Stages
 
-The following [pipeline concepts](/docs/tour) are being used in the pipeline below:
+The following [pipeline concepts](/docs/usage/tour/tour.md) are being used in the pipeline below:
 
-* [Stages](/docs/tour/stages/)
-  * [Steps](/docs/tour/steps/)
-  * [Image](/docs/tour/image/)
-  * [Pull](/docs/tour/image/)
-  * [Secrets](/docs/tour/secrets/)
-  * [Parameters](/docs/tour/plugins/)
-* [Secrets](/docs/tour/secrets/)
+* [Stages](docs/usage/tour/stages.md)
+  * [Steps](docs/usage/tour/steps.md)
+  * [Image](docs/usage/tour/image.md)
+  * [Pull](docs/usage/tour/image.md)
+  * [Secrets](docs/usage/tour/secrets.md)
+  * [Parameters](docs/usage/tour/plugins.md)
+* [Secrets](docs/usage/tour/secrets.md)
 
-The following [Vela plugins](None) are being used in the pipeline below:
+The following [Vela plugins](/docs/usage/tour/tour.md) are being used in the pipeline below:
 
-* [Docker](None)
+* [Docker](/docs/usage/plugins/registry/docker.md)
 
 :::tip
 Pipeline must be stored in base of repository as `.vela.yml` or `.vela.yaml`

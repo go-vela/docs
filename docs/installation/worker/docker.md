@@ -48,9 +48,9 @@ Currently, Vela supports two methods of maintaining authentication between the w
 
 Take care to read through both options to determine which setup makes the most sense for your installation:
 
-##### Worker-Server Trusted Symmetric Token
+### Worker-Server Trusted Symmetric Token
 
-This authentication method involves using the same secret generated as the `VELA_SECRET` during the [server installation](/docs/installation/server/docker/#step-3-create-a-shared-secret) as the bearer token for all API requests related to check-in and build tokens from the worker to the server.
+This authentication method involves using the same secret generated as the `VELA_SECRET` during the [server installation](/installation/server/docker/#step-3-create-a-shared-secret) as the bearer token for all API requests related to check-in and build tokens from the worker to the server.
 
 The token is non-expiring and exists within the container environment. Once the server is running, all that is necessary for a worker to connect to the server and pull builds from the queue is simply starting the worker container:
 
@@ -71,9 +71,9 @@ $ docker run \
 
 The worker must still pass its check-in with the server in order to pull builds from the queue.
 
-##### Worker Registration and Auth Refresh
+### Worker Registration and Auth Refresh
 
-This authentication method is the more secure of the two options. Rather than using a non-expiring token in the container environment, platform administrators can register workers using their credentials via the Vela CLI. In order to leverage this method, simply do NOT supply the [`VELA_SECRET`](/docs/installation/server/reference/#vela_secret) to the server and do NOT supply the [`VELA_SERVER_SECRET`](/docs/installation/worker/reference/#vela_server_secret) to the worker. 
+This authentication method is the more secure of the two options. Rather than using a non-expiring token in the container environment, platform administrators can register workers using their credentials via the Vela CLI. In order to leverage this method, simply do NOT supply the [`VELA_SECRET`](/reference/installation/server#vela_secret) to the server and do NOT supply the [`VELA_SERVER_SECRET`](/reference/installation/worker/#vela_server_secret) to the worker. 
 
 To start, launch the worker container:
 
@@ -104,7 +104,7 @@ worker registered successfully
 This process involves the generation of a registration token, which can only be done by platform admins. The quickly expiring registration token is then passed to the worker using an http request to the worker's `/register` endpoint. The worker exchanges this registration token with the server for an auth token. 
 
 :::info
-IMPORTANT: When using this method, ensure that the [`VELA_WORKER_AUTH_TOKEN_DURATION`](/docs/installation/server/reference/#vela_worker_auth_token_duration) configured in the server is _longer_ than the [`VELA_CHECK_IN`](/docs/installation/worker/reference/#vela_check_in) configured in the worker. This ensures that all requests made by the worker are done with a valid token, refreshed at each check-in.
+IMPORTANT: When using this method, ensure that the [`VELA_WORKER_AUTH_TOKEN_DURATION`](/reference/installation/server#vela_worker_auth_token_duration) configured in the server is _longer_ than the [`VELA_CHECK_IN`](/reference/installation/worker/#vela_check_in) configured in the worker. This ensures that all requests made by the worker are done with a valid token, refreshed at each check-in.
 :::
 
 Once registered, the worker will continue refreshing its authentication token at the specified check in interval. Workers that lose their connection to the server for long enough for their existing auth

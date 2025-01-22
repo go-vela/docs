@@ -8,8 +8,8 @@ description: >
 :::note
 The following plugins are used within the example
 
-* [Kaniko](None)
-* [Vault](None)
+* [Kaniko](/docs/usage/plugins/registry/Kaniko.md)
+* [Vault](/docs/usage/tour/vault secrets.md)
 :::
 
 Typically, plugins are configured as a step in a pipeline and should accept their configuration via environment variables. The below example shows a pipeline and secret plugin working together to publish an image to a registry:

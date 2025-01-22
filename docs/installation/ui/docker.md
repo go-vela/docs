@@ -54,7 +54,7 @@ $ docker run \
 ```
 
 :::info
-For a full list of configuration options, please see the [UI reference](None).
+For a full list of configuration options, please see the [UI reference](/docs/reference/installation/ui.md).
 :::
 
 ### Step 3: Verify the UI Logs

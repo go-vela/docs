@@ -44,7 +44,7 @@ This command also supports setting the following parameters via a configuration 
 - `repo`
 - `output`
 
-For more information, please review the [CLI config documentation](/docs//docs/reference/cli/config.md).
+For more information, please review the [CLI config documentation](/docs/reference/cli/config/config.md).
 :::
 
 ## Permissions
@@ -103,7 +103,7 @@ Vela supports updating multiple secrets from a file using the `filename` paramet
 vela update secret -f secret.yml
 ```
 
-##### Single YAML document
+### Single YAML document
 
 ```yaml
 ---
@@ -133,7 +133,7 @@ secrets:
       - pull_request
 ```
 
-##### Multiple YAML document
+### Multiple YAML document
 
 ```yaml
 ---

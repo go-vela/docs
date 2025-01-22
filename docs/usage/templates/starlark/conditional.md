@@ -11,14 +11,14 @@ We recommend reviewing [Starlark Spec](https://github.com/bazelbuild/starlark/bl
 
 ## Overview
 
-From [Starlark Conditional Expressions](https://github.com/google/starlark-go/blob/master/doc/spec.md#conditional-expressions):
+From [Starlark Conditional Expressions](https://github.com/google/starlark-go/blob/master/doc/spec#conditional-expressions):
 
 ```text
 "yes" if enabled else "no"
 ```
 
 :::tip
-For information on if/else statements see [conditional docs](https://github.com/google/starlark-go/blob/master/doc/spec.md#conditional-expressions)
+For information on if/else statements see [conditional docs](https://github.com/google/starlark-go/blob/master/doc/spec#conditional-expressions)
 :::
 
 ## Sample

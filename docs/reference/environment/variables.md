@@ -41,7 +41,7 @@ The following environment variables are injected into every step, service, or se
 | `VELA_BUILD_TITLE`        | `push received from https://github.com/octocat/hello-world` | title for the build                                                 |
 | `VELA_BUILD_WORKSPACE`    | `/vela/src/github.com/octocat/hello-world`                  | working directory the build is executed in                          |
 
-##### `comment` event only
+### `comment` event only
 
 :::tip
 The following table includes variables only available during the **comment** event.
@@ -54,7 +54,7 @@ The following table includes variables only available during the **comment** eve
 | `VELA_PULL_REQUEST_SOURCE` | `dev`  | pull request branch from the source reference              |
 | `VELA_PULL_REQUEST_TARGET` | `main` | pull request branch for the target reference               |
 
-##### `deployment` event only
+### `deployment` event only
 
 :::tip
 The following table includes variables only available during the **deployment** event.
@@ -68,7 +68,7 @@ All custom parameters are passed to the deployment available with a `DEPLOYMENT_
 | `VELA_DEPLOYMENT`        | `production` | name of target environment for the deployment |
 | `VELA_DEPLOYMENT_NUMBER` | `12345`      | ID of deployment from source                  |
 
-##### `pull_request` event only
+### `pull_request` event only
 
 :::tip
 The following table includes variables only available during the **pull_request** event.
@@ -81,7 +81,7 @@ The following table includes variables only available during the **pull_request*
 | `VELA_PULL_REQUEST_SOURCE` | `dev`  | pull request branch from the source reference              |
 | `VELA_PULL_REQUEST_TARGET` | `main` | pull request branch for the target reference               |
 
-##### `tag` event only
+### `tag` event only
 
 :::tip
 The following table includes variables only available during the **tag** event.
@@ -91,7 +91,7 @@ The following table includes variables only available during the **tag** event.
 | ---------------- | -------- | ------------------------------------------ |
 | `VELA_BUILD_TAG` | `v1.0.0` | tag is populated from the source reference |
 
-##### OpenID Connect only
+### OpenID Connect only
 
 :::tip
 The following table includes variables only available when the step `id_request` field has a value.
@@ -189,7 +189,7 @@ The following environment variables are **only** injected into every step contai
 
 ## Using Substitution For Platform Variables
 
-There are a few default environment variables that need to be [escaped](/docs/reference/environment/substitution/#escaping) when attempting to substitute, as they are not available or not accurate at compile time.
+There are a few default environment variables that need to be [escaped](/reference/environment/substitution/#escaping) when attempting to substitute, as they are not available or not accurate at compile time.
 
 | Key                        | Compile Time  | Build Time Example  |
 | -------------------------- | ------------- | ------------------- |

@@ -1,6 +1,6 @@
 ---
 title: "Plugins"
-sidebar_position: 2
+sidebar_position: 4
 ---
 
 Vela contains two plugin types:
@@ -13,9 +13,9 @@ Both accept configuration via environment variables but should be used within th
 :::info
 Before you begin your plugin journey we recommend the following pre-requisites:
 
-* [Steps](/docs/tour/steps/)
-* [Stages](/docs/tour/stages/)
-* [Templates](/docs/tour/templates/)
+* [Steps](docs/usage/tour/steps.md)
+* [Stages](docs/usage/tour/stages.md)
+* [Templates](docs/usage/tour/templates.md)
 :::
 
 ## Pipeline

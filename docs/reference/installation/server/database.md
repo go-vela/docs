@@ -36,7 +36,7 @@ The following options are used to configure the component:
 | `database.log.slow_threshold` | queries higher than this value are considered slow and logged    | `false`  | `200ms`       | `DATABASE_LOG_SLOW_THRESHOLD` \ `VELA_DATABASE_LOG_SLOW_THRESHOLD` |
 
 :::note
-For more information on these configuration options, please see the [server reference](/docs/reference/installation/server.md).
+For more information on these configuration options, please see the [server reference](/docs/reference/installation/server/server.md).
 :::
 
 ## Drivers

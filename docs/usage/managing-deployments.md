@@ -35,10 +35,10 @@ Additionally, any secret you may need for the event must also have `deployments`
 
 Let us look at an example workflow for executing a deployment on your repo. You should understand the following concepts before proceeding:
 
-* [Steps](/docs/tour/steps/)
-  * [image](/docs/tour/image/)
-  * [Commands](/docs/tour/environment/)
-  * [Ruleset](/docs/tour/rulesets/)
+* [Steps](docs/usage/tour/steps.md)
+  * [image](docs/usage/tour/image.md)
+  * [Commands](docs/usage/tour/environment.md)
+  * [Ruleset](docs/usage/tour/rulesets.md)
 
 ```yaml
 version: "1"

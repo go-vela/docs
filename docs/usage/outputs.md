@@ -11,7 +11,7 @@ Outputs functionality is only available in the Docker runtime.
 
 ### What are outputs and why are they useful?
 
-While the workspace [is shared](/docs/usage/workspace) for all steps in a build, the environment is not. This is because changes to a container environment are not exported after the completion of a step.
+While the workspace [is shared](/docs/usage/workspace.md) for all steps in a build, the environment is not. This is because changes to a container environment are not exported after the completion of a step.
 
 For example, take the following pipeline:
 
