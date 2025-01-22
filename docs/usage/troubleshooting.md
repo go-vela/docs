@@ -129,8 +129,8 @@ To resolve the issue, optimize the pipeline to improve the performance and decre
 
 This can be accomplished by using one of the following methods:
 
-* Update the pipeline [to use rulesets](docs/usage/tour/rulesets.md) which will limit the number of [steps](docs/usage/tour/step.md) ran in the build
-* Update the pipeline [to use stages](docs/usage/tour/stages.md) which will enable running [steps](docs/usage/tour/step.md) concurrently
+* Update the pipeline [to use rulesets](/docs/tour/rulesets/) which will limit the number of [steps](/docs/tour/step/) ran in the build
+* Update the pipeline [to use stages](/docs/tour/stages/) which will enable running [steps](/docs/tour/step/) concurrently
 
 :::tip
 An alternative solution is to increase the build timeout for the repository.
@@ -145,7 +145,7 @@ This can be accomplished by using one of the following methods:
 
 ![Invalid Reference Format](/img/troubleshooting/invalid_reference_format.png)
 
-This behavior indicates [the `image` key](docs/usage/tour/image.md) provided for a step in the pipeline is invalid.
+This behavior indicates [the `image` key](/docs/tour/image/) provided for a step in the pipeline is invalid.
 
 To resolve the issue, identify the step with the incorrect `image` and update it with a proper value.
 
@@ -155,7 +155,7 @@ This can be accomplished by using the [`docker pull` CLI command](https://docs.d
 
 ![Invalid Secret Path](/img/troubleshooting/invalid_secret_path.png)
 
-This behavior indicates [the `key` property](/reference/yaml/secrets/#the-key-key) provided for a secret in the pipeline is invalid.
+This behavior indicates [the `key` property](/docs/reference/yaml/secrets/#the-key-key) provided for a secret in the pipeline is invalid.
 
 To resolve the issue, explicitly define the secret depending on the type as outlined in the [secret usage docs](/docs/usage/secrets.md) with all of the expected fields.
 
@@ -198,6 +198,6 @@ If you're using GitHub and using the secret for a pipeline at `https://github.co
 
 ![Untrusted Repo](/img/troubleshooting/untrusted_repo.png)
 
-This behavior indicates [the `vela_executor_enforce_trusted_repos` flag](/reference/installation/worker/#vela_executor_enforce_trusted_repos) has been set by the Vela platform administrators, which allows only certain repositories to run privileged images.
+This behavior indicates [the `vela_executor_enforce_trusted_repos` flag](/docs/installation/worker/reference/#vela_executor_enforce_trusted_repos) has been set by the Vela platform administrators, which allows only certain repositories to run privileged images.
 
 To resolve the issue, identify the step attempting to run a privileged image and consider a workaround. Otherwise, work with your Vela platform administrators to add your repository to the allowlist.

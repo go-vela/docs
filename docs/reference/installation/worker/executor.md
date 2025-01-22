@@ -5,9 +5,9 @@ description: >
   This section contains information on the executor component for the worker.
 ---
 
-This component is responsible for coordinating with the runtime to manage workload resources.
+This component is responsible for coordinating with [the runtime](/docs/installation/worker/runtime/) to manage workload resources.
 
-Throughout the lifecycle of these resources, this component will track and report results back to the [server](/docs/installation/server/server.md).
+Throughout the lifecycle of these resources, this component will track and report results back to the [server](/docs/installation/server/).
 
 ## Configuration
 
@@ -20,7 +20,7 @@ The following options are used to configure the component:
 | `executor.log_streaming_timeout` | maximum time to wait, after build completion, for logs to finish streaming | `false`  | `5m`           | `EXECUTOR_LOG_STREAMING_TIMEOUT`\`VELA_EXECUTOR_LOG_STREAMING_TIMEOUT` |
 
 :::note
-For more information on these configuration options, please see the [worker reference](/docs/reference/installation/worker/worker.md).
+For more information on these configuration options, please see the [worker reference](/docs/reference/installation/worker.md).
 :::
 
 ## Drivers
@@ -62,6 +62,6 @@ This Linux configuration is enabled by default and is not necessary to provide i
 
 ### Local
 
-The `local` executor driver is only intended for use with the Vela CLI.
+The `local` executor driver is only intended for use with the [Vela CLI](N/A).
 
 It's not recommended to run any workloads on a worker configured with this driver.

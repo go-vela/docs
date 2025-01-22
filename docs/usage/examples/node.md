@@ -14,12 +14,12 @@ User is looking to create a pipeline that builds an artifact on any event or bra
 
 ### Steps
 
-The following [pipeline concepts](/docs/usage/tour/tour.md) are being used in the pipeline below:
+The following [pipeline concepts](None) are being used in the pipeline below:
 
-* [Steps](docs/usage/tour/steps.md)
-  * [image](docs/usage/tour/image.md)
-  * [Pull](docs/usage/tour/image.md)
-  * [Commands](docs/usage/tour/steps.md)
+* [Steps](/docs/tour/steps/)
+  * [image](/docs/tour/image/)
+  * [Pull](/docs/tour/image/)
+  * [Commands](/docs/tour/steps/)
 
 :::tip
 Pipeline must be stored in base of repository as `.vela.yml` or `.vela.yaml`
@@ -52,14 +52,14 @@ steps:
 
 ### Stages
 
-The following [pipeline concepts](/docs/usage/tour/tour.md) are being used in the pipeline below:
+The following [pipeline concepts](None) are being used in the pipeline below:
 
-* [Stages](docs/usage/tour/stages.md)
-  * [Needs](docs/usage/tour/stages.md)
-  * [Steps](docs/usage/tour/steps.md)
-    * [image](docs/usage/tour/image.md)
-    * [Pull](docs/usage/tour/image.md)
-    * [Commands](docs/usage/tour/steps.md)
+* [Stages](/docs/tour/stages/)
+  * [Needs](/docs/tour/stages/)
+  * [Steps](/docs/tour/steps/)
+    * [image](/docs/tour/image/)
+    * [Pull](/docs/tour/image/)
+    * [Commands](/docs/tour/steps/)
 
 :::tip
 Pipeline must be stored in base of repository as `.vela.yml` or `.vela.yaml`

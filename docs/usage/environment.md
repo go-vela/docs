@@ -11,22 +11,22 @@ Please note the environment is designed to be unique per container. Vela does in
 
 Defaults:
 
-* [Container](/reference/environment/variables/#container-defaults)
-* [Steps only](/reference/environment/variables/#step-only-defaults)
-* [Services only](/reference/environment/variables/#service-only-defaults)
+* [Container](/docs/reference/environment/variables/#container-defaults)
+* [Steps only](/docs/reference/environment/variables/#step-only-defaults)
+* [Services only](/docs/reference/environment/variables/#service-only-defaults)
 
 ## Usage
 
-The following [pipeline concepts](/docs/usage/tour/tour.md) are being used in the pipeline below:
+The following [pipeline concepts](/docs/tour) are being used in the pipeline below:
 
-* [Services](docs/usage/tour/services.md)
-  * [Environment](docs/usage/tour/environment.md)
-* [Stages](docs/usage/tour/stages.md)
-  * [Environment](docs/usage/tour/environment.md)
-* [Steps](docs/usage/tour/steps.md)
-  * [Environment](docs/usage/tour/environment.md)
-* [Secrets](docs/usage/tour/secrets.md)
-  * [Origin](docs/usage/tour/secrets.md)
+* [Services](/docs/tour/services/)
+  * [Environment](/docs/tour/environment/)
+* [Stages](/docs/tour/stages/)
+  * [Environment](/docs/tour/environment/)
+* [Steps](/docs/tour/steps/)
+  * [Environment](/docs/tour/environment/)
+* [Secrets](/docs/tour/secrets/)
+  * [Origin](/docs/tour/secrets/)
 
 :::note
 Please be warned that `${variable}` expressions are subject to pre-processing.

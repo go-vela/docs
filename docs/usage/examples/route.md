@@ -18,14 +18,14 @@ Work with your server administer to understand what routes are available for you
 
 ### Steps
 
-The following [pipeline concepts](/docs/usage/tour/tour.md) are being used in the pipeline below:
+The following [pipeline concepts](None) are being used in the pipeline below:
 
 * *Worker*
   * *Platform*
-* [Steps](docs/usage/tour/steps.md)
-  * [Image](docs/usage/tour/image.md)
-  * [Pull](docs/usage/tour/image.md)
-  * [Commands](docs/usage/tour/steps.md)
+* [Steps](/docs/tour/steps/)
+  * [Image](/docs/tour/image/)
+  * [Pull](/docs/tour/image/)
+  * [Commands](/docs/tour/steps/)
 
 :::tip
 Pipeline must be stored in base of repository as `.vela.yml` or `.vela.yaml`
@@ -49,16 +49,16 @@ steps:
 
 ### Stages
 
-The following [pipeline concepts](/docs/usage/tour/tour.md) are being used in the pipeline below:
+The following [pipeline concepts](None) are being used in the pipeline below:
 
 * *Worker*
   * *Platform*
-* [Stages](docs/usage/tour/stages.md)
-  * [Steps](docs/usage/tour/steps.md)
-  * [Image](docs/usage/tour/image.md)
-  * [Environment](docs/usage/tour/environment.md)
-  * [Pull](docs/usage/tour/image.md)
-  * [Commands](docs/usage/tour/steps.md)
+* [Stages](/docs/tour/stages/)
+  * [Steps](/docs/tour/steps/)
+  * [Image](/docs/tour/image/)
+  * [Environment](/docs/tour/environment/)
+  * [Pull](/docs/tour/image/)
+  * [Commands](/docs/tour/steps/)
 
 :::tip
 Pipeline must be stored in base of repository as `.vela.yml` or `.vela.yaml`

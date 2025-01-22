@@ -5,7 +5,7 @@ description: >
   Learn how to orchestrate pipelines with stages.
 ---
 
-This page will focus on [`stages`](/docs/usage/tour/stages.md) and how to effectively leverage the orchestration options given to users. These options are: the [`ruleset`](/docs/usage/tour/rulesets.md) key, the [`needs`](/reference/yaml/stages/#the-needs-key) key, and the [`independent`](/reference/yaml/stages/#the-independent-key) key.
+This page will focus on [`stages`](/docs/tour/stages) and how to effectively leverage the orchestration options given to users. These options are: the [`ruleset`](/docs/tour/rulesets) key, the [`needs`](/docs/reference/yaml/stages/#the-needs-key) key, and the [`independent`](/docs/reference/yaml/stages/#the-independent-key) key.
 
 ### Step Rulesets in Stages
 
@@ -184,7 +184,7 @@ So in fact, in this scenario, the `run-first` stage and the `y-stage` begin simu
 
 With the increasing popularity of monorepos, some Vela pipelines may want to simultaneously execute very different build flows based on modules within the repository. Since by nature Vela stages will skip the remainder of the build if a single stage fails its pipeline, this could potentially cause issues, such as half-done deployments.
 
-For example, say we have a repo that has back-end _and_ front-end code written together. Let's assume all the back-end code is in `org/repo/back-end` and the front-end code is in `org/repo/front-end`. We can leverage the [`path`](/reference/yaml/steps/#the-ruleset-key) ruleset with the [`independent`](/reference/yaml/stages/#the-independent-key) stage key to compartmentalize Vela builds:
+For example, say we have a repo that has back-end _and_ front-end code written together. Let's assume all the back-end code is in `org/repo/back-end` and the front-end code is in `org/repo/front-end`. We can leverage the [`path`](/docs/reference/yaml/steps/#the-ruleset-key) ruleset with the [`independent`](/docs/reference/yaml/stages/#the-independent-key) stage key to compartmentalize Vela builds:
 
 ```yaml
 version: "1"

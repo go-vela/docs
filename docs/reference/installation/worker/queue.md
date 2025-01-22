@@ -7,7 +7,7 @@ description: >
 
 This component is responsible for integrating with a queue system based off the configuration provided.
 
-The queue system is used by Vela for pulling workloads, provided by the [server](/docs/installation/server/server.md), that will be run.
+The queue system is used by Vela for pulling workloads, provided by the [server](/docs/installation/server/), that will be run.
 
 Workloads fetched from the queue are managed with a [first in, first out (FIFO)](https://en.wikipedia.org/wiki/FIFO_(computing_and_electronics)) strategy.
 
@@ -23,7 +23,7 @@ The following options are used to configure the component:
 | `queue.routes`      | unique channels or topics for pulling workloads   | `true`   | `[ vela ]` | `QUEUE_ROUTES`\`VELA_QUEUE_ROUTES`           |
 
 :::note
-For more information on these configuration options, please see the [worker reference](/docs/reference/installation/worker/worker.md).
+For more information on these configuration options, please see the [worker reference](/docs/reference/installation/worker.md).
 :::
 
 ## Drivers

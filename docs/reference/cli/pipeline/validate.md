@@ -80,4 +80,4 @@ vela validate pipeline --template --template-file name:/path/to/file
 ".vela.yml" is valid
 ```
 
-Using a template in your pipeline? You can [validate templates also](/usage/templates/#cli-pipeline-validation).
+Using a template in your pipeline? You can [validate templates also](/docs/templates/working_with/#cli-pipeline-validation).

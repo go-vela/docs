@@ -10,7 +10,7 @@ This component is optional and is responsible for integrating with an external s
 
 The secret system is used by Vela for storing sensitive application [data at rest](https://en.wikipedia.org/wiki/Data_at_rest).
 
-By default, Vela will use [the database](docs/reference/installation/server/database.md) to store the sensitive data if no other secret system is configured.
+By default, Vela will use [the database](/docs/installation/server/database/) to store the sensitive data if no other secret system is configured.
 
 :::note
 Any sensitive data stored in the database will be encrypted using the [Advanced Encryption Standard (AES)](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard).
@@ -32,7 +32,7 @@ The following options are used to configure the component:
 | `secret.vault.version`     | version for the k/v backend for the HashiCorp Vault instance                 | `true`   | `2`     | `SECRET_VAULT_VERSION`\`VELA_SECRET_VAULT_VERSION`         |
 
 :::note
-For more information on these configuration options, please see the [server reference](/docs/reference/installation/server/server.md).
+For more information on these configuration options, please see the [server reference](/docs/reference/installation/server.md).
 :::
 
 ## Drivers

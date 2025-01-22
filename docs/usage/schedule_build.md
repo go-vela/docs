@@ -6,14 +6,14 @@ description: >
 ---
 
 :::note
-Please ensure you've already [started a build](/docs/usage/start_build.md) for your repo before attempting to setup a schedule.
+Please ensure you've already [started a build](/docs/usage/start_build/) for your repo before attempting to setup a schedule.
 :::
 
 Vela supports the ability to periodically trigger builds for a repo known as a "schedule".
 
 Outside of the Vela ecosystem, this is more commonly known as a [cron expression](https://en.wikipedia.org/wiki/Cron).
 
-Users will be able to manage schedules for a repo via the UI, [API](/docs/reference/api/schedule/schedule.md) and [CLI](/docs/reference/cli/schedule/schedule.md).
+Users will be able to manage schedules for a repo via the UI, [API](/docs/reference/api/schedule/) and [CLI](/docs/reference/cli/schedule/schedule.md).
 
 Only users with `admin` access to a repo will be able to manage schedules for that repo.
 
@@ -47,7 +47,7 @@ We recommend leveraging an official cron expression generator like [Crontab Guru
 
 ## Pipeline
 
-Uses will be able to customize what [stages](docs/usage/tour/stages.md) or [steps](docs/usage/tour/steps.md) will run in a build for a schedule using a [ruleset](docs/usage/tour/rulesets.md):
+Uses will be able to customize what [stages](/docs/tour/stages/) or [steps](/docs/tour/steps/) will run in a build for a schedule using a [ruleset](/docs/tour/rulesets/):
 
 ```yaml
 version: "1"

@@ -30,7 +30,7 @@ This command also supports setting the following parameters via a configuration 
 
 - `output`
 
-For more information, please review the [CLI config documentation](/docs/reference/cli/config/config.md).
+For more information, please review the [CLI config documentation](/docs//docs/reference/cli/config.md).
 :::
 
 ## Sample

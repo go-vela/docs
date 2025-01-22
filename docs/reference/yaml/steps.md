@@ -405,6 +405,8 @@ steps:
     id_request: write
 ```
 
+More info can be found in the [OpenID Connect usage docs](usage/open_id_connect/).
+
 #### The `entrypoint:` key
 
 ```yaml

@@ -10,9 +10,9 @@ description: >
 The compiler is embedded directly in the server and can only be accessed through the server.
 :::
 
-This component is responsible for transforming a [pipeline](/docs/usage/tour/tour.md) into an executable representation for the [worker](/docs/installation/worker/worker.md).
+This component is responsible for transforming a [pipeline](None) into an executable representation for the [worker](/docs/installation/worker/worker.md).
 
-During the transformation, it will retrieve [templates](/docs/usage/tour/templates.md) from one or more registries depending on the pipeline configuration.
+During the transformation, it will retrieve [templates](/docs/tour/templates/) from one or more registries depending on the pipeline configuration.
 
 By default, Vela will use [GitHub](https://github.com/) as a registry for fetching templates, but you can configure additional registries as well.
 
@@ -24,10 +24,10 @@ This modification endpoint can be used to perform any number of customizations t
 
 Some examples of what the modification endpoint can do include, but are not limited to:
 
-* injecting or updating the configuration for [secrets](/docs/usage/tour/secrets.md) in the pipeline
-* injecting or updating the configuration for [services](/docs/usage/tour/services.md) in the pipeline
-* injecting or updating the configuration for [stages](/docs/usage/tour/stages.md) in the pipeline
-* injecting or updating the configuration for [steps](/docs/usage/tour/steps.md) in the pipeline
+* injecting or updating the configuration for [secrets](/docs/tour/secrets/) in the pipeline
+* injecting or updating the configuration for [services](/docs/tour/services/) in the pipeline
+* injecting or updating the configuration for [stages](/docs/tour/stages/) in the pipeline
+* injecting or updating the configuration for [steps](/docs/tour/steps/) in the pipeline
 
 ## Configuration
 
@@ -49,7 +49,7 @@ The following options are used to configure the component:
 _(1) this will be the latest available, tagged release of `target/vela-git` at the time the server component is released_
 
 :::note
-For more information on these configuration options, please see the [server reference](/docs/reference/installation/server/server.md).
+For more information on these configuration options, please see the [server reference](/docs/reference/installation/server.md).
 :::
 
 ## Drivers

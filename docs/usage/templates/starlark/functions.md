@@ -11,7 +11,7 @@ We recommend reviewing [Starlark Spec](https://github.com/bazelbuild/starlark/bl
 
 ## Overview
 
-From [Starlark functions](https://github.com/bazelbuild/starlark/blob/master/spec#function-definitions):
+From [Starlark functions](https://github.com/bazelbuild/starlark/blob/master/spec.md#function-definitions):
 
 ```star
 def twice(x):
