@@ -133,12 +133,12 @@ const remoteVelaPlugins = [
         sourceRef: "refs/heads/main",
         sourceFileName: "DOCS.md",
     },
-    {
-        name: "vault-secrets",
-        sourceRepo: "go-vela/secret-vault",
-        sourceRef: "refs/heads/main",
-        sourceFileName: "DOCS.md",
-    },
+    // {
+    //     name: "vault-secrets",
+    //     sourceRepo: "go-vela/secret-vault",
+    //     sourceRef: "refs/heads/main",
+    //     sourceFileName: "DOCS.md",
+    // },
 ]
 
 export default remoteVelaPlugins;
