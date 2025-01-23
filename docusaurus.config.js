@@ -100,7 +100,7 @@ const config = {
               sidebarId: 'reference',
               label: 'Reference',
             },
-            { to: '/blog', label: 'Blog', position: 'left' },
+            { to: '/blog', label: 'Announcements', position: 'left' },
             {
               type: 'docsVersionDropdown',
               label: 'version',
