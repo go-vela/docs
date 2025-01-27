@@ -24,6 +24,7 @@ const config = {
   organizationName: 'go-vela',
   projectName: 'docs',
   deploymentBranch: 'gh-pages',
+  trailingSlash: false,
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
