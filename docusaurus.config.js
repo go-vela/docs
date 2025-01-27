@@ -13,7 +13,7 @@ const config = {
   url: 'https://go-vela.github.io/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/docs-v2/',
+  baseUrl: '/go-vela/docs/',
   plugins: [
     require.resolve('docusaurus-lunr-search'),
     ...remoteContentVelaPlugins,
@@ -22,7 +22,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'go-vela',
-  projectName: 'docs-v2',
+  projectName: 'docs',
   deploymentBranch: 'gh-pages',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
@@ -41,7 +41,7 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: "/",
           editUrl:
-            'https://go-vela.github.io/docs-v2/',
+            'https://go-vela.github.io/go-vela/docs/blob/main/',
           versions: {
             current: {
               label: `Current 🚧`,
