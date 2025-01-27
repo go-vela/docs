@@ -13,13 +13,13 @@ const config = {
   url: 'https://go-vela.github.io/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/go-vela/docs/',
+  baseUrl: '/',
   plugins: [
     require.resolve('docusaurus-lunr-search'),
     ...remoteContentVelaPlugins,
   ],
 
-  // GitHub pages deployment config.
+  // GitHub pages deployment config...
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'go-vela',
   projectName: 'docs',
