@@ -46,7 +46,7 @@ const config = {
             'https://github.com/go-vela/docs/blob/main/',
           versions: {
             current: {
-              label: `Next 🚧`,
+              label: `v0.26`,
             },
           },
         },
