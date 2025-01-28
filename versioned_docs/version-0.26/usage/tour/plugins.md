@@ -47,5 +47,4 @@ steps:
 
 **Key references:**
 
-[`name:`](/reference/yaml/steps/#the-name-key), [`image:`](/reference/yaml/steps/#the-image-key), [`parameters:`](/reference/yaml/steps/#the-parameters-key),
-
+[`name:`](/reference/yaml/steps/#the-name-key), [`image:`](/reference/yaml/steps/#the-image-key), [`parameters:`](/reference/yaml/steps/#the-parameters-key)

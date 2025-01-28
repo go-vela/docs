@@ -59,4 +59,4 @@ stages:
 
 **Key references:**
 
-[`name:`](/reference/yaml/steps/#the-name-key), [`image:`](/reference/yaml/steps/#the-image-key), [`environment:`](/reference/yaml/steps/#the-environment-key), [`commands:`](/reference/yaml/steps/#the-commands-key),
+[`name:`](/reference/yaml/steps/#the-name-key), [`image:`](/reference/yaml/steps/#the-image-key), [`environment:`](/reference/yaml/steps/#the-environment-key), [`commands:`](/reference/yaml/steps/#the-commands-key)

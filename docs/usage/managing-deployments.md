@@ -36,7 +36,7 @@ Additionally, any secret you may need for the event must also have `deployments`
 Let us look at an example workflow for executing a deployment on your repo. You should understand the following concepts before proceeding:
 
 * [Steps](docs/usage/tour/steps.md)
-  * [image](docs/usage/tour/image.md)
+  * [Image](docs/usage/tour/image.md)
   * [Commands](docs/usage/tour/environment.md)
   * [Ruleset](docs/usage/tour/rulesets.md)
 
@@ -86,3 +86,4 @@ $ vela add deployment --org github --repo octocat --target stage
 # Add a deployment for a repository with two parameters.
 $ vela add deployment --org github --repo octocat --parameter 'message=Hello, custom var!'
 ```
+

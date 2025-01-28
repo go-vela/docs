@@ -31,7 +31,7 @@ steps:
           - latest
 ```
 
-The above pipeline will work and be suitable for many cloud-related CI builds. However, there are potential issues with this method. As stricter rotation policies for credentials becomes more common place, developing processes wherein Vela secrets are updated in tandem with these rotations is introducing unneccessary tech debt and is antithetical to continuous integration.
+The above pipeline will work and be suitable for many cloud-related CI builds. However, there are potential issues with this method. As stricter rotation policies for credentials becomes more common place, developing processes wherein Vela secrets are updated in tandem with these rotations is introducing unnecessary tech debt and is antithetical to continuous integration.
 
 In comes [OpenID Connect](https://openid.net/developers/how-connect-works/).
 
@@ -103,3 +103,4 @@ There are many resources on validating OpenID tokens. Some of the high level req
 - Can the token be validated using the JWKs located at the well-known path of the issuer?
 - Do the claims of the ID token match the cloud service expectations?
 - Are the claims all members of the `supported_claims` field located at the well-known OpenID configuration?
+

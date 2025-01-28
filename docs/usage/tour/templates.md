@@ -12,7 +12,7 @@ Templates can solve duplicative tasks in a single workflow or be leveraged by an
 
 In this pipeline each step is shown with the minimum required YAML keys to execute a step.
 
-Both steps are pulling a [Alpine Linux](https://alpinelinux.org/) image from [Docker Hub](https://hub.docker.com/) and executing echo statements.  
+Both steps are pulling an [Alpine Linux](https://alpinelinux.org/) image from [Docker Hub](https://hub.docker.com/) and executing echo statements.  
 
 **Expand your knowledge with a [deep dive](/docs/usage/templates/templates.md)!**
 
@@ -43,5 +43,4 @@ steps:
 
 **Key references:**
 
-[`templates:`](/docs/reference/yaml/templates.md), [`vars:`](/reference/yaml/steps/#the-template-key),
-
+[`templates:`](/docs/reference/yaml/templates.md), [`vars:`](/reference/yaml/steps/#the-template-key)

@@ -6,7 +6,7 @@ description: >
   Example pipeline with external secrets
 ---
 
-Example [Yaml](https://yaml.org/spec/) configuration for a project requiring a secrets to be used within a step
+Example [YAML](https://yaml.org/spec/) configuration for a project requiring a secrets to be used within a step
 
 ## Scenario
 
@@ -31,7 +31,7 @@ The following [pipeline concepts](/docs/usage/tour/tour.md) are being used in th
 
 The following [Vela plugins](/docs/usage/tour/tour.md) are being used in the pipeline below:
 
-* [Docker](/docs/usage/plugins/registry/docker.md)
+* [Docker](/docs/usage/plugins/registry/Docker.md)
 
 :::tip
 Pipeline must be stored in base of repository as `.vela.yml` or `.vela.yaml`
@@ -88,7 +88,7 @@ The following [pipeline concepts](/docs/usage/tour/tour.md) are being used in th
 
 The following [Vela plugins](/docs/usage/tour/tour.md) are being used in the pipeline below:
 
-* [Docker](/docs/usage/plugins/registry/docker.md)
+* [Docker](/docs/usage/plugins/registry/Docker.md)
 
 :::tip
 Pipeline must be stored in base of repository as `.vela.yml` or `.vela.yaml`

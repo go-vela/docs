@@ -6,7 +6,7 @@ description: >
   Example Rust (With Cargo) Pipeline
 ---
 
-Example [Yaml](https://yaml.org/spec/) configuration for a project building a [Rust](https://www.rust-lang.org/) binary with [Cargo](https://doc.rust-lang.org/cargo/commands/cargo-doc.html).
+Example [YAML](https://yaml.org/spec/) configuration for a project building a [Rust](https://www.rust-lang.org/) binary with [Cargo](https://doc.rust-lang.org/cargo/commands/cargo-doc.html).
 
 ## Scenario
 
@@ -103,3 +103,4 @@ stages:
         commands:
           - cargo build --verbose --all
 ```
+

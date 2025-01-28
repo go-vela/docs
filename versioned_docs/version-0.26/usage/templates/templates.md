@@ -145,13 +145,14 @@ steps:
 
 ### Templating directly in `.vela.yml`
 
-As of `0.9.0` Vela allows using Starlark and Go templates directly in the `.vela.yml` 
+As of `0.9.0` Vela allows using Starlark and Go templates directly in the `.vela.yml`
 given you select the desired template language in the pipeline settings `https://vela.company.com/<org>/<repo>/settings`.
 
 **NOTE:** When Starlark is chosen in the pipeline settings, Vela will look for any of the following files for the pipeline instructions
 `.vela.yml`, `.vela.py` or `.vela.star`
 
 #### Example `.vela.yml` using Golang
+
 ```yaml
 version: "1"
 
@@ -171,6 +172,7 @@ stages:
 ```
 
 #### Example `.vela.yml`, `.vela.py` or `.vela.star` using Starlark
+
 ```python
 
 def main(ctx):
@@ -204,21 +206,21 @@ def stage(word):
 
 Rendering a template inline gives you the power of:
 
- - using an external template without the need of having to specify using that directly in the pipeline 
- - merging templates into an existing pipeline without needing to be expanded
+* using an external template without the need of having to specify using that directly in the pipeline
+* merging templates into an existing pipeline without needing to be expanded
 
 :::warning
-You **can not** mix stages and steps pipelines in a single render. They must be all of one type. 
+You **can not** mix stages and steps pipelines in a single render. They must be all of one type.
 :::
 
 Using this feat unlocks powerful pipelines that allow you to use templates with:
 
-- stages
-- steps
-- services
-- secrets
+* stages
+* steps
+* services
+* secrets
 
-To use this feature all you need to do is add `render_inline: true` in the metadata block of your pipeline and you can start compiling templates without the need of the stages and steps blocks. This feature does work with both Go templates and Starlark. 
+To use this feature all you need to do is add `render_inline: true` in the metadata block of your pipeline and you can start compiling templates without the need of the stages and steps blocks. This feature does work with both Go templates and Starlark.
 
 #### Basic
 
@@ -420,9 +422,8 @@ It is highly recommended before reviewing the below content to have a solid gras
 
 When writing a new template getting feedback can be a very painful process. Vela provides a few core methods to get feedback quickly to ensure the template you're writing expands in the pipeline you expect to run. The main methods for seeing expanded pipelines are:
 
-- Pipeline endpoints _(which can be used via UI or CLI)_
-- CLI pipeline validation _(`vela validate pipeline`)_
-
+* Pipeline endpoints _(which can be used via UI or CLI)_
+* CLI pipeline validation _(`vela validate pipeline`)_
 
 ## Pipeline endpoints
 
@@ -452,3 +453,4 @@ vela validate pipeline --template
 # this will allow someone to override the `source:` and use a local template for testing
 vela validate pipeline --template --template-file name:path/to/file
 ```
+

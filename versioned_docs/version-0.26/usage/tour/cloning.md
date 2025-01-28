@@ -55,5 +55,4 @@ steps:
 
 **Key references:**
 
-[`clone:`](/reference/yaml/metadata/#the-clone-key), [`name:`](/reference/yaml/steps/#the-name-key), [`image:`](/reference/yaml/steps/#the-image-key), [`parameters:`](/reference/yaml/steps/#the-parameters-key),
-
+[`clone:`](/reference/yaml/metadata/#the-clone-key), [`name:`](/reference/yaml/steps/#the-name-key), [`image:`](/reference/yaml/steps/#the-image-key), [`parameters:`](/reference/yaml/steps/#the-parameters-key)

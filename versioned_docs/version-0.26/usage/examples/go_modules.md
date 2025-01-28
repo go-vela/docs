@@ -6,7 +6,7 @@ description: >
   Example Go (With Modules) Pipeline
 ---
 
-Example [Yaml](https://yaml.org/spec/) configuration for a project building a [Go](https://golang.org/) binary with [Go modules](https://github.com/golang/go/wiki/Modules).
+Example [YAML](https://yaml.org/spec/) configuration for a project building a [Go](https://golang.org/) binary with [Go modules](https://github.com/golang/go/wiki/Modules).
 
 ## Scenario
 
@@ -117,3 +117,4 @@ stages:
         commands:
           - go build
 ```
+

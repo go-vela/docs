@@ -22,11 +22,13 @@ See [Go template Functions](https://pkg.go.dev/text/template#hdr-Functions) for 
 #### Example
 
 A function call:
+
 ```go-text-template
 {{ printf "%q" "output" }}
 ```
 
 A function call whose final argument comes from the previous command:
+
 ```go-text-template
 {{ "output" | printf "%q" }}
 ```
@@ -46,6 +48,7 @@ The `toYaml` function is intended to ease working with passing and rendering YAM
 ### Example
 
 `.vela.yml`
+
 ```yaml
 version: "1"
 templates:
@@ -64,6 +67,7 @@ steps:
 ```
 
 `github.com/<org>/<repo>/path/to/file/<template>.yml`
+
 ```go-text-template
 metadata:
   template: true
@@ -94,4 +98,3 @@ steps:
 #### vela
 
 The `vela` function provides the convenience of accessing [Vela environment variables](/docs/reference/environment/variables.md) within your Vela templates. See its dedicated [platform vars page](/docs/usage/templates/go/vars_platform.md) for more info.
-

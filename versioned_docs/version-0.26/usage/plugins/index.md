@@ -6,9 +6,9 @@ sidebar_position: 4
 Vela contains two plugin types:
 
 * pipeline - designed to be used within steps, stages, and template pipelines
-* secret - designed to be used within the secrets Yaml block of pipelines
+* secret - designed to be used within the secrets YAML block of pipelines
 
-Both accept configuration via environment variables but should be used within their specific location of the Yaml pipeline.
+Both accept configuration via environment variables but should be used within their specific location of the YAML pipeline.
 
 :::info
 Before you begin your plugin journey we recommend the following pre-requisites:
@@ -16,6 +16,7 @@ Before you begin your plugin journey we recommend the following pre-requisites:
 * [Steps](docs/usage/tour/steps.md)
 * [Stages](docs/usage/tour/stages.md)
 * [Templates](docs/usage/tour/templates.md)
+
 :::
 
 ## Pipeline
@@ -34,6 +35,7 @@ These actions can be for any number of general tasks, including:
 The example we have shown is publishing an image to a registry. Pipeline plugins configuration works via environment variables that pass data from pipeline to the container at runtime.
 
 _Not a runnable pipeline_
+
 ```diff
 version: "1"
 
@@ -49,7 +51,7 @@ steps:
 ## Secret
 
 :::warning
-Secret plugins are configured with an allow list of available images via an administator on installation. To know which secret plugins are available for your Vela installation, we recommend consulting your system administrators.
+Secret plugins are configured with an allow list of available images via an administrator on installation. To know which secret plugins are available for your Vela installation, we recommend consulting your system administrators.
 :::
 
 Secret plugins are designed to be used to read secrets in volumes within the Vela workspace. When a secret plugin runs the plugin should write data to the custom Vela mount (`/vela/secrets/`) as key/value pairs. Secret plugins configuration works via environment variables that pass data from pipeline to the container at runtime.
@@ -59,6 +61,7 @@ A secret plugin works in tandem with the Vela workspace to read data from a prov
 ### Sample
 
 _Not a runnable pipeline_
+
 ```diff
 secrets:
   - name: vault_token

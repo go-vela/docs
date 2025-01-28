@@ -6,7 +6,7 @@ description: >
   Example Pipeline with build routing
 ---
 
-Example [Yaml](https://yaml.org/spec/) configuration for a project requiring a specific runtime or platform.
+Example [YAML](https://yaml.org/spec/) configuration for a project requiring a specific runtime or platform.
 
 ## Scenario
 

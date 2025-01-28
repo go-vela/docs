@@ -6,7 +6,7 @@ description: >
   Example Pipeline with Postgres
 ---
 
-Example [Yaml](https://yaml.org/spec/) configuration for a project requiring a [Postgres](https://www.postgresql.org/) as a pipeline dependency.
+Example [YAML](https://yaml.org/spec/) configuration for a project requiring a [Postgres](https://www.postgresql.org/) as a pipeline dependency.
 
 ## Scenario
 
@@ -14,7 +14,7 @@ User is looking to create a pipeline that can integrate with an ephemeral Postgr
 
 ### Services
 
-Services Yaml block can be used with stages and steps pipelines. This example uses a basic steps configuration.
+Services YAML block can be used with stages and steps pipelines. This example uses a basic steps configuration.
 
 The following [pipeline concepts](/docs/usage/tour/tour.md) are being used in the pipeline below:
 

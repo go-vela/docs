@@ -63,6 +63,7 @@ This pipeline will:
 * always attempt to pull the `redis:latest` image, even if it exists locally
 * only pull the `alpine:latest` image if it doesn't already exist locally
 * wait to pull the `target/secret-vault:latest` image until right before starting the container
+
 :::
 
 ## References
@@ -75,6 +76,4 @@ The following [pipeline concepts](/docs/usage/tour/tour.md) are being used in th
   * [Pull](docs/usage/tour/image.md)
 * [Secrets](docs/usage/tour/secrets.md)
   * [Origin](docs/usage/tour/secrets.md)
-
 * [`Pull` YAML Key](/reference/yaml/steps/#the-pull-key)
-

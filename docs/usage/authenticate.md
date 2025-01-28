@@ -22,4 +22,4 @@ Please see authentication in the [API reference](/docs/reference/api/authenticat
 
 ## SDK
 
-Please see authentication in the [sdk reference](/docs/reference/sdk/go.md).
+Please see authentication in the [SDK reference](/docs/reference/sdk/go.md).

@@ -6,7 +6,7 @@ description: >
   Example Rust (With Cargo) Pipeline
 ---
 
-Example [Yaml](https://yaml.org/spec/) configuration for a project building a [Rust](https://www.rust-lang.org/) binary with [Cargo](https://doc.rust-lang.org/cargo/commands/cargo-doc.html).
+Example [YAML](https://yaml.org/spec/) configuration for a project building a [Rust](https://www.rust-lang.org/) binary with [Cargo](https://doc.rust-lang.org/cargo/commands/cargo-doc.html).
 
 ## Scenario
 
@@ -17,7 +17,7 @@ User is looking to create a pipeline that builds an artifact on any event or bra
 The following [pipeline concepts](/docs/usage/tour/tour.md) are being used in the pipeline below:
 
 * [Steps](docs/usage/tour/steps.md)
-  * [image](docs/usage/tour/image.md)
+  * [Image](docs/usage/tour/image.md)
   * [Pull](docs/usage/tour/image.md)
   * [Commands](docs/usage/tour/steps.md)
 
@@ -63,7 +63,7 @@ The following [pipeline concepts](/docs/usage/tour/tour.md) are being used in th
 * [Stages](docs/usage/tour/stages.md)
   * [Needs](docs/usage/tour/stages.md)
   * [Steps](docs/usage/tour/steps.md)
-    * [image](docs/usage/tour/image.md)
+    * [Image](docs/usage/tour/image.md)
     * [Pull](docs/usage/tour/image.md)
     * [Commands](docs/usage/tour/steps.md)
 
@@ -103,3 +103,4 @@ stages:
         commands:
           - cargo build --verbose --all
 ```
+

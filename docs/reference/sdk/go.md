@@ -7,7 +7,7 @@ description: >
 
 ## Overview
 
-Vela Go SDK is a client to perform operations on Vela objects or view content in a new way to integrate into applications. 
+Vela Go SDK is a client to perform operations on Vela objects or view content in a new way to integrate into applications.
 
 For a complete list of APIs and examples, please take a look at the [Godoc Reference documentation](https://pkg.go.dev/github.com/go-vela/sdk-go/vela).
 
@@ -54,3 +54,4 @@ func main() {
     fmt.Printf("Received response code %d, for build %+v", resp.StatusCode, build)    
 }
 ```
+

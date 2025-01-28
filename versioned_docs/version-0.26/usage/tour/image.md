@@ -51,5 +51,4 @@ image: index.docker.io/library/alpine:3
 
 **Key references:**
 
-[`name:`](/reference/yaml/steps/#the-name-key), [`image:`](/reference/yaml/steps/#the-image-key), [`pull:`](/reference/yaml/steps/#the-commands-key),  [`commands:`](/reference/yaml/steps/#the-commands-key),
-
+[`name:`](/reference/yaml/steps/#the-name-key), [`image:`](/reference/yaml/steps/#the-image-key), [`pull:`](/reference/yaml/steps/#the-commands-key),  [`commands:`](/reference/yaml/steps/#the-commands-key)

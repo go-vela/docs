@@ -35,7 +35,7 @@ Vela can subscribe to any of the following webhook events:
 | `delete:branch`               |  a repository branch has been deleted                                      |
 | `delete:tag`                  |  a repository tag has been deleted                                         |
 
-Pipelines can be written to behave differently based on which event triggered the build (see [rulesets](/docs/usage/tour/rulesets.md).
+Pipelines can be written to behave differently based on which event triggered the build (see [rulesets](/docs/usage/tour/rulesets.md)).
 
 :::note
 Event scoping (`event:action`) was included in Vela release `v0.23.0`. As such, general `event` rulesets in pipelines are mapped as following:
