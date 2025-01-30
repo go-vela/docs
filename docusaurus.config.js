@@ -5,7 +5,6 @@ import remoteContentVelaPlugins from './remote-vela-plugins/index.js';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-
   title: 'Vela',
   tagline: 'Vela is a Pipeline Automation (CI/CD) framework built on Linux container technology written in Golang.',
   favicon: 'img/favicon.ico',
