@@ -39,13 +39,14 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          lastVersion: 'current',
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: "/",
           editUrl:
-            'https://go-vela.github.io/go-vela/docs/blob/main/',
+            'https://github.com/go-vela/docs/blob/main/',
           versions: {
             current: {
-              label: `Current 🚧`,
+              label: `v0.26`,
             },
           },
         },
