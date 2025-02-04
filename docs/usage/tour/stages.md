@@ -16,7 +16,7 @@ These pipelines do not have a minimum defined length and will always execute ste
 
 In this pipeline both stages trigger at the same time.
 
-Both steps are pulling a [Alpine Linux](https://alpinelinux.org/) image from [Docker Hub](https://hub.docker.com/) and executing echo statements.  
+Both steps are pulling an [Alpine Linux](https://alpinelinux.org/) image from [Docker Hub](https://hub.docker.com/) and executing echo statements.  
 
 **See it in action with examples!**
 
@@ -79,4 +79,4 @@ $ vela exec pipeline
 
 **Key references:**
 
-[`name:`](/reference/yaml/steps/#the-name-key), [`image:`](/reference/yaml/steps/#the-image-key), [`commands:`](/reference/yaml/steps/#the-commands-key),
+[`name:`](/reference/yaml/steps/#the-name-key), [`image:`](/reference/yaml/steps/#the-image-key), [`commands:`](/reference/yaml/steps/#the-commands-key)

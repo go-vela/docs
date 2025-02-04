@@ -6,7 +6,7 @@ description: >
   Example Java (With Gradle) Pipeline
 ---
 
-Example [Yaml](https://yaml.org/spec/) configuration for a project building a [Java](https://docs.oracle.com/en/java/) application with [Gradle](https://docs.gradle.org/current/userguide/userguide.html).
+Example [YAML](https://yaml.org/spec/) configuration for a project building a [Java](https://docs.oracle.com/en/java/) application with [Gradle](https://docs.gradle.org/current/userguide/userguide.html).
 
 ## Scenario
 
@@ -17,7 +17,7 @@ User is looking to create a pipeline that builds an artifact on any event or bra
 The following [pipeline concepts](/docs/usage/tour/tour.md) are being used in the pipeline below:
 
 * [Steps](docs/usage/tour/steps.md)
-  * [image](docs/usage/tour/image.md)
+  * [Image](docs/usage/tour/image.md)
   * [Environment](docs/usage/tour/environment.md)
   * [Pull](docs/usage/tour/image.md)
   * [Commands](docs/usage/tour/steps.md)
@@ -67,7 +67,7 @@ The following [pipeline concepts](/docs/usage/tour/tour.md) are being used in th
 * [Stages](/docs/usage/tour/stages.md)
   * [Needs](/docs/usage/tour/stages.md)
   * [Steps](/docs/usage/tour/steps.md)
-    * [image](/docs/usage/tour/image.md)
+    * [Image](/docs/usage/tour/image.md)
     * [Environment](/docs/usage/tour/environment.md)
     * [Pull](/docs/usage/tour/image.md)
     * [Commands](/docs/usage/tour/steps.md)
@@ -115,3 +115,4 @@ stages:
         commands:
           - gradle build
 ```
+

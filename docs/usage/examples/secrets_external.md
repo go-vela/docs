@@ -6,7 +6,7 @@ description: >
   Example pipeline with external secrets
 ---
 
-Example [Yaml](https://yaml.org/spec/) configuration for a project requiring a secrets to be used within a step
+Example [YAML](https://yaml.org/spec/) configuration for a project requiring a secrets to be used within a step
 
 ## Scenario
 

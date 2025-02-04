@@ -10,7 +10,6 @@ The version key is intended to be used in order to issue warnings for deprecated
 
 ```yaml
 ---
-# This document is displaying using the version key within a yaml file.
+# This document is displaying using the version key within a YAML file.
 version: "1"
 ```
-

@@ -7,8 +7,7 @@ sidebar_position: 1
 ## Step 1 - Enable a Repo
 
 :::warning
-You will need **Admin** access to the repo to be able to activate it in Vela. This is because you need **Admin** access to be able to add webhooks
-to the repo.
+You will need **Admin** access to the repo in your SCM (GitHub) to be able to activate it in Vela. This is because you need **Admin** access to be able to add webhooks to the repo.
 :::
 
 For this example, we'll go over using the UI to add the repo. You can always head over to the [CLI docs](/docs/reference/cli/repo/add.md) for docs on how to add a repo via CLI.
@@ -20,7 +19,7 @@ For this example, we'll go over using the UI to add the repo. You can always hea
    1. Alternatively you can "Add All" repos in an org.
    1. If your repo doesn't exist, try clicking "Refresh List" in the top right.
 
-Your repo now has the necessary web hook to Vela.
+Your repo now has the necessary webhook to Vela.
 
 :::info
 If you're coming from another CI platform you can set a starting build number by updating the counter field on the repo via the UI, [CLI](/docs/reference/cli/repo/repo.md), or [API](/docs/reference/api/repo/repo.md).
@@ -28,14 +27,14 @@ If you're coming from another CI platform you can set a starting build number by
 
 ## Step 2 - Build a Pipeline
 
-A steps pipeline is designed to run a sequential set of tasks.These pipelines do not have a minimum defined length and steps will always execute in the order defined.
+A steps pipeline is designed to run a sequential set of tasks. These pipelines do not have a minimum defined length and steps will always execute in the order defined.
 
-In this pipeline each step is shown with the minimum required YAML keys to execute a step. Both steps are pulling a [Alpine Linux](https://alpinelinux.org/) image from [Docker Hub](https://hub.docker.com/) and executing echo statements.  
+In this pipeline each step is shown with the minimum required YAML keys to execute a step. Both steps are pulling an [Alpine Linux](https://alpinelinux.org/) image from [Docker Hub](https://hub.docker.com/) and executing echo statements.  
 
 ```yaml
 version: "1"
 
-# In this pipeline, commands are executed inside the container as the Entrypoint.
+# In this pipeline, commands are executed inside the container as the entrypoint.
 # If any command returns a non-zero exit code, the pipeline fails and exits.
 steps:
 
@@ -49,6 +48,7 @@ steps:
     commands:
       - echo "Welcome to the Vela docs"
 ```
+
 **See it in action with examples!**
 
 * [Go](/docs/usage/examples/go_modules.md)
@@ -91,6 +91,7 @@ The ruleset key gives you the ability to add conditions on the step to tell Vela
   commands:
     - echo "Welcome to the Vela docs"
 ```
+
 ## Step 4 - Select Your Plugins
 
 A plugin is a Docker container that is designed to perform a set of pre-defined actions.
@@ -129,6 +130,7 @@ steps:
         - latest
         - v1.0.0
 ```
+
 ## Step 5 - Trigger the Pipeline
 
 If you've followed the documentation for [enabling a repo](/docs/usage/enable_repo.md) and wrote a pipeline ([here are some example pipelines](/docs/usage/tour/tour.md)), all that should be left is to push your pipeline to your repo.
@@ -136,7 +138,7 @@ If you've followed the documentation for [enabling a repo](/docs/usage/enable_re
 If a build does not trigger when your push a change to your repo, check the webhook response to see if there is an error.
 
 :::tip
-Want to run it locally? Install the CLI and "exec" the pipline from your terminal
+Want to run it locally? Install the CLI and "exec" the pipeline from your terminal.
 :::
 
 ```sh
@@ -145,5 +147,5 @@ $ vela exec pipeline
 [stage: ][step: Greeting] $ echo "Hello, World"
 [stage: ][step: Greeting] Hello, World
 [stage: ][step: Welcome] $ echo "Welcome to the Vela docs"
-[stage: ][step: Welcome] Welcome to the Vela docs  
+[stage: ][step: Welcome] Welcome to the Vela docs
 ```

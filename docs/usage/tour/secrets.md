@@ -73,4 +73,4 @@ secrets:
 
 **Key references:**
 
-[(step) `secrets:`](/reference/yaml/steps/#the-secrets-key), [(parent)  `secrets:`](/docs/reference/yaml/secrets.md),
+[(step) `secrets:`](/reference/yaml/steps/#the-secrets-key), [(parent)  `secrets:`](/docs/reference/yaml/secrets.md)

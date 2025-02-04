@@ -6,7 +6,7 @@ description: >
   Example Pipeline with Redis
 ---
 
-Example [Yaml](https://yaml.org/spec/) configuration for a project requiring a [Redis](https://redis.io/) as a pipeline dependency.
+Example [YAML](https://yaml.org/spec/) configuration for a project requiring a [Redis](https://redis.io/) as a pipeline dependency.
 
 ## Scenario
 
@@ -14,7 +14,7 @@ User is looking to create a pipeline that can integrate with an ephemeral Redis 
 
 ### Services
 
-Services Yaml block can be used with stages and steps pipelines. This example uses a basic steps configuration.
+Services YAML block can be used with stages and steps pipelines. This example uses a basic steps configuration.
 
 The following [pipeline concepts](/docs/usage/tour/tour.md) are being used in the pipeline below:
 
@@ -55,7 +55,7 @@ If you're looking for more granular start time for the container you can add a d
 The following [pipeline concepts](/docs/usage/tour/tour.md) are being used in the pipeline below:
 
 * [Steps](docs/usage/tour/steps.md)
-  * [image](docs/usage/tour/image.md)
+  * [Image](docs/usage/tour/image.md)
   * [Pull](docs/usage/tour/image.md)
   * [Commands](docs/usage/tour/steps.md)
 
@@ -82,3 +82,4 @@ steps:
 +      - sleep 15
       - redis-cli -h redis ping
 ```
+
