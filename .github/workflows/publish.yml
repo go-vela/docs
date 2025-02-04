@@ -10,6 +10,9 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  build:
+    uses: go-vela/docs/.github/workflows/build.yml@488a32717f2a02f217a11d82bb85ab5bce45ce31
+    secrets: inherit
   publish:
     needs: build
     runs-on: ubuntu-latest
