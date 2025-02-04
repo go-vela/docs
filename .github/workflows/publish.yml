@@ -10,6 +10,10 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  build:
+    uses: go-vela/docs/.github/workflows/build.yml@f77161d9c6e524457e05e0c3d82c0dc40c530695
+    secrets: inherit
+
   publish:
     needs: build
     runs-on: ubuntu-latest
@@ -19,6 +23,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
