@@ -37,7 +37,7 @@ steps:
 
 Building an image with elevated access is a allowed pattern as long as the administrators have set the required allow list of images on the worker. It's *important to work with your administrator* to understand stand which pattern you instances was deployed to support. The supported plugin for building those images:
 
-* [vela-docker](/docs/usage/plugins/registry/docker.md)
+* [vela-docker](/docs/usage/plugins/registry/Docker.md)
 
 ```yaml
 version: "1"
