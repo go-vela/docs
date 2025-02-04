@@ -2,15 +2,15 @@ name: Build Site
 
 on:
   pull_request:
-  push:
-    branches: [main]
   workflow_dispatch:
+  workflow_call:
+    secrets:
+      DOCUSAURUS_GITHUB_PAT:
+        required: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      base_path: "/actions-management/actions-docs"
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
 
@@ -28,7 +28,7 @@ jobs:
         env:
           GITHUB_PAT: ${{ secrets.DOCUSAURUS_GITHUB_PAT }}
           GHE_PAT: ${{ secrets.DOCUSAURUS_GHE_PAT }}
-          GHE_API_URL: ${{ secrets.DOCUSAURUS_GHE_API_URL }}  
+          GHE_API_URL: ${{ secrets.DOCUSAURUS_GHE_API_URL }}
         run: |
           pnpm install
           pnpm build
