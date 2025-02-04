@@ -11,8 +11,7 @@ import Heading from '@theme/Heading';
 const docsPluginId = undefined;
 
 const VersionsArchived = {
-    "0.25": "/usage/quickstart",
-    "0.24": "/0.24.x/usage/quickstart",
+
 };
 
 const VersionsArchivedList = Object.entries(VersionsArchived);

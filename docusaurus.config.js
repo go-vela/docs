@@ -10,20 +10,21 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://pages.git.target.com',
+  url: 'https://go-vela.github.io/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/docs-v2/',
+  baseUrl: '/docs/',
   plugins: [
     require.resolve('docusaurus-lunr-search'),
     ...remoteContentVelaPlugins,
   ],
 
-  // GitHub pages deployment config.
+  // GitHub pages deployment config...
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'actions-playground',
-  projectName: 'vela-prototype',
+  organizationName: 'go-vela',
+  projectName: 'docs',
   deploymentBranch: 'gh-pages',
+  trailingSlash: false,
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
@@ -38,13 +39,14 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          lastVersion: 'current',
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: "/",
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/go-vela/docs/blob/main/',
           versions: {
             current: {
-              label: `Current 🚧`,
+              label: `v0.26`,
             },
           },
         },
@@ -54,11 +56,6 @@ const config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          // Please change this to your repo..
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
@@ -100,7 +97,7 @@ const config = {
               sidebarId: 'reference',
               label: 'Reference',
             },
-            { to: '/blog', label: 'Blog', position: 'left' },
+            { to: '/blog', label: 'Announcements', position: 'left' },
             {
               type: 'docsVersionDropdown',
               label: 'version',
