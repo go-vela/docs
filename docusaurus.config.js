@@ -70,12 +70,12 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: 'img/vela.png',
+      image: 'img/vela.svg',
       navbar: {
         title: 'Vela',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/vela.png',
+          alt: 'Vela logo',
+          src: 'img/vela.svg',
         },
         items:
           [
