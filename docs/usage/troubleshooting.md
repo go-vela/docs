@@ -201,3 +201,147 @@ If you're using GitHub and using the secret for a pipeline at `https://github.co
 This behavior indicates [the `vela_executor_enforce_trusted_repos` flag](/reference/installation/worker/#vela_executor_enforce_trusted_repos) has been set by the Vela platform administrators, which allows only certain repositories to run privileged images.
 
 To resolve the issue, identify the step attempting to run a privileged image and consider a workaround. Otherwise, work with your Vela platform administrators to add your repository to the allowlist.
+
+## `v0.26` YAML Migration
+
+With the release of `v0.26`, Vela transitioned away from [buildkite/yaml](https://github.com/buildkite/yaml) to the official [go-yaml/yaml](https://github.com/go-yaml/yaml) for parsing pipelines and templates.
+
+As a result, there are a few common parsing issues that have been compiled together here:
+
+### Issue 1: `unable to unmarshal into StringSliceMap`
+
+This error indicates that Vela is failing to unmarshal the `environment` key in one or many steps in your pipeline.
+
+This can be caused in two different ways.
+
+**Cause 1: inline Go "clobbering" pre-defined YAML environment key**
+
+```yaml
+environment:
+  STATE: California
+  CITY: San Francisco
+  NEIGHBORHOOD: Embarcadero
+  {{ if <something> }}
+  NEIGHBORHOOD: Mission
+  {{ end }}
+```
+
+Because `NEIGHBORHOOD` was already declared _outside_ the inline Go logic, it will cause issues with the YAML parser. Instead of re-assigning the environment key, users should declare the key solely within the inline Go:
+
+**Solution**
+```yaml
+environment:
+  STATE: California
+  CITY: San Francisco
+  {{ if <something> }}
+  NEIGHBORHOOD: Mission
+  {{ else }}
+  NEIGHBORHOOD: Embarcadero
+  {{ end }}
+```
+
+Now the `NEIGHBORHOOD` key is not being re-assigned. It is being declared via Go logic.
+
+**Cause 2: multiple `<<` keys within the environment map (will be addressed as a warning in v0.26.2)**
+
+```yaml
+base_env: &base_env
+  CLUSTER: my_cluster
+  REGION: us-west
+
+release_env: &release_env
+  ENV: prod
+
+steps:
+  - name: release step
+    image: my_image
+    environment:
+      REPO: ${VELA_REPO_FULL_NAME}
+      <<: *base_env
+      <<: *release_env
+    commands:
+      - ./do_release.sh
+```
+
+The above environment merge will throw an error because the `<<` key is repeated, which violates the unique key constraint in standard YAML maps. To remediate, simply declare all your alias YAML nodes in a sequence.
+
+**Solution**
+```yaml
+base_env: &base_env
+  CLUSTER: my_cluster
+  REGION: us-west
+
+release_env: &release_env
+  ENV: prod
+
+steps:
+  - name: release step
+    image: my_image
+    environment:
+      REPO: ${VELA_REPO_FULL_NAME}
+      <<:
+        - *base_env
+        - *release_env
+    commands:
+      - ./do_release.sh
+```
+
+### Issue 2: missing `parameters` or `environment`  pairs when using YAML anchors
+
+This issue occurs when users have declared an anchor which contains some base set of `parameters` or `environment` pairs and attempts to add them to step configurations which have _their own_ `parameters` or `environment` pairs. Below is an example.
+
+```yaml
+plugin_base: &plugin_base
+  image: my-neat-plugin:v1.2.3
+  pull: always
+  secrets: [ plugin_token ]
+  parameters:
+    log_level: debug
+    repo: ${VELA_REPO_FULL_NAME}
+
+steps:
+  - name: plugin-west
+    <<: *plugin_base
+    parameters:
+      region: central
+      data_center: west
+
+  - name: plugin-east
+    <<: *plugin_base
+    parameters:
+      region: central
+      data_center: east
+```
+
+Due to the fact that `parameters` is a declared key in the `plugin_base` anchor _and_ in the steps `plugin-west` + `plugin-east`, the YAML parser will only accept the `parameters` declared in the steps. This is the [YAML standard](https://yaml.org/type/merge.html), which unfortunately was not followed by our previous parser.
+
+To solve this issue, users should plan on merging `parameters` and `environment` maps with separate map anchors that avoid collisions.
+
+**Solution**
+```yaml
+plugin_base: &plugin_base
+  image: my-neat-plugin:v1.2.3
+  pull: always
+  secrets: [ plugin_token ]
+
+plugin_base_params: &plugin_base_params
+  log_level: debug
+  repo: ${VELA_REPO_FULL_NAME}
+
+steps:
+  - name: plugin-west
+    <<: *plugin_base
+    parameters:
+      <<: *plugin_base_params
+      region: central
+      data_center: west
+
+  - name: plugin-east
+    <<: *plugin_base
+    parameters:
+      <<: *plugin_base_params
+      region: central
+      data_center: east
+```
+
+Now when Vela compiles the pipeline, the `parameters` blocks for each step will include the `log_level` and `repo` pairs from the base anchor.
