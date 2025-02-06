@@ -267,11 +267,11 @@ The above environment merge will throw an error because the `<<` key is repeated
 
 **Solution**
 ```yaml
-tap_base_env: &base_env
+base_env: &base_env
   CLUSTER: my_cluster
   REGION: us-west
 
-tap_release_env: &release_env
+release_env: &release_env
   ENV: prod
 
 steps:
