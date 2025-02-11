@@ -44,7 +44,7 @@ The ruleset key gives you the ability to add conditions on the step to tell Vela
 ```yaml
 - name: Welcome
   # This ruleset would scope the step to only executing
-  # under the conditions a push to a non-main branch occurred
+  # under the conditions a push to a any branch other than main
   ruleset:
     event: push
     unless:
