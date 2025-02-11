@@ -41,6 +41,19 @@ The ruleset key gives you the ability to add conditions on the step to tell Vela
     - echo "Welcome to the Vela docs"
 ```
 
+```yaml
+- name: Welcome
+  # This ruleset would scope the step to only executing
+  # under the conditions a push to a non-main branch occurred
+  ruleset:
+    event: push
+    unless:
+      branch: main
+  image: alpine
+  commands:
+    - echo "Welcome to the Vela docs"
+```
+
 <!-- section break -->
 
 **Key references:**
