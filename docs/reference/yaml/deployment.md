@@ -6,7 +6,7 @@ description: >
   YAML keys for deployment configuration block
 ---
 
-The deployment key can be used to provide guardrails for deployment builds in Vela.
+The deployment key can be used to provide guardrails and custom form fields for deployments in Vela.
 
 By default, this key is not set.
 
