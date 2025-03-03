@@ -3,10 +3,6 @@
   "position": 2,
   "link": {
     "type": "generated-index",
-    "description": "A Vela cluster is deployed as a self-hosted solution and consists of two core services, the server and the worker. The relationship between these services is considered many-to-many meaning many workers can connect to many servers.
-
-The server is considered the brains of the application while the worker is considered the brawn of the application.
-
-An optional third service, the UI, can also be deployed but is not required for the Vela platform to operate as intended. This service provides a means for utilizing and interacting with the Vela platform."
+    "description":  "An example of these tutorials exist in our go-vela/vela-tutorials repository. We recommend reviewing Docker's best practices before attempting to create a custom plugin. We recommend that all plugins be placed inside a scratch image."
   }
 }

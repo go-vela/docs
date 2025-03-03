@@ -1,6 +1,5 @@
 ---
 title: "Bash"
-sidebar_position: 1
 ---
 
 :::warning
