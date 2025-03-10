@@ -30,7 +30,7 @@
     "dotenv": "^16.4.7",
     "lunr": "^2.3.9",
     "prism-react-renderer": "^2.3.0",
-    "prismjs": "^1.29.0",
+    "prismjs": "^1.30.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-player": "^2.16.0"
