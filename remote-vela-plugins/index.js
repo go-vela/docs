@@ -16,6 +16,12 @@ const allPluginsDestinationDir = "docs/usage/plugins/registry";
 moveLocalPluginsToDocs(localPluginsSourceDir, allPluginsDestinationDir);
 
 function fetchRemoteContentPlugin(plugin) {
+    const headers = plugin.anonymous ? {} : {
+        "Authorization": "Bearer " + (plugin.internal ?
+            process.env.GHE_PAT :
+            process.env.GITHUB_PAT),
+    };
+
     return [
         "docusaurus-plugin-remote-content",
         {
@@ -25,11 +31,7 @@ function fetchRemoteContentPlugin(plugin) {
                 `${process.env.GHE_API_URL}/repos/${plugin.sourceRepo}/contents/` :
                 `https://api.github.com/repos/${plugin.sourceRepo}/contents/`,
             requestConfig: {
-                headers: {
-                    "Authorization": "Bearer " + (plugin.internal ?
-                        process.env.GHE_PAT :
-                        process.env.GITHUB_PAT),
-                },
+                headers,
                 params: {
                     ref: plugin.sourceRef,
                 },
