@@ -93,6 +93,10 @@ secrets:
     type: shared
 ```
 
+#### Allowlists
+
+Both shared and org secrets can have repository allowlists. These can be configured in the UI and CLI. These allowlists will scope access to specific repositories.
+
 ### Protecting Secrets
 
 Learn the best practices for keeping your Vela secrets safe.

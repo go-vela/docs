@@ -143,6 +143,8 @@ The following table includes variables only available when the step `id_request`
 | `VELA_REPO_TOPICS`        | `cloud,security`                             | comma-separated list of repository topics     |
 | `VELA_REPO_TRUSTED`       | `false`                                      | trusted setting for the repository            |
 | `VELA_REPO_VISIBILITY`    | `public`                                     | visibility setting for the repository         |
+| `VELA_REPO_INSTALL_ID`    | `100`                                        | scm app install id (if installed)             |
+| `VELA_REPO_CUSTOM_PROPS`  | `{"foo":"bar","foob":"baz"}`                 | custom properties assigned to repository      |
 
 #### User Environment Variables
 
