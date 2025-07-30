@@ -44,58 +44,28 @@ curl \
 ```json
 [
   {
-    "id": 2,
-    "repo_id": 2,
-    "number": 1,
-    "parent": 1,
-    "event": "push",
-    "status": "pending",
-    "error": "",
-    "enqueued": 1563474204,
-    "created": 1563474204,
-    "started": 1563474204,
-    "finished": 0,
-    "deploy": "",
-    "clone": "https://github.com/github/octocat.git",
-    "source": "https://github.com/github/octocat/commit/48afb5bdc41ad69bf22588491333f7cf71135163",
-    "title": "push received from https://github.com/github/octocat",
-    "message": "Second commit...",
-    "commit": "48afb5bdc41ad69bf22588491333f7cf71135163",
-    "sender": "OctoKitty",
-    "author": "OctoKitty",
-    "branch": "main",
-    "ref": "refs/heads/main",
-    "base_ref": "",
-    "host": "ed95dcc0687c",
-    "runtime": "",
-    "distribution": ""
+    "status": "running",
+    "number": 2142,
+    "created": 1740767426,
+    "full_name": "octocat/fav-repo"
   },
   {
-    "id": 1,
-    "repo_id": 1,
-    "number": 1,
-    "parent": 1,
-    "event": "push",
-    "status": "running",
-    "error": "",
-    "enqueued": 1563474077,
-    "created": 1563474076,
-    "started": 1563474077,
-    "finished": 0,
-    "deploy": "",
-    "clone": "https://github.com/github/octocat.git",
-    "source": "https://github.com/github/octocat/commit/48afb5bdc41ad69bf22588491333f7cf71135163",
-    "title": "push received from https://github.com/github/octocat",
-    "message": "First commit...",
-    "commit": "48afb5bdc41ad69bf22588491333f7cf71135163",
-    "sender": "OctoKitty",
-    "author": "OctoKitty",
-    "branch": "main",
-    "ref": "refs/heads/main",
-    "base_ref": "",
-    "host": "82823eb770b0",
-    "runtime": "",
-    "distribution": ""
+    "status": "pending",
+    "number": 2143,
+    "created": 1740767427,
+    "full_name": "octocat/fav-repo"
+  },
+  {
+    "status": "pending",
+    "number": 2144,
+    "created": 1740767428,
+    "full_name": "octocat/fav-repo"
+  },
+  {
+    "status": "pending",
+    "number": 2145,
+    "created": 1740767429,
+    "full_name": "octocat/fav-repo"
   }
 ]
 ```

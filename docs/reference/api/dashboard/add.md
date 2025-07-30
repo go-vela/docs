@@ -13,7 +13,7 @@ POST  /api/v1/dashboards
 
 ## Permissions
 
-COMING SOON!
+Users need a valid access token.
 
 ## Responses
 
@@ -50,7 +50,7 @@ To authenticate to the API, please review the [authentication documentation](/do
     ],
     "repos": [
         {
-            "name": "Octocat/myvela"
+            "name": "github/octocat"
         }
     ]
 }
@@ -87,7 +87,7 @@ curl \
     "repos": [
         {
             "id": 293,
-            "name": "Octocat/myvela"
+            "name": "github/octocat"
         }
     ]
 }

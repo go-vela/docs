@@ -23,7 +23,7 @@ The following parameters are used to configure the endpoint:
 
 ## Permissions
 
-COMING SOON!
+User must have `read` access to the repository in the SCM.
 
 ## Responses
 
@@ -46,38 +46,101 @@ To authenticate to the API, please review the [authentication documentation](/do
 curl \
   -X GET \
   -H "Authorization: Bearer <token>" \
-  "http://127.0.0.1:8080/api/v1/repos/github/octocat/builds/1"
+  "http://127.0.0.1:8080/api/v1/repos/github/octocat/builds/1000"
 ```
 
 #### Response
 
 ```json
 {
-  "id": 1,
-  "repo_id": 1,
-  "number": 1,
-  "parent": 1,
+  "id": 40063,
+  "repo": {
+    "id": 293,
+    "owner": {
+      "id": 126,
+      "name": "Octocat",
+      "active": true
+    },
+    "org": "Octocat",
+    "name": "myvela",
+    "full_name": "github/octocat",
+    "link": "https://github.com/github/octocat",
+    "clone": "https://github.com/github/octocat.git",
+    "branch": "main",
+    "topics": [],
+    "build_limit": 10,
+    "timeout": 30,
+    "counter": 2145,
+    "visibility": "public",
+    "private": false,
+    "trusted": false,
+    "active": true,
+    "allow_events": {
+      "push": {
+        "branch": true,
+        "tag": true,
+        "delete_branch": false,
+        "delete_tag": false
+      },
+      "pull_request": {
+        "opened": true,
+        "edited": true,
+        "synchronize": true,
+        "reopened": true,
+        "labeled": true,
+        "unlabeled": true
+      },
+      "deployment": {
+        "created": true
+      },
+      "comment": {
+        "created": true,
+        "edited": true
+      },
+      "schedule": {
+        "run": true
+      }
+    },
+    "pipeline_type": "go",
+    "previous_name": "",
+    "approve_build": "fork-always",
+    "approval_timeout": 7,
+    "install_id": 0
+  },
+  "pipeline_id": 4177,
+  "number": 1000,
+  "parent": 999,
   "event": "push",
-  "status": "created",
+  "event_action": "",
+  "status": "success",
   "error": "",
-  "enqueued": 1563474077,
-  "created": 1563474076,
-  "started": 1563474077,
-  "finished": 0,
+  "enqueued": 1693341901,
+  "created": 1693341901,
+  "started": 1693341901,
+  "finished": 1693341903,
   "deploy": "",
+  "deploy_number": 0,
+  "deploy_payload": {},
   "clone": "https://github.com/github/octocat.git",
-  "source": "https://github.com/github/octocat/commit/48afb5bdc41ad69bf22588491333f7cf71135163",
+  "source": "https://github.com/github/octocat/commit/1598250b3d002c9f25f82bb046296f831b6b9a53",
   "title": "push received from https://github.com/github/octocat",
-  "message": "First commit...",
-  "commit": "48afb5bdc41ad69bf22588491333f7cf71135163",
-  "sender": "OctoKitty",
-  "author": "OctoKitty",
+  "message": "Update .vela.yml",
+  "commit": "1598250b3d002c9f25f82bb046296f831b6b9a53",
+  "sender": "Octocat",
+  "sender_scm_id": "0",
+  "fork": false,
+  "author": "Octocat",
+  "email": "octocat@github.com",
+  "link": "https://vela.example.com/github/octocat/1000",
   "branch": "main",
   "ref": "refs/heads/main",
   "base_ref": "",
-  "host": "company.localhost",
+  "head_ref": "",
+  "host": "worker1",
   "runtime": "docker",
-  "distribution": "linux"
+  "distribution": "linux",
+  "approved_at": 0,
+  "approved_by": ""
 }
 ```
 
@@ -120,37 +183,100 @@ To authenticate to the API, please review the [authentication documentation](/do
 curl \
   -X GET \
   -H "Authorization: Bearer <token>" \
-  "http://127.0.0.1:8080/api/v1/search/builds/1"
+  "http://127.0.0.1:8080/api/v1/search/builds/40063"
 ```
 
 #### Response
 
 ```json
 {
-  "id": 1,
-  "repo_id": 1,
-  "number": 1,
-  "parent": 1,
+  "id": 40063,
+  "repo": {
+    "id": 293,
+    "owner": {
+      "id": 126,
+      "name": "Octocat",
+      "active": true
+    },
+    "org": "Octocat",
+    "name": "myvela",
+    "full_name": "github/octocat",
+    "link": "https://github.com/github/octocat",
+    "clone": "https://github.com/github/octocat.git",
+    "branch": "main",
+    "topics": [],
+    "build_limit": 10,
+    "timeout": 30,
+    "counter": 2145,
+    "visibility": "public",
+    "private": false,
+    "trusted": false,
+    "active": true,
+    "allow_events": {
+      "push": {
+        "branch": true,
+        "tag": true,
+        "delete_branch": false,
+        "delete_tag": false
+      },
+      "pull_request": {
+        "opened": true,
+        "edited": true,
+        "synchronize": true,
+        "reopened": true,
+        "labeled": true,
+        "unlabeled": true
+      },
+      "deployment": {
+        "created": true
+      },
+      "comment": {
+        "created": true,
+        "edited": true
+      },
+      "schedule": {
+        "run": true
+      }
+    },
+    "pipeline_type": "go",
+    "previous_name": "",
+    "approve_build": "fork-always",
+    "approval_timeout": 7,
+    "install_id": 0
+  },
+  "pipeline_id": 4177,
+  "number": 1000,
+  "parent": 999,
   "event": "push",
-  "status": "created",
+  "event_action": "",
+  "status": "success",
   "error": "",
-  "enqueued": 1563474077,
-  "created": 1563474076,
-  "started": 1563474077,
-  "finished": 0,
+  "enqueued": 1693341901,
+  "created": 1693341901,
+  "started": 1693341901,
+  "finished": 1693341903,
   "deploy": "",
+  "deploy_number": 0,
+  "deploy_payload": {},
   "clone": "https://github.com/github/octocat.git",
-  "source": "https://github.com/github/octocat/commit/48afb5bdc41ad69bf22588491333f7cf71135163",
+  "source": "https://github.com/github/octocat/commit/1598250b3d002c9f25f82bb046296f831b6b9a53",
   "title": "push received from https://github.com/github/octocat",
-  "message": "First commit...",
-  "commit": "48afb5bdc41ad69bf22588491333f7cf71135163",
-  "sender": "OctoKitty",
-  "author": "OctoKitty",
+  "message": "Update .vela.yml",
+  "commit": "1598250b3d002c9f25f82bb046296f831b6b9a53",
+  "sender": "Octocat",
+  "sender_scm_id": "0",
+  "fork": false,
+  "author": "Octocat",
+  "email": "octocat@github.com",
+  "link": "https://vela.example.com/github/octocat/1000",
   "branch": "main",
   "ref": "refs/heads/main",
   "base_ref": "",
-  "host": "company.localhost",
+  "head_ref": "",
+  "host": "worker1",
   "runtime": "docker",
-  "distribution": "linux"
+  "distribution": "linux",
+  "approved_at": 0,
+  "approved_by": ""
 }
 ```

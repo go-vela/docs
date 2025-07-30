@@ -23,7 +23,7 @@ The following parameters are used to configure the endpoint:
 
 ## Permissions
 
-COMING SOON!
+User must have `read` access to the repository in the SCM.
 
 ## Responses
 

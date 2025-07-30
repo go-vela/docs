@@ -13,7 +13,7 @@ PUT  /api/v1/dashboards/:id
 
 ## Permissions
 
-COMING SOON!
+User must be a member of the admin list for the dashboard.
 
 ## Responses
 
@@ -50,7 +50,7 @@ To authenticate to the API, please review the [authentication documentation](/do
     ],
     "repos": [
         {
-            "name": "Octocat/myvela"
+            "name": "github/octocat"
         },
         {
             "name": "Octocat/other-repo"
@@ -95,7 +95,7 @@ curl \
     "repos": [
         {
             "id": 293,
-            "name": "Octocat/myvela"
+            "name": "github/octocat"
         },
         {
             "id": 294,

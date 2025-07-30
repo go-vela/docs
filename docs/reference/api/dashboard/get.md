@@ -13,7 +13,7 @@ GET  /api/v1/dashboards/:id
 
 ## Permissions
 
-COMING SOON!
+Any user with a valid access token can view a dashboard.
 
 ## Responses
 
@@ -64,7 +64,7 @@ curl \
     "repos": [
       {
         "id": 293,
-        "name": "Octocat/myvela"
+        "name": "github/octocat"
       }
     ]
   },
@@ -83,7 +83,7 @@ curl \
           "status": "success",
           "event": "push",
           "branch": "develop",
-          "link": "https://http://127.0.0.1:8080/Octocat/myvela/1703"
+          "link": "https://http://127.0.0.1:8080/github/octocat/1703"
         },
         {
           "number": 1702,
@@ -91,7 +91,7 @@ curl \
           "status": "pending approval",
           "event": "pull_request",
           "branch": "main",
-          "link": "https://http://127.0.0.1:8080/Octocat/myvela/1702"
+          "link": "https://http://127.0.0.1:8080/github/octocat/1702"
         },
         {
           "number": 1701,
@@ -101,7 +101,7 @@ curl \
           "status": "failure",
           "event": "push",
           "branch": "develop",
-          "link": "https://http://127.0.0.1:8080/Octocat/myvela/1701"
+          "link": "https://http://127.0.0.1:8080/github/octocat/1701"
         },
         {
           "number": 1700,
@@ -111,7 +111,7 @@ curl \
           "status": "failure",
           "event": "push",
           "branch": "develop",
-          "link": "https://http://127.0.0.1:8080/Octocat/myvela/1700"
+          "link": "https://http://127.0.0.1:8080/github/octocat/1700"
         },
         {
           "number": 1699,
@@ -121,7 +121,7 @@ curl \
           "status": "failure",
           "event": "push",
           "branch": "develop",
-          "link": "https://http://127.0.0.1:8080/Octocat/myvela/1699"
+          "link": "https://http://127.0.0.1:8080/github/octocat/1699"
         }
       ]
     }

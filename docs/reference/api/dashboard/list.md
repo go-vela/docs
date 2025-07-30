@@ -13,7 +13,7 @@ GET  /api/v1/user/dashboards
 
 ## Permissions
 
-COMING SOON!
+Any user with a valid access token can list their own saved dashboards.
 
 ## Responses
 
@@ -70,7 +70,7 @@ curl \
       "repos": [
         {
           "id": 293,
-          "name": "Octocat/myvela"
+          "name": "github/octocat"
         },
         {
           "id": 34,
@@ -100,7 +100,7 @@ curl \
       "repos": [
         {
           "id": 293,
-          "name": "Octocat/myvela"
+          "name": "github/octocat"
         }
       ]
     },

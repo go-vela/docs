@@ -23,7 +23,7 @@ The following parameters are used to configure the endpoint:
 
 ## Permissions
 
-COMING SOON!
+User must be a platform admin of the Vela installation.
 
 ## Responses
 

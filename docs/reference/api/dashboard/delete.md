@@ -13,7 +13,7 @@ DELETE  /api/v1/dashboards/:id
 
 ## Permissions
 
-COMING SOON!
+User must be a member of the admin list for the dashboard.
 
 ## Responses
 
