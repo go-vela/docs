@@ -81,6 +81,12 @@ steps:
 
 After the first step is complete, the logs will mask any mention of the `$API_KEY`. 
 
+### Base64 Option
+
+If the output value contains special characters or newlines, it may be a good option to `base64` encode the value. Rather than encoding, writing to `$VELA_OUTPUTS`, and decoding manually in another step, Vela has a `$VELA_BASE64_OUTPUTS` (and `$VELA_MASKED_BASE64_OUTPUTS`) which will automatically decode the values for future steps. 
+
+Note: the user will still need to encode the value when writing to this file.
+
 ### Limitations
 
 - Outputs can only be used as environment variables (`$VAR`) or substitution variables (`${VAR}`). Inline Go templating (`{{ .VAR }}`) is done at compile time and will not dynamically be evaluated.

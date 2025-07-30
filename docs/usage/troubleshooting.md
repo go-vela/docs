@@ -119,6 +119,12 @@ This behavior indicates the number of `running` builds for the system is greater
 
 Unfortunately, the only way to resolve the issue is to wait until a worker becomes available to run your build.
 
+### Queue length exceeds configured limit, please wait for the queue to decrease in size before retrying
+
+This error is given in response to a build restart request of a `pending` build whenever the queue is larger than the configured limit by the platform admins.
+
+This is a measure to prevent queue bloat from builds that are already in the queue.
+
 ### Context Deadline Exceeded
 
 ![Context Deadline Exceeded](/img/troubleshooting/context_deadline_exceeded.png)
