@@ -129,6 +129,7 @@ The following rules can be used to configure a ruleset:
 | `status`   | name of status for a build.                        |
 | `tag`      | name of reference for a build.                     |
 | `target`   | name of deployment or schedule target for a build. |
+| `eval`     | [expr](https://expr-lang.org/) query to evaluate.  |
 
 ```yaml
 ---
@@ -258,6 +259,33 @@ steps:
       # As shown below this step will execute if the build target is stage or production.
       # This key is only compatible with deployment and schedule events.
       target: [ dev/*, test/* ]
+```
+
+:::tip
+Eval utilizes the [expr query language](https://expr-lang.org/) to assess the ruleset. The eval key can be used alongside other ruleset keys, provided that all rulesets return true the step will run. For a deeper understanding of the syntax, refer to the expr documentation available at https://expr-lang.org/docs/language-definition. All environment variables mentioned within [variable documentation](/docs/reference/environment/variables.md) can be used within the expression. However, conditionally available variables (such as `VELA_BUILD_TAG` outside of a tag event) won't always be populated. You can still include them in the query, but they will evaluate to an empty string in those cases.
+:::
+
+```yaml
+---
+steps:
+  - name: simple-match
+    ruleset:
+      eval: "VELA_BUILD_AUTHOR == 'Octocat'"
+    commands:
+      - echo "this will only run if the build author name is Octocat"
+
+  - name: function-match
+    ruleset:
+      eval: "hasPrefix(VELA_BUILD_AUTHOR, 'Octo')"
+    commands:
+      - echo "this will only run if the build author name has the prefix of Octo"
+
+  - name: new-and-old
+    ruleset:
+      eval: "VELA_BUILD_AUTHOR == 'Octocat'"
+      event: [tag]
+    commands:
+      - echo "this will only run if Octocat triggered the tag event"
 ```
 
 The following controls can be used to modify the behavior of the ruleset evaluation:
