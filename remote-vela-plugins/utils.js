@@ -97,6 +97,12 @@ function modifyRemoteContent(plugin) {
         content = content.replace(/<repo>/g, "|repo|");
         content = content.replace(/<org>/g, "|org|");
 
+        // Convert angle bracket URLs to proper markdown links
+        // This matches <http://...> or <https://...> patterns and converts them to [url](url)
+        content = content.replace(/<(https?:\/\/[^>]+)>/g, function(match, url) {
+            return `[${url}](${url})`;
+        });
+
         return {
             filename: filename,
             content: content,
