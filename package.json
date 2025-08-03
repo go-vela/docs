@@ -27,7 +27,7 @@
     "clsx": "^2.1.1",
     "docusaurus-lunr-search": "^3.6.0",
     "docusaurus-plugin-remote-content": "^4.0.0",
-    "dotenv": "^16.4.7",
+    "dotenv": "^17.0.0",
     "lunr": "^2.3.9",
     "prism-react-renderer": "^2.4.1",
     "prismjs": "^1.30.0",
