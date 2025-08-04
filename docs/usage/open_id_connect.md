@@ -74,25 +74,33 @@ The `id_request` key being set to _anything_ will result in the injection of the
 
 ```json
 {
-   "build_number": 42,
-   "build_id": 100,
-   "actor": "Octocat",
-   "actor_scm_id": "1",
-   "repo": "Octocat/vela-testing",
-   "token_type": "ID",
-   "image": "golang:1.22.4",
-   "request": "yes",
-   "commands": true,
-   "event": "pull_request:opened",
-   "ref": "refs/heads/main",
-   "sha": "15b17a5751dd2fd04a7b4ca056063dc876984073",
-   "iss": "https://vela-server.com/_services/token",
-   "sub": "repo:Octocat/vela-testing:ref:refs/heads/main:event:pull_request",
-   "aud": [
+  "sub": "repo:Octocat/vela-testing:ref:refs/heads/main:event:pull_request",
+  "exp": 1717699924,
+  "iat": 1717699624,
+  "iss": "https://vela-server.com/_services/token",
+  "aud": [
       "artifactory"
-   ],
-   "exp": 1717699924,
-   "iat": 1717699624
+  ],
+  "branch": "main",
+  "build_number": 42,
+  "build_id": 100,
+  "repo": "Octocat/vela-testing",
+  "pull_fork": "false",
+  "token_type": "ID",
+  "actor": "Octocat",
+  "actor_scm_id": "1",
+  "commands": "true",
+  "image": "golang:1.22.4",
+  "image_name": "golang",
+  "image_tag": "1.22.4",
+  "request": "yes",
+  "event": "pull_request:opened",
+  "sha": "15b17a5751dd2fd04a7b4ca056063dc876984073",
+  "ref": "refs/heads/main",
+  "custom_properties": {
+    "prop1": "foo",
+    "prop2": "bar"
+  }
 }
 ```
 

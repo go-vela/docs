@@ -108,7 +108,7 @@ The following table includes variables only available when the step `id_request`
 | Key                    | Value                                             | Explanation                                                         |
 | ---------------------- |---------------------------------------------------|---------------------------------------------------------------------|
 | `VELA`                 | `true`                                            | environment is Vela                                                 |
-| `VELA_ADDR`            | `vela.example.com`                                | fully qualified domain name of the Vela server                      |
+| `VELA_ADDR`            | `https://vela.example.com`                        | fully qualified domain name of the Vela server                      |
 | `VELA_CHANNEL`         | `vela`                                            | queue channel the build was published to                            |
 | `VELA_DATABASE`        | `postgres`                                        | database Vela is connected to                                       |
 | `VELA_HOST`            | `vela-worker-1`                                   | fully qualified domain name of the worker the build was executed on |
@@ -143,6 +143,8 @@ The following table includes variables only available when the step `id_request`
 | `VELA_REPO_TOPICS`        | `cloud,security`                             | comma-separated list of repository topics     |
 | `VELA_REPO_TRUSTED`       | `false`                                      | trusted setting for the repository            |
 | `VELA_REPO_VISIBILITY`    | `public`                                     | visibility setting for the repository         |
+| `VELA_REPO_INSTALL_ID`    | `100`                                        | scm app install id (if installed)             |
+| `VELA_REPO_CUSTOM_PROPS`  | `{"foo":"bar","foob":"baz"}`                 | custom properties assigned to repository      |
 
 #### User Environment Variables
 
