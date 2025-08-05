@@ -11,7 +11,7 @@ concurrency:
 
 jobs:
   build:
-    uses: go-vela/docs/.github/workflows/build.yml@6a145d57c52b8a770d354f2923f4747ae7a1bb0c
+    uses: go-vela/docs/.github/workflows/build.yml@a7b86653293ca0d0ad66fe32cd91cc1b86f274b2
     secrets: inherit
 
   publish:
