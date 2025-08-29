@@ -11,15 +11,15 @@ description: >
 
 The server is made up of several components, responsible for specific tasks, necessary for the service to operate:
 
-| Name       | Description                                                                                                       |
-| ---------- | ----------------------------------------------------------------------------------------------------------------- |
-| `settings` | keeps track of updated runtime properties for the [server](/docs/installation/server/server.md)                            |
-| `compiler` | transforms a [pipeline](/docs/usage/tour/tour.md) into an executable workload for the [worker](/docs/installation/worker/worker.md)     |
-| `database` | integrates with a database provider for storing application data at rest                                          |
-| `queue`    | integrates with a queue provider for pushing workloads that will be run by a [worker](/docs/installation/worker/worker.md) |
-| `secret`   | integrates with a secret provider for storing sensitive application data at rest                                  |
-| `source`   | integrates with a source control management (SCM) provider for authentication and authorization                   |
-| `tracing`  | implements OpenTelemetry tracing instrumentation for the [server](/docs/installation/server/server.md) |
+| Name       | Description                                                                                                                         |
+| ---------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `settings` | keeps track of updated runtime properties for the [server](/docs/installation/server/server.md)                                     |
+| `compiler` | transforms a [pipeline](/docs/usage/tour/tour.md) into an executable workload for the [worker](/docs/installation/worker/worker.md) |
+| `database` | integrates with a database provider for storing application data at rest                                                            |
+| `queue`    | integrates with a queue provider for pushing workloads that will be run by a [worker](/docs/installation/worker/worker.md)          |
+| `secret`   | integrates with a secret provider for storing sensitive application data at rest                                                    |
+| `source`   | integrates with a source control management (SCM) provider for authentication and authorization                                     |
+| `tracing`  | implements OpenTelemetry tracing instrumentation for the [server](/docs/installation/server/server.md)                              |
 
 ## Required
 
@@ -110,6 +110,16 @@ By default, Vela will use the latest available release of the clone image at the
 This variable should be provided as a `string`.
 
 This property can be updated while the server is running using the [settings component](/docs/reference/installation/server/settings.md).
+
+### VELA_CORS_ALLOW_ORIGINS
+
+This variable sets the list of origins a cross-domain request can be executed from for the server API.
+
+The variable can be provided as a comma-separated `list` (i.e. `https://example.com,https://sub.example.com`).
+
+:::note
+This variable has no default value. When unset, CORS is effectively disabled (no origins explicitly allowed).
+:::
 
 ### VELA_COMPILER_GITHUB
 
@@ -336,6 +346,16 @@ The variable can be provided as an `integer`.
 This variable has a default value of `30`.
 :::
 
+### VELA_DEFAULT_APPROVAL_TIMEOUT
+
+This variable sets the default duration (in days) that a pending approval will remain valid before expiring.
+
+The variable can be provided as an `integer` (days).
+
+:::note
+This variable has a default value that matches the server constant `ApprovalTimeoutDefault` (currently `30`).
+:::
+
 ### VELA_DEFAULT_REPO_EVENTS
 
 This variable sets the default active events for newly activated repositories.
@@ -344,6 +364,28 @@ The variable can be provided as a comma-separated `list` (i.e. `push,tag,deploym
 
 :::note
 By default, the `push` event is enabled. Valid values are: `push`, `pull_request`, `tag`, `deployment`, and `comment`.
+:::
+
+### VELA_DEFAULT_REPO_EVENTS_MASK
+
+This variable sets the default event bitmask applied to newly activated repositories. It can be used instead of, or in conjunction with, `VELA_DEFAULT_REPO_EVENTS` for more granular internal enablement.
+
+The variable can be provided as an `integer` (bitmask).
+
+:::note
+This variable has no default value. When unset, the mask derived from `VELA_DEFAULT_REPO_EVENTS` is used.
+:::
+
+### VELA_DEFAULT_REPO_APPROVE_BUILD
+
+This variable sets the default approval strategy for builds triggered from outside contributors on newly activated repositories.
+
+The variable can be provided as a `string`.
+
+:::note
+Valid values are: `fork-always`, `fork-no-write`, `first-time`, `never`.
+
+This variable has a default value of `fork-always`.
 :::
 
 ### VELA_DISABLE_WEBHOOK_VALIDATION
@@ -370,6 +412,16 @@ This variable should only be used for local development.
 This variable has a default value of `true`.
 :::
 
+### VELA_LOG_LEVEL
+
+This variable sets the log level for the server process.
+
+The variable can be provided as a `string` (trace, debug, info, warn, error, fatal, panic).
+
+:::note
+This variable has a default value of `info`.
+:::
+
 ### VELA_LOG_FORMATTER
 
 This variable sets whether the logging formatter used for structured server logs is a standard JSON logger, or a custom Elasticsearch Common Schema (ECS) compatible JSON formatter.
@@ -394,6 +446,16 @@ The variable can be provided as an `integer`.
 This variable has a default value of `30`.
 
 This variable should match [the `VELA_MAX_BUILD_LIMIT` variable](/reference/installation/ui/#vela_max_build_limit) provided to the UI.
+:::
+
+### VELA_MAX_DASHBOARD_REPOS
+
+This variable sets the maximum number of repositories that can be assigned to a single dashboard resource.
+
+The variable can be provided as an `integer`.
+
+:::note
+This variable has a default value of `10`.
 :::
 
 ### VELA_MODIFICATION_ADDR
@@ -524,6 +586,16 @@ This variable sets a public key secret for opening queue items that have been si
 
 The variable should be provided as a base64 encoded `string`.
 
+### VELA_QUEUE_RESTART_LIMIT
+
+This variable sets the maximum queue size (in pending builds) before queued (pending) builds are no longer allowed to be restarted. Setting to `0` disables enforcement.
+
+The variable can be provided as an `integer`.
+
+:::note
+This variable has a default value of `30`.
+:::
+
 ### VELA_REPO_ALLOWLIST
 
 This variable sets a group of repositories, from the SCM, that can be enabled on the server.
@@ -556,6 +628,16 @@ The variable can be provided as a `duration` (i.e. `5s`, `10m`).
 
 :::note
 This variable has a default value of `1h`.
+:::
+
+### VELA_SCHEDULE_INTERVAL
+
+This variable sets the interval at which schedules will be processed by the server to trigger builds.
+
+The variable can be provided as a `duration` (i.e. `5s`, `10m`).
+
+:::note
+This variable has a default value of `5m`.
 :::
 
 ### VELA_SCM_ADDR
@@ -740,6 +822,26 @@ The variable can be provided as a `duration` (i.e. `5s`, `10m`).
 This variable has a default value of `8h`.
 :::
 
+### VELA_OPEN_ID_TOKEN_DURATION
+
+This variable sets the maximum duration of time an OpenID token requested during a build is valid. It should be short-lived for security.
+
+The variable can be provided as a `duration` (i.e. `5s`, `10m`).
+
+:::note
+This variable has a default value of `5m`.
+:::
+
+### VELA_OPEN_ID_ISSUER
+
+This variable sets the issuer URL placed in OpenID tokens requested during a build.
+
+The variable can be provided as a `string` (fully qualified URL).
+
+:::note
+This variable has no default value.
+:::
+
 ### VELA_BUILD_TOKEN_BUFFER_DURATION
 
 This variable sets the maximum duration of time a Vela build token for a build extends beyond the repo build limit to maintain validity on the server.
@@ -806,6 +908,17 @@ The variable can be provided as a `duration` (i.e. `5s`, `10m`).
 This variable has a default value of `5m`.\
 \
 The value should coordinate with the [`VELA_CHECK_IN`](/reference/installation/worker/#vela_check_in) setting provided to the [worker](/docs/installation/worker/worker.md).
+:::
+
+### VELA_PLATFORM_SETTINGS_REFRESH_INTERVAL
+
+This variable sets the interval at which dynamically updatable platform settings are refreshed from persistent storage.
+
+The variable can be provided as a `duration` (i.e. `5s`, `10m`).
+
+:::note
+This variable has a default value of `5s`.
+It is an alias of `VELA_SETTINGS_REFRESH_INTERVAL`.
 :::
 
 ### VELA_OTEL_TRACING_ENABLE

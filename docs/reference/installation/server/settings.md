@@ -15,6 +15,8 @@ The following properties are available to be updated:
 * [`VELA_MAX_TEMPLATE_DEPTH`](/reference/installation/server/#vela_max_template_depth)
 * [`VELA_COMPILER_STARLARK_EXEC_LIMIT`](/reference/installation/server/#vela_compiler_starlark_exec_limit)
 * [`VELA_CLONE_IMAGE`](/reference/installation/server/#vela_clone_image)
+* [`VELA_MAX_DASHBOARD_REPOS`](/reference/installation/server/#vela_max_dashboard_repos)
+* [`VELA_QUEUE_RESTART_LIMIT`](/reference/installation/server/#vela_queue_restart_limit)
 
 
 ## Configuration

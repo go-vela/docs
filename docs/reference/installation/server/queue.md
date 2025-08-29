@@ -16,9 +16,9 @@ Workloads published to the queue are managed with a [first in, first out (FIFO)]
 
 The following options are used to configure the component:
 
-| Name                | Description                                                   | Required | Default    | Environment Variables                           |
-| ------------------- | ------------------------------------------------------------- | -------- | ---------- | ----------------------------------------------- |
-| `queue.addr`        | full connection string to the queue                           | `true`   | `N/A`      | `QUEUE_ADDR`\`VELA_QUEUE_ADDR`               |
+| Name                | Description                                                   | Required | Default    | Environment Variables                        |
+| ------------------- | ------------------------------------------------------------- | -------- | ---------- | -------------------------------------------- |
+| `queue.addr`        | full connection string to the queue                           | `true`   | `N/A`      | `QUEUE_ADDR`/`VELA_QUEUE_ADDR`               |
 | `queue.cluster`     | configures the client for a queue cluster                     | `false`  | `false`    | `QUEUE_CLUSTER`\`VELA_QUEUE_CLUSTER`         |
 | `queue.driver`      | type of client to control and operate queue                   | `true`   | `N/A`      | `QUEUE_DRIVER`\`VELA_QUEUE_DRIVER`           |
 | `queue.pop.timeout` | timeout for requests that pop items off the queue             | `true`   | `60s`      | `QUEUE_POP_TIMEOUT`\`VELA_QUEUE_POP_TIMEOUT` |

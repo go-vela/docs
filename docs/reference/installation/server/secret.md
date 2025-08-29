@@ -20,16 +20,16 @@ Any sensitive data stored in the database will be encrypted using the [Advanced 
 
 The following options are used to configure the component:
 
-| Name                       | Description                                                                  | Required | Default | Environment Variables                                         |
-| -------------------------- | ---------------------------------------------------------------------------- | -------- | ------- | ------------------------------------------------------------- |
-| `secret.vault.addr`        | fully qualified url to the HashiCorp Vault instance                          | `true`   | `N/A`   | `SECRET_VAULT_ADDR`\`VELA_SECRET_VAULT_ADDR`               |
-| `secret.vault.auth-method` | authentication method used to obtain token from the HashiCorp Vault instance | `false`  | `N/A`   | `SECRET_VAULT_AUTH_METHOD`\`VELA_SECRET_VAULT_AUTH_METHOD` |
-| `secret.vault.aws-role`    | HashiCorp Vault role used to connect to the auth/aws/login endpoint          | `false`  | `N/A`   | `SECRET_VAULT_AWS_ROLE`\`VELA_SECRET_VAULT_AWS_ROLE`       |
-| `secret.vault.driver`      | enables HashiCorp Vault as a secret engine                                   | `true`   | `false` | `SECRET_VAULT`\`VELA_SECRET_VAULT`                         |
-| `secret.vault.prefix`      | prefix for k/v secrets in the HashiCorp Vault instance                       | `false`  | `N/A`   | `SECRET_VAULT_PREFIX`\`VELA_SECRET_VAULT_PREFIX`           |
-| `secret.vault.renewal`     | frequency to renew the token for the HashiCorp Vault instance                | `false`  | `30m`   | `SECRET_VAULT_RENEWAL`\`VELA_SECRET_VAULT_RENEWAL`         |
-| `secret.vault.token`       | token required to access the HashiCorp Vault instance                        | `true`   | `N/A`   | `SECRET_VAULT_TOKEN`\`VELA_SECRET_VAULT_TOKEN`             |
-| `secret.vault.version`     | version for the k/v backend for the HashiCorp Vault instance                 | `true`   | `2`     | `SECRET_VAULT_VERSION`\`VELA_SECRET_VAULT_VERSION`         |
+| Name                       | Description                                                                  | Required | Default | Environment Variables                                      |
+| -------------------------- | ---------------------------------------------------------------------------- | -------- | ------- | ---------------------------------------------------------- |
+| `secret.vault.addr`        | fully qualified url to the HashiCorp Vault instance                          | `true`   | `N/A`   | `SECRET_VAULT_ADDR`,`VELA_SECRET_VAULT_ADDR`               |
+| `secret.vault.auth-method` | authentication method used to obtain token from the HashiCorp Vault instance | `false`  | `N/A`   | `SECRET_VAULT_AUTH_METHOD`,`VELA_SECRET_VAULT_AUTH_METHOD` |
+| `secret.vault.aws-role`    | HashiCorp Vault role used to connect to the auth/aws/login endpoint          | `false`  | `N/A`   | `SECRET_VAULT_AWS_ROLE`,`VELA_SECRET_VAULT_AWS_ROLE`       |
+| `secret.vault.driver`      | enables HashiCorp Vault as a secret engine                                   | `true`   | `false` | `SECRET_VAULT`,`VELA_SECRET_VAULT`                         |
+| `secret.vault.prefix`      | prefix for k/v secrets in the HashiCorp Vault instance                       | `false`  | `N/A`   | `SECRET_VAULT_PREFIX`,`VELA_SECRET_VAULT_PREFIX`           |
+| `secret.vault.renewal`     | frequency to renew the token for the HashiCorp Vault instance                | `false`  | `30m`   | `SECRET_VAULT_RENEWAL`,`VELA_SECRET_VAULT_RENEWAL`         |
+| `secret.vault.token`       | token required to access the HashiCorp Vault instance                        | `true`   | `N/A`   | `SECRET_VAULT_TOKEN`,`VELA_SECRET_VAULT_TOKEN`             |
+| `secret.vault.version`     | version for the k/v backend for the HashiCorp Vault instance                 | `true`   | `2`     | `SECRET_VAULT_VERSION`,`VELA_SECRET_VAULT_VERSION`         |
 
 :::note
 For more information on these configuration options, please see the [server reference](/docs/reference/installation/server/server.md).
