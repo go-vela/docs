@@ -15,14 +15,14 @@ The token manager is designed to ensure secure interactions with the server and 
 
 The following options are used to configure the component:
 
-| Name                             | Description                                                                                                                     | Required | Default   | Environment Variables                         |
-| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | -------- | --------- | --------------------------------------------- |
-| `vela-server-private-key`        | private key used for signing and validating all JWT tokens                                                                      | `true`   | `N/A`     | `VELA_SERVER_PRIVATE_KEY`                                                   |
-| `user-access-token-duration`     | maximum duration of time a Vela access token for a user is valid on the server                                                  | `true`   | `15m`     | `VELA_USER_ACCESS_TOKEN_DURATION`\`USER_ACCESS_TOKEN_DURATION`           |
-| `user-refresh-token-duration`    | maximum duration of time a Vela refresh token for a user is valid on the server                                                 | `true`   | `8h`      | `VELA_USER_ACCESS_TOKEN_DURATION`\`USER_ACCESS_TOKEN_DURATION`           |
-| `build-token-buffer-duration`    | maximum duration of time a Vela build token for a build extends beyond the repo build limit to maintain validity on the server  | `true`   | `5m`      | `VELA_BUILD_TOKEN_BUFFER_DURATION`\`BUILD_TOKEN_BUFFER_DURATION`         |
-| `worker-auth-token-duration`     | maximum duration of time an auth token for a worker is valid on the server                                                      | `false`*   | `20m`     | `VELA_WORKER_AUTH_TOKEN_DURATION`\`WORKER_AUTH_TOKEN_DURATION`           |
-| `worker-register-token-duration` | maximum duration of time a registration token for a worker is valid on the server                                               | `false`*   | `1m`      | `VELA_WORKER_REGISTER_TOKEN_DURATION`\`WORKER_REGISTER_TOKEN_DURATION`   |
+| Name                             | Description                                                                                                                    | Required | Default | Environment Variables                                                  |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ | -------- | ------- | ---------------------------------------------------------------------- |
+| `vela-server-private-key`        | private key used for signing and validating all JWT tokens                                                                     | `true`   | `N/A`   | `VELA_SERVER_PRIVATE_KEY`                                              |
+| `user-access-token-duration`     | maximum duration of time a Vela access token for a user is valid on the server                                                 | `true`   | `15m`   | `VELA_USER_ACCESS_TOKEN_DURATION`,`USER_ACCESS_TOKEN_DURATION`         |
+| `user-refresh-token-duration`    | maximum duration of time a Vela refresh token for a user is valid on the server                                                | `true`   | `8h`    | `VELA_USER_ACCESS_TOKEN_DURATION`,`USER_ACCESS_TOKEN_DURATION`         |
+| `build-token-buffer-duration`    | maximum duration of time a Vela build token for a build extends beyond the repo build limit to maintain validity on the server | `true`   | `5m`    | `VELA_BUILD_TOKEN_BUFFER_DURATION`,`BUILD_TOKEN_BUFFER_DURATION`       |
+| `worker-auth-token-duration`     | maximum duration of time an auth token for a worker is valid on the server                                                     | `false`* | `20m`   | `VELA_WORKER_AUTH_TOKEN_DURATION`,`WORKER_AUTH_TOKEN_DURATION`         |
+| `worker-register-token-duration` | maximum duration of time a registration token for a worker is valid on the server                                              | `false`* | `1m`    | `VELA_WORKER_REGISTER_TOKEN_DURATION`,`WORKER_REGISTER_TOKEN_DURATION` |
 
 
 

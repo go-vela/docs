@@ -20,20 +20,23 @@ Any sensitive data stored in the database will be encrypted using the [Advanced 
 
 The following options are used to configure the component:
 
-| Name                          | Description                                                      | Required | Default       | Environment Variables                                                 |
-| ----------------------------- | ---------------------------------------------------------------- | -------- | ------------- | --------------------------------------------------------------------- |
-| `database.addr`               | full connection string to the database                           | `true`   | `sqlite3`     | `DATABASE_ADDR`\`VELA_DATABASE_ADDR`                               |
-| `database.driver`             | type of client to control and operate the database               | `true`   | `vela.sqlite` | `DATABASE_DRIVER`\`VELA_DATABASE_DRIVER`                           |
-| `database.compression.level`  | level of compression for logs stored in the database             | `true`   | `3`           | `DATABASE_COMPRESSION_LEVEL`\`VELA_DATABASE_COMPRESSION_LEVEL`     |
-| `database.connection.idle`    | maximum number of idle connections to the database               | `true`   | `2`           | `DATABASE_CONNECTION_IDLE`\`VELA_DATABASE_CONNECTION_IDLE`         |
-| `database.connection.life`    | duration of time a connection is reusable                        | `true`   | `30m`         | `DATABASE_CONNECTION_LIFE`\`VELA_DATABASE_CONNECTION_LIFE`         |
-| `database.connection.open`    | maximum number of open connections to the database               | `true`   | `0`           | `DATABASE_CONNECTION_OPEN`\`VELA_DATABASE_CONNECTION_OPEN`         |
-| `database.encryption.key`     | AES-256 key for encrypting/decrypting values in the database     | `true`   | `N/A`         | `DATABASE_ENCRYPTION_KEY`\`VELA_DATABASE_ENCRYPTION_KEY`           |
-| `database.skip_creation`      | skips the creation of tables and indexes in the database         | `false`  | `false`       | `DATABASE_SKIP_CREATION`\`VELA_DATABASE_SKIP_CREATION`             |
-| `database.log.level`          | log level for database                                           | `false`  | `warn`        | `DATABASE_LOG_LEVEL` \ `VELA_DATABASE_LOG_LEVEL`                   |
-| `database.log.show_sql`       | show sql query in logs                                           | `false`  | `false`       | `DATABASE_LOG_SHOW_SQL` \ `VELA_DATABASE_LOG_SHOW_SQL`             |
-| `database.log.skip_notfound`  | skip logging not found errors                                    | `false`  | `true`        | `DATABASE_LOG_SKIP_NOTFOUND` \ `VELA_DATABASE_LOG_SKIP_NOTFOUND`   |
-| `database.log.slow_threshold` | queries higher than this value are considered slow and logged    | `false`  | `200ms`       | `DATABASE_LOG_SLOW_THRESHOLD` \ `VELA_DATABASE_LOG_SLOW_THRESHOLD` |
+| Name                             | Description                                                        | Required | Default       | Environment Variables                                                    |
+| -------------------------------- | ------------------------------------------------------------------ | -------- | ------------- | ------------------------------------------------------------------------ |
+| `database.addr`                  | full connection string / DSN to the database                       | `true`   | `vela.sqlite` | `DATABASE_ADDR`,`VELA_DATABASE_ADDR`                                     |
+| `database.driver`                | type of client to control and operate the database                 | `true`   | `sqlite3`     | `DATABASE_DRIVER`,`VELA_DATABASE_DRIVER`                                 |
+| `database.compression.level`     | level of compression for logs stored in the database               | `true`   | `3`           | `DATABASE_COMPRESSION_LEVEL`,`VELA_DATABASE_COMPRESSION_LEVEL`           |
+| `database.connection.idle`       | maximum number of idle connections to the database                 | `true`   | `2`           | `DATABASE_CONNECTION_IDLE`,`VELA_DATABASE_CONNECTION_IDLE`               |
+| `database.connection.life`       | duration of time a connection is reusable                          | `true`   | `30m`         | `DATABASE_CONNECTION_LIFE`,`VELA_DATABASE_CONNECTION_LIFE`               |
+| `database.connection.open`       | maximum number of open connections to the database                 | `true`   | `0`           | `DATABASE_CONNECTION_OPEN`,`VELA_DATABASE_CONNECTION_OPEN`               |
+| `database.encryption.key`        | AES-256 key for encrypting/decrypting values in the database       | `true`   | `N/A`         | `DATABASE_ENCRYPTION_KEY`,`VELA_DATABASE_ENCRYPTION_KEY`                 |
+| `database.skip_creation`         | skips the creation of tables and indexes in the database           | `false`  | `false`       | `DATABASE_SKIP_CREATION`,`VELA_DATABASE_SKIP_CREATION`                   |
+| `database.log.level`             | log level for database                                             | `false`  | `warn`        | `DATABASE_LOG_LEVEL` \ `VELA_DATABASE_LOG_LEVEL`                         |
+| `database.log.show_sql`          | show sql query in logs                                             | `false`  | `false`       | `DATABASE_LOG_SHOW_SQL` \ `VELA_DATABASE_LOG_SHOW_SQL`                   |
+| `database.log.skip_notfound`     | skip logging not found errors                                      | `false`  | `true`        | `DATABASE_LOG_SKIP_NOTFOUND` \ `VELA_DATABASE_LOG_SKIP_NOTFOUND`         |
+| `database.log.slow_threshold`    | queries higher than this value are considered slow and logged      | `false`  | `200ms`       | `DATABASE_LOG_SLOW_THRESHOLD` \ `VELA_DATABASE_LOG_SLOW_THRESHOLD`       |
+| `database.log.partitioned`       | enables partition-aware log cleanup for partitioned log tables     | `false`  | `false`       | `DATABASE_LOG_PARTITIONED` \ `VELA_DATABASE_LOG_PARTITIONED`             |
+| `database.log.partition_pattern` | naming pattern for log table partitions (e.g. `logs_%`, `logs_y%`) | `false`  | `logs_%`      | `DATABASE_LOG_PARTITION_PATTERN` \ `VELA_DATABASE_LOG_PARTITION_PATTERN` |
+| `database.log.partition_schema`  | database schema containing log table partitions                    | `false`  | `public`      | `DATABASE_LOG_PARTITION_SCHEMA` \ `VELA_DATABASE_LOG_PARTITION_SCHEMA`   |
 
 :::note
 For more information on these configuration options, please see the [server reference](/docs/reference/installation/server/server.md).
