@@ -38,7 +38,7 @@ sidebar_position: 1
 
 1. Download the binary
     ```sh
-    curl -L https://github.com/go-vela/cli/releases/latest/download/vela_darwin_amd64.tar.gz | tar zx
+    curl -L https://github.com/go-vela/cli/releases/latest/download/vela_linux_amd64.tar.gz | tar zx
     ```
 1. Copy binary to $PATH
     ```sh
