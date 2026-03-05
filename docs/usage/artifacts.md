@@ -68,6 +68,13 @@ The worker enforces limits on artifact uploads to prevent runaway storage usage:
 - **Per-file limit** — files exceeding the configured per-file size limit are skipped.
 - **Per-build limit** — once the total uploaded bytes for a build reaches the configured build-level limit, remaining files are skipped.
 
+These limits are configured on the worker via the following environment variables:
+
+| Variable                             | Description                                                                              |
+|--------------------------------------|------------------------------------------------------------------------------------------|
+| `VELA_STORAGE_FILE_SIZE_LIMIT`       | Maximum size (in MB) for a single artifact file. Set to `0` for no limit.                |
+| `VELA_STORAGE_BUILD_FILE_SIZE_LIMIT` | Maximum total size (in MB) of all artifacts for a single build. Set to `0` for no limit. |
+
 Files that are skipped due to size limits are logged at the worker level. Contact your Vela administrator for the limits configured on your installation.
 
 ### Server configuration
