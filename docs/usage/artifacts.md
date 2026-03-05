@@ -74,14 +74,15 @@ Files that are skipped due to size limits are logged at the worker level. Contac
 
 Artifacts require the Vela server to be configured with an S3-compatible object storage backend (e.g. MinIO). The following environment variables must be set on the server:
 
-| Variable | Description |
-|---|---|
-| `VELA_STORAGE_DRIVER` | Object storage driver (e.g. `minio`) |
-| `VELA_STORAGE_ADDRESS` | Storage endpoint (e.g. `https://minio.example.com`) |
-| `VELA_STORAGE_ACCESS_KEY` | Storage access key |
-| `VELA_STORAGE_SECRET_KEY` | Storage secret key |
-| `VELA_STORAGE_BUCKET` | Bucket name to store artifacts in |
-| `VELA_STORAGE_USE_SSL` | Set to `true` to enable SSL (default: `false`) |
+| Variable                  | Description                                         |
+|---------------------------|-----------------------------------------------------|
+| `VELA_STORAGE_ENABLE`     | Set to `true` to enable storage (default: `false`)  |
+| `VELA_STORAGE_DRIVER`     | Object storage driver (e.g. `minio`)                |
+| `VELA_STORAGE_ADDRESS`    | Storage endpoint (e.g. `https://minio.example.com`) |
+| `VELA_STORAGE_ACCESS_KEY` | Storage access key                                  |
+| `VELA_STORAGE_SECRET_KEY` | Storage secret key                                  |
+| `VELA_STORAGE_BUCKET`     | Bucket name to store artifacts in                   |
+| `VELA_STORAGE_USE_SSL`    | Set to `true` to enable SSL (default: `false`)      |
 
 If storage is not enabled on the server, any step with `artifacts.paths` will be skipped silently and the build will continue normally.
 
