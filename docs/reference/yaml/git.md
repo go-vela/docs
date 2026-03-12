@@ -31,9 +31,10 @@ The `token` key can be used to generate an installation token so long as the rep
 # the repositories listed below as well as the repository running the build: VELA_GIT_TOKEN
 git:
   token:
+    # list of repository names (must be in the same organization as repository running the build)
     repositories:
-      - alpha/beta
-      - gamma/delta
+      - repo_1
+      - repo_2
     permissions:
       checks: write
       contents: write
