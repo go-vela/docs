@@ -50,7 +50,7 @@ steps:
         - >
             AUTH_TOKEN=$(curl -H "Authorization: Bearer $VELA_ID_TOKEN_REQUEST_TOKEN"
             "$VELA_ID_TOKEN_REQUEST_URL?audience=artifactory" |
-            jq -r '.value')
+            jq -r '.token')
         - >
             REQ=$(curl -s -X POST -H "Token: $AUTH_TOKEN"
             "https://cloud-service-open-id-validator.com/get-token")
