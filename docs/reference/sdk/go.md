@@ -13,7 +13,7 @@ For a complete list of APIs and examples, please take a look at the [Godoc Refer
 
 ## Minimum requirements
 
-Go 1.13 or above
+Go 1.26 or above
 
 ## Get build info example
 
