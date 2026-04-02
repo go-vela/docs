@@ -43,3 +43,21 @@ git:
 :::note
 This token will only be generated if the repository owner also has access to the repositories listed.
 :::
+
+## API Access With Installation Tokens
+
+Starting in `v0.28`, installation tokens generated with the `git.token` block can also be used for Vela API endpoints that require repo `read` or `write` access.
+
+This makes `VELA_GIT_TOKEN` useful for automation patterns that call Vela APIs from within a build (for example, listing build data or creating deployment-related resources).
+
+When Vela receives an installation token for these endpoints, it validates:
+
+* token scope (repository access)
+* token permissions (for example `contents:read` vs `contents:write`)
+* token validity via server-side token cache metadata
+
+If a token does not include the required repository or permission level, the request is rejected with `401`.
+
+:::tip
+Use least privilege for the `permissions` map and only grant `write` for resources your pipeline actually needs.
+:::

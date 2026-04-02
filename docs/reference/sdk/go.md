@@ -23,32 +23,34 @@ Below is a sample Go program demonstrating how to authenticate and get a build w
 package main
 
 import (
+    "context"
     "fmt"
     "github.com/go-vela/sdk-go/vela"
 )
 
 func main() {
+    ctx := context.Background()
+
     // full URI to the Vela server
     url := "https://your-vela-server.example.com"
 
     token := "someToken"
-    accessToken := "someAccessToken"
-    refreshToken := "someRefreshToken"   
 
     // instantiate a new Vela client
     client, err := vela.NewClient(url, nil)
     if err != nil {
         fmt.Println(err)
+        return
     }    
 
-    // set the Authentication mechanisms for the client
+    // set token authentication for the client
     client.Authentication.SetTokenAuth(token)
-    client.Authentication.SetAccessAndRefreshAuth(accessToken, refreshToken) 
     
     // Get a build from the server
-    build, resp, err := c.Build.Get("go-vela", "sdk-go", 1)
+    build, resp, err := client.Build.Get(ctx, "go-vela", "sdk-go", 1)
     if err != nil {
         fmt.Println(err)
+        return
     }
 
     fmt.Printf("Received response code %d, for build %+v", resp.StatusCode, build)    
