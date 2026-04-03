@@ -1054,3 +1054,86 @@ This variable sets OTel tracestate [(span) attributes](https://www.w3.org/TR/tra
 :::note
 This variable has no default value.
 :::
+
+## Storage (Artifacts)
+
+This section contains configuration variables for enabling S3-compatible object storage on the server. Object storage is required for the [artifacts feature](/docs/usage/artifacts.md), which allows pipeline steps to collect and preserve build output files (e.g. test reports, screenshots, binaries).
+
+When storage is enabled, the server manages presigned download URLs that are surfaced in the Vela UI under the **Artifacts** tab of each build.
+
+If `VELA_STORAGE_ENABLE` is not set to `true`, any pipeline step that declares `artifacts.paths` will be skipped silently and the build will continue normally.
+
+### VELA_STORAGE_ENABLE
+
+This variable enables S3-compatible object storage support on the server.
+
+The variable should be provided as a `boolean`.
+
+:::note
+This variable has a default value of `false`.
+:::
+
+### VELA_STORAGE_DRIVER
+
+This variable sets the object storage driver.
+
+The variable should be provided as a `string`.
+
+:::note
+The possible options to provide for this variable are:
+
+* `minio`
+:::
+
+### VELA_STORAGE_ADDRESS
+
+This variable sets a fully qualified URL to the object storage endpoint.
+
+The variable should be provided as a `string` (e.g. `https://minio.example.com`).
+
+:::note
+The address must include a scheme (`https://` or `http://`) and must **not** contain a trailing slash.
+:::
+
+### VELA_STORAGE_ACCESS_KEY
+
+This variable sets the access key (username) used to authenticate with the object storage backend.
+
+The variable should be provided as a `string`.
+
+### VELA_STORAGE_SECRET_KEY
+
+This variable sets the secret key (password) used to authenticate with the object storage backend.
+
+The variable should be provided as a `string`.
+
+### VELA_STORAGE_BUCKET
+
+This variable sets the name of the bucket in which artifacts will be stored.
+
+The variable should be provided as a `string`.
+
+### VELA_STORAGE_USE_SSL
+
+This variable controls whether the server communicates with the object storage backend over SSL/TLS.
+
+The variable should be provided as a `boolean`.
+
+:::note
+This variable has a default value of `false`.
+:::
+
+#### Example: enabling storage with MinIO
+
+```shell
+$ docker run \
+  --env=VELA_STORAGE_ENABLE=true \
+  --env=VELA_STORAGE_DRIVER=minio \
+  --env=VELA_STORAGE_ADDRESS=https://minio.example.com \
+  --env=VELA_STORAGE_ACCESS_KEY=<access-key> \
+  --env=VELA_STORAGE_SECRET_KEY=<secret-key> \
+  --env=VELA_STORAGE_BUCKET=vela \
+  --env=VELA_STORAGE_USE_SSL=true \
+  target/vela-server:latest
+```
+
