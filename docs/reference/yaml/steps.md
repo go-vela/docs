@@ -37,6 +37,7 @@ steps:
 | `detach`      | N        | []string        | Run the container in a detached (headless) state.                |
 | `ulimits`     | N        | string          | Set the user limits for the container.                           | 
 | `user`        | N        | string          | Set the user for the container.                                  |
+| `artifacts`   | N        | struct          | Files to collect and upload to object storage after the step.    |
 
 ### Usage
 
@@ -477,4 +478,52 @@ steps:
     # Run the container with the foo user.
   - user: foo
 ```
+
+#### The `artifacts:` key
+
+:::tip
+Artifact collection is only available in the **Docker runtime** and requires the Vela server to be configured with an S3-compatible object storage backend. See the [artifacts usage guide](/docs/usage/artifacts.md) for more details.
+:::
+
+The `artifacts` key accepts a struct with the following field:
+
+| Name    | Required | Type     | Description                                              |
+|---------|----------|----------|----------------------------------------------------------|
+| `paths` | Y        | []string | List of glob patterns matching files to collect and upload after the step completes. |
+
+Glob patterns are evaluated relative to the step's workspace root. Only regular files are collected — directories and symlinks are skipped.
+
+```yaml
+---
+steps:
+    # Collect files matching the given glob patterns and upload them
+    # to configured object storage once the step finishes.
+  - name: test
+    image: golang:latest
+    commands:
+      - go test -v ./... 2>&1 | tee test-output.txt
+    artifacts:
+      paths:
+        - test-output.txt
+```
+
+```yaml
+---
+steps:
+    # Multiple glob patterns can be provided.
+  - name: cypress_tests
+    image: cypress/browsers:node-20.16.0-chrome-127.0.6533.119-1-ff-129.0.1-edge-127.0.2651.98-1
+    commands:
+      - npm install
+      - npm run cy:run
+    artifacts:
+      paths:
+        - cypress/screenshots/**/*.png
+        - cypress/videos/**/*.mp4
+        - test-results/*.xml
+```
+
+:::note
+The `artifacts` key is supported on `steps` only, not on `services` or `stages` steps. Only the **filename** (basename) is preserved in storage — if two matched paths resolve to files with the same name, only one will be stored.
+:::
 

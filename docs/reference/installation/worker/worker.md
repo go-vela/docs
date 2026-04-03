@@ -301,4 +301,38 @@ The possible options to provide for this variable are:
 * `1.3`
 :::
 
+## Storage (Artifacts)
+
+This section contains configuration variables that control how the worker handles artifact uploads. Artifacts are files declared by pipeline steps via the `artifacts.paths` YAML key and are collected after each step completes, then uploaded to the object storage backend configured on the server.
+
+These limits are enforced on the worker independently of the server-side storage configuration. Setting either variable to `0` disables the corresponding limit entirely.
+
+### VELA_STORAGE_FILE_SIZE_LIMIT
+
+This variable sets the maximum size (in MB) allowed for a single artifact file upload.
+
+Files exceeding this limit are skipped and logged at the worker level; the build continues normally.
+
+The variable can be provided as an `integer`.
+
+:::note
+This variable has a default value of `100` (MB).
+
+Set to `0` for no per-file size limit.
+:::
+
+### VELA_STORAGE_BUILD_FILE_SIZE_LIMIT
+
+This variable sets the maximum total size (in MB) of all artifact file uploads for a single build.
+
+Once the cumulative size of uploaded artifacts for a build reaches this limit, any remaining files are skipped and logged at the worker level.
+
+The variable can be provided as an `integer`.
+
+:::note
+This variable has a default value of `500` (MB).
+
+Set to `0` for no per-build total size limit.
+:::
+
 
