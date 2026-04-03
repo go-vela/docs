@@ -35,6 +35,21 @@ The following options are used to configure the component:
 For more information on these configuration options, please see the [server reference](/docs/reference/installation/server/server.md).
 :::
 
+## Native Secret Availability
+
+Vela can enable or disable native secret management operations by secret scope at runtime.
+
+The following server variables control this behavior:
+
+* `VELA_ENABLE_REPO_SECRETS`
+* `VELA_ENABLE_ORG_SECRETS`
+* `VELA_ENABLE_SHARED_SECRETS`
+
+These values default to `true` and can be updated by platform administrators via the server settings APIs/UI.
+
+If a secret scope is disabled, non-`GET` secret operations for that scope (for example create, update, and delete) are blocked.
+`GET` requests remain allowed so existing secrets can still be read/listed.
+
 ## Drivers
 
 The following drivers are available to configure the component:

@@ -17,6 +17,9 @@ The following properties are available to be updated:
 * [`VELA_CLONE_IMAGE`](/reference/installation/server/#vela_clone_image)
 * [`VELA_MAX_DASHBOARD_REPOS`](/reference/installation/server/#vela_max_dashboard_repos)
 * [`VELA_QUEUE_RESTART_LIMIT`](/reference/installation/server/#vela_queue_restart_limit)
+* [`VELA_ENABLE_REPO_SECRETS`](/reference/installation/server/#vela_enable_repo_secrets)
+* [`VELA_ENABLE_ORG_SECRETS`](/reference/installation/server/#vela_enable_org_secrets)
+* [`VELA_ENABLE_SHARED_SECRETS`](/reference/installation/server/#vela_enable_shared_secrets)
 
 
 ## Configuration

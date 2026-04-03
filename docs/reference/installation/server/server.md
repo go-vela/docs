@@ -412,6 +412,42 @@ This variable should only be used for local development.
 This variable has a default value of `true`.
 :::
 
+### VELA_ENABLE_REPO_SECRETS
+
+This variable controls whether repository-level native secrets are enabled.
+
+The variable can be provided as a `boolean`.
+
+:::note
+This variable has a default value of `true`.
+
+This property can be updated while the server is running using the [settings component](/docs/reference/installation/server/settings.md).
+:::
+
+### VELA_ENABLE_ORG_SECRETS
+
+This variable controls whether organization-level native secrets are enabled.
+
+The variable can be provided as a `boolean`.
+
+:::note
+This variable has a default value of `true`.
+
+This property can be updated while the server is running using the [settings component](/docs/reference/installation/server/settings.md).
+:::
+
+### VELA_ENABLE_SHARED_SECRETS
+
+This variable controls whether shared native secrets are enabled.
+
+The variable can be provided as a `boolean`.
+
+:::note
+This variable has a default value of `true`.
+
+This property can be updated while the server is running using the [settings component](/docs/reference/installation/server/settings.md).
+:::
+
 ### VELA_LOG_LEVEL
 
 This variable sets the log level for the server process.
