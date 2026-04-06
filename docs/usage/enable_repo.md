@@ -20,5 +20,9 @@ For this example, we'll go over using the UI to add the repo. You can always hea
 Your repo now has the necessary webhook to Vela.
 
 :::tip
+In newer UI versions, repository enablement may also be available directly from the builds view when a repository is not yet active.
+:::
+
+:::tip
 If you're coming from another CI platform you can set a starting build number by updating the counter field on the repo via the UI, [CLI](/docs/reference/cli/repo/repo.md), or [API](/docs/reference/api/repo/repo.md).
 :::

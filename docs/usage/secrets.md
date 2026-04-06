@@ -17,6 +17,10 @@ Internal secrets are generally managed via the UI or the [CLI](/docs/reference/c
 
 A full pipeline example is available [here](/docs/usage/examples/secrets_internal.md)
 
+:::note
+Starting in `v0.28`, Vela de-duplicates origin secrets by `name` during compile. If the same origin secret name appears multiple times, only one instance is retained.
+:::
+
 _Example pipeline YAML block for internal secrets_
 
 ```yaml

@@ -30,13 +30,17 @@ The following options are used to configure the component:
 | `scm.app.private-key`             | base64 encoded private key value for SCM App integration (one of this OR `scm.app.private-key.path` required when `scm.app.id` set) | `false`  | `N/A`                                                                       | `SCM_APP_PRIVATE_KEY`,`VELA_SCM_APP_PRIVATE_KEY`           |
 | `scm.app.private-key.path`        | filesystem path to private key for SCM App integration (alternative to `scm.app.private-key`)                                       | `false`  | `N/A`                                                                       | `SCM_APP_PRIVATE_KEY_PATH`,`VELA_SCM_APP_PRIVATE_KEY_PATH` |
 | `scm.app.webhook-secret`          | webhook HMAC secret for SCM App integration (required when `scm.app.id` set and webhook validation enabled)                         | `false`  | `N/A`                                                                       | `SCM_APP_WEBHOOK_SECRET`,`VELA_SCM_APP_WEBHOOK_SECRET`     |
-| `scm.app.permissions`             | allowed installation token permissions for SCM App integration                                                                      | `false`  | `[ contents:read, checks:write ]`                                           | `SCM_APP_PERMISSIONS`,`VELA_SCM_APP_PERMISSIONS`           |
+| `scm.app.permissions`             | allowed installation token permissions for SCM App integration                                                                      | `false`  | `[ contents:read, checks:write, deployments:write ]`                        | `SCM_APP_PERMISSIONS`,`VELA_SCM_APP_PERMISSIONS`           |
 | `scm.repo.roles-map`              | map of SCM repository roles -> Vela permissions                                                                                     | `false`  | `{ admin: admin, write: write, maintain: write, triage: read, read: read }` | `SCM_REPO_ROLES_MAP`,`VELA_SCM_REPO_ROLES_MAP`             |
 | `scm.org.roles-map`               | map of SCM organization roles -> Vela permissions                                                                                   | `false`  | `{ admin: admin, member: read }`                                            | `SCM_ORG_ROLES_MAP`,`VELA_SCM_ORG_ROLES_MAP`               |
 | `scm.team.roles-map`              | map of SCM team roles -> Vela permissions                                                                                           | `false`  | `{ maintainer: admin, member: read }`                                       | `SCM_TEAM_ROLES_MAP`,`VELA_SCM_TEAM_ROLES_MAP`             |
 
 :::note
 For more information on these configuration options, please see the [server reference](/docs/reference/installation/server/server.md).
+:::
+
+:::note
+If your repositories use the `deployment` event in Vela, ensure `deployments:write` is included in `scm.app.permissions` so deployment statuses can be updated correctly.
 :::
 
 ## Drivers

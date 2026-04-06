@@ -351,3 +351,24 @@ steps:
 ```
 
 Now when Vela compiles the pipeline, the `parameters` blocks for each step will include the `log_level` and `repo` pairs from the base anchor.
+
+## `v0.28` Buildkite Legacy Removal
+
+With `v0.28`, Vela removed the Buildkite parser dependency and no longer supports legacy pipeline parsing behavior.
+
+If your repository still relies on `version: "legacy"` semantics, pipeline compilation can fail after upgrade.
+
+### Symptoms
+
+* Pipeline validation errors that did not appear before upgrade
+* Build creation succeeds but compile fails with YAML parsing/validation errors
+
+### Resolution
+
+* Ensure your pipeline uses supported Vela YAML format (`version: "1"`)
+* Run [`vela validate pipeline`](/docs/reference/cli/pipeline/validate.md) locally and fix reported schema or type issues
+* Update any templates that were relying on legacy parser quirks
+
+:::tip
+Treat this migration similarly to the `v0.26` YAML parser migration: validate pipelines and templates before or immediately after upgrade.
+:::

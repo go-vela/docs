@@ -11,7 +11,7 @@ concurrency:
 
 jobs:
   build:
-    uses: go-vela/docs/.github/workflows/build.yml@fafd1178b136e33f214a212e73ad2498f42cf5fa
+    uses: go-vela/docs/.github/workflows/build.yml@3fd29018350321342f028b7349c12f48a719da4a
     secrets: inherit
 
   publish:
@@ -27,4 +27,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4.0.5
+        uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128 # v5.0.0

@@ -78,6 +78,7 @@ The `id_request` key being set to _anything_ will result in the injection of the
   "exp": 1717699924,
   "iat": 1717699624,
   "iss": "https://vela-server.com/_services/token",
+  "jti": "e98eea96-9efb-4071-b794-08b89ef2fa3e",
   "aud": [
       "artifactory"
   ],
@@ -111,4 +112,3 @@ There are many resources on validating OpenID tokens. Some of the high level req
 - Can the token be validated using the JWKs located at the well-known path of the issuer?
 - Do the claims of the ID token match the cloud service expectations?
 - Are the claims all members of the `supported_claims` field located at the well-known OpenID configuration?
-
