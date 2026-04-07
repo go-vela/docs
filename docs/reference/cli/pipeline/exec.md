@@ -5,6 +5,10 @@ description: >
   Learn how to execute a pipeline locally.
 ---
 
+:::note
+This command runs the pipeline locally on the machine where it is executed — it does not trigger a run on the remote Vela platform.
+:::
+
 ## Command
 
 ```
