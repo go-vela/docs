@@ -57,12 +57,13 @@ version: "1"
 stages:
   build:
     steps:
-      - name: Build My Docker Image
-        image: target/vela-kaniko:latest
-        parameters:
-          registry: index.docker.io
-          repo: index.docker.io/octocat/hello-world
-          dry-run: true
+      - name: Build My Code 
+        image: golang:latest
+        environment:
+          CGO_ENABLED: '0'
+          GOOS: linux
+        commands:
+          - go build
   notify:
     needs: [ build ]
     steps:
