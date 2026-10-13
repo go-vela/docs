@@ -20,9 +20,15 @@ Platform variables can be referenced with the following syntax:
 ## Examples
 
 - `ctx["vela"]["repo"]["name"]` equates to the `VELA_REPO_NAME` environment variable
-- `ctx["vela"]["build"]["number"]` equates to the `VELA_BUILD_NUMBER` environment variable
 - `ctx["vela"]["system"]["addr"]` equates to the `VELA_ADDR` environment variable
 - `ctx["vela"]["deployment"]["<name>"]` equates to the `DEPLOYMENT_PARAMETER_<name>` environment variable
+
+## Caveats
+
+- Use `${VELA_BUILD_NUMBER}` to access the build number.
+  Build numbers and some others are determined after Starlark expansion.
+  Vela will insert it into the JSON emitted from Starlark processing.
+  `ctx["vela"]["build"]["number"]` will be empty.
 
 ## Sample
 
